@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>North Peak Labs — AI &amp; Platform Engineering</title>
-    <meta name="description" content="North Peak Labs builds production-grade AI platforms, cloud infrastructure, and automation systems for teams moving from prototype to scale." />
+    <title>North Peak Labs LLC — Platform Engineering, MLOps &amp; AI Infrastructure</title>
+    <meta name="description" content="North Peak Labs LLC is Dejan Rajkovic’s consulting practice for platform engineering, MLOps, and AI infrastructure. Senior platform and MLOps engineer, 8+ years, including Guild Education’s enterprise AI Gateway." />
     <link rel="canonical" href="https://northpeaklabs.studio/" />
     <meta name="color-scheme" content="light" />
     <meta name="theme-color" content="#f3f1eb" />
-    <meta property="og:title" content="North Peak Labs — AI &amp; Platform Engineering" />
-    <meta property="og:description" content="North Peak Labs builds production-grade AI platforms, cloud infrastructure, and automation systems for teams moving from prototype to scale." />
+    <meta property="og:title" content="North Peak Labs LLC — Platform Engineering, MLOps &amp; AI Infrastructure" />
+    <meta property="og:description" content="North Peak Labs LLC is Dejan Rajkovic’s consulting practice for platform engineering, MLOps, and AI infrastructure. Senior platform and MLOps engineer, 8+ years, including Guild Education’s enterprise AI Gateway." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://northpeaklabs.studio/" />
     <meta property="og:image" content="https://northpeaklabs.studio/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="North Peak Labs — Build the system behind the breakthrough." />
+    <meta property="og:image:alt" content="North Peak Labs LLC — Production platforms for AI, Kubernetes, and AWS." />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="North Peak Labs — AI &amp; Platform Engineering" />
-    <meta name="twitter:description" content="North Peak Labs builds production-grade AI platforms, cloud infrastructure, and automation systems for teams moving from prototype to scale." />
+    <meta name="twitter:title" content="North Peak Labs LLC — Platform Engineering, MLOps &amp; AI Infrastructure" />
+    <meta name="twitter:description" content="North Peak Labs LLC is Dejan Rajkovic’s consulting practice for platform engineering, MLOps, and AI infrastructure. Senior platform and MLOps engineer, 8+ years, including Guild Education’s enterprise AI Gateway." />
     <meta name="twitter:image" content="https://northpeaklabs.studio/og-image.png" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32" />
@@ -44,7 +44,7 @@
         --serif: "Newsreader", "Iowan Old Style", Palatino, Georgia, serif;
         --sans: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
         --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-        --header: 76px;
+        --header: 92px;
         --shadow: 0 18px 50px rgba(16, 22, 20, 0.08);
       }
 
@@ -109,19 +109,42 @@
         justify-content: space-between;
         gap: 24px;
       }
+      .brand { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 1px; min-width: 0; }
       .wordmark {
         display: inline-flex;
         align-items: center;
         gap: 10px;
         color: var(--ink);
         text-decoration: none;
-        font-family: var(--serif);
-        font-size: 1.22rem;
-        font-weight: 500;
-        letter-spacing: -0.02em;
         min-height: 44px;
       }
       .wordmark img { width: 28px; height: 28px; display: block; }
+      .brand-name {
+        font-family: var(--serif);
+        font-size: 1.18rem;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        line-height: 1.05;
+      }
+      .brand-sub {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px 8px;
+        margin: 0 0 0 38px;
+        color: var(--muted);
+        font-size: 0.72rem;
+        line-height: 1.3;
+        font-weight: 500;
+      }
+      .domain {
+        color: var(--pine);
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.01em;
+        text-decoration: none;
+      }
+      .domain:hover { color: var(--ink); }
       .nav-links { display: flex; align-items: center; gap: 22px; }
       .nav-links a {
         display: inline-flex;
@@ -162,6 +185,7 @@
       .hero { padding: clamp(56px, 8vw, 104px) 0 clamp(48px, 6vw, 72px); }
       .kicker {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         gap: 12px;
         margin: 0;
@@ -174,7 +198,7 @@
       }
       .kicker i { width: 28px; height: 1px; background: var(--ember); display: block; }
       h1 {
-        max-width: 11em;
+        max-width: 14em;
         margin: 18px 0 22px;
         font-family: var(--serif);
         font-weight: 500;
@@ -339,6 +363,11 @@
         line-height: 0.9;
         letter-spacing: -0.04em;
       }
+      .outcome strong.figure-label {
+        font-size: clamp(1.85rem, 2.6vw, 2.45rem);
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+      }
       .outcome span { display: block; max-width: 22rem; margin-top: 12px; color: var(--muted); font-size: 0.98rem; }
 
       .signal {
@@ -421,6 +450,7 @@
         text-transform: uppercase;
       }
       .fact dd { margin: 0; font-weight: 600; }
+      .fact a { text-underline-offset: 0.18em; }
       .program-copy .text-link { margin-top: 8px; }
       .program-list { border-bottom: 1px solid var(--line); }
       .program-item { display: grid; grid-template-columns: 2.6rem 1fr; gap: 12px; padding: 18px 0; border-top: 1px solid var(--line); }
@@ -597,10 +627,13 @@
     <a class="skip" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="nav-bar wrap">
-        <a class="wordmark" href="#top">
-          <img src="favicon.svg" width="28" height="28" alt="" />
-          North Peak Labs
-        </a>
+        <div class="brand">
+          <a class="wordmark" href="#top">
+            <img src="favicon.svg" width="28" height="28" alt="" />
+            <span class="brand-name">North Peak Labs</span>
+          </a>
+          <p class="brand-sub"><span>North Peak Labs LLC</span><a class="domain" href="https://northpeaklabs.studio/">northpeaklabs.studio</a></p>
+        </div>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
           <span class="menu-icon" aria-hidden="true"></span>
         </button>
@@ -609,7 +642,7 @@
           <a href="#work">Work</a>
           <a href="#systems">Systems</a>
           <a href="#about">About</a>
-          <a href="#programs">Programs</a>
+          <a href="#handoff">Handoff</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
@@ -617,57 +650,63 @@
 
     <main id="main">
       <section class="hero wrap" id="top">
-        <p class="kicker"><i aria-hidden="true"></i>AI &amp; platform engineering</p>
-        <h1>Build the system behind the <em>breakthrough.</em></h1>
-        <p class="lede">North Peak Labs turns ambitious AI initiatives into secure, observable, production-ready platforms—then leaves your team with the architecture and operating patterns to keep moving.</p>
+        <p class="kicker"><i aria-hidden="true"></i>Senior platform &amp; MLOps engineer · 8+ years</p>
+        <h1>Production platforms for AI, Kubernetes, and AWS.</h1>
+        <p class="lede">North Peak Labs LLC is the consulting practice of Dejan Rajkovic. He builds the paved roads product teams ship on: multi-account AWS, EKS, Terraform and CDK, and governed AI infrastructure. At Guild Education he architected the enterprise AI Gateway — 500+ users, multi-tenant, OAuth 2.1, hot reloads — and co-invented Apollo, a patent-pending PostgreSQL/pgvector context layer.</p>
         <div class="actions">
-          <a class="button" href="mailto:drajkovic@mail.grokbot.com?subject=North%20Peak%20Labs%20inquiry">Discuss a project <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="button" href="mailto:drajkovic@mail.grokbot.com?subject=North%20Peak%20Labs%20inquiry">Discuss a build <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <a class="text-link" href="#work">See the track record</a>
         </div>
         <ul class="hero-notes">
-          <li>Arizona-based</li>
-          <li>Available for remote engagements</li>
+          <li>AWS Certified Security – Specialty</li>
+          <li>Snyk DevSecOps Leadership Award (2022)</li>
+          <li>Python, TypeScript, Terraform, CDK</li>
         </ul>
       </section>
 
       <section class="proof" aria-label="Selected engineering experience">
         <div class="wrap proof-grid">
-          <article><strong>8+ years</strong><span>production engineering experience</span></article>
-          <article><strong>500+</strong><span>users supported by an enterprise AI platform</span></article>
-          <article><strong>2.5 days → 5 min</strong><span>self-service environment provisioning</span></article>
-          <article><strong>~70%</strong><span>cloud cost reduction in prior platform work</span></article>
+          <article><strong>8+ years</strong><span>platform engineering and MLOps, from DevOps through senior MLOps</span></article>
+          <article><strong>500+</strong><span>engineers and business users on Guild’s multi-tenant AI Gateway</span></article>
+          <article><strong>2.5 days → ~5 min</strong><span>self-service AWS account vending, with auditability kept</span></article>
+          <article><strong>~70%</strong><span>cloud infrastructure cost reduction at onPeak</span></article>
         </div>
       </section>
 
       <section class="section" id="services" aria-labelledby="services-title">
         <div class="wrap">
           <div class="section-head">
-            <p class="kicker">01 — Capabilities</p>
+            <p class="kicker">01 — Engagements</p>
             <div>
-              <h2 id="services-title">Senior technical execution, from first architecture to production operations.</h2>
-              <p class="section-intro">Engagements are built around the real constraint: platform foundations, AI delivery, secure integration, or the operating model required to make the work last.</p>
+              <h2 id="services-title">Scoped builds, taken from systems already operated.</h2>
+              <p class="section-intro">Each engagement is a concrete platform. The scope follows work Dejan has designed and run: an AI gateway, EKS with GitOps, AWS account vending, SLOs as code, or a measured cloud-cost program.</p>
             </div>
           </div>
           <div class="service-list">
             <article class="service">
               <span class="service-num">01</span>
-              <h3>AI &amp; agent platforms</h3>
-              <p>Production gateways, multi-model routing, MCP and tool integrations, memory and RAG layers, evaluation pipelines, guardrails, and observability for agentic systems.</p>
+              <h3>AI gateway and LLM platform buildout</h3>
+              <p>A governed, multi-tenant access layer: secure routing across model providers, OAuth 2.1 and per-tool scopes, centralized configuration, self-service registration, hot config reloads, and a React admin UI. Python, FastAPI, and TypeScript, with Datadog observability and audit logging in the path.</p>
             </article>
             <article class="service">
               <span class="service-num">02</span>
-              <h3>Cloud &amp; developer platforms</h3>
-              <p>Kubernetes, multi-account AWS, infrastructure as code, CI/CD, self-service provisioning, and paved roads that make secure delivery easier.</p>
+              <h3>EKS and GitOps platform</h3>
+              <p>Production Kubernetes on EKS with GitOps, automated scaling, and Datadog observability. CI/CD with GitHub Actions and Jenkins, standardized for deployment safety and reproducibility.</p>
             </article>
             <article class="service">
               <span class="service-num">03</span>
-              <h3>Reliability &amp; automation</h3>
-              <p>SLOs and monitors as code, OpenTelemetry, progressive delivery, quality gates, safe rollouts, and operational automation with clear human control points.</p>
+              <h3>AWS landing zone and account vending</h3>
+              <p>Multi-account AWS with IAM boundaries, service-control policies, and budget controls. Self-service sandboxes for isolated environments, with auditability kept in the workflow. The Guild account-vending platform took this from a 2.5-day ticket to about five minutes across 50–100 environments.</p>
             </article>
             <article class="service">
               <span class="service-num">04</span>
-              <h3>Embedded technical leadership</h3>
-              <p>Hands-on architecture, discovery, roadmap definition, implementation, incident support, and capability transfer for high-leverage initiatives.</p>
+              <h3>Observability and SLOs</h3>
+              <p>Datadog APM, OpenTelemetry, and MLflow on one instrumentation path: session-correlated traces, token and cost metrics, replayable traces, and Terraform-managed SLOs and paging monitors. At Guild, the agreed targets were 99.5% request success and 99% tool-call success, enforced as code.</p>
+            </article>
+            <article class="service">
+              <span class="service-num">05</span>
+              <h3>Cloud cost reduction</h3>
+              <p>EC2 Spot strategies, systematic right-sizing, and infrastructure automation in a high-change production environment. At onPeak, that work reduced cloud infrastructure costs by about 70%.</p>
             </article>
           </div>
         </div>
@@ -676,55 +715,87 @@
       <section class="section work" id="work" aria-labelledby="work-title">
         <div class="wrap">
           <div class="section-head">
-            <p class="kicker">02 — Selected experience</p>
+            <p class="kicker">02 — Selected work</p>
             <div>
-              <h2 id="work-title">Proof from systems already built and operated.</h2>
-              <p class="section-intro">Representative work led by founder Dejan Rajkovic before launching North Peak Labs.</p>
+              <h2 id="work-title">Systems already built and operated.</h2>
+              <p class="section-intro">Representative work led by Dejan Rajkovic before North Peak Labs LLC. Employers are named where the record names them.</p>
             </div>
           </div>
           <div class="case-list">
             <article class="case">
               <div>
-                <p class="case-kicker">Enterprise AI platform</p>
-                <h3>A governed path from AI prototype to production.</h3>
-                <p class="case-copy">Architected an enterprise AI gateway with secure model routing, centralized configuration, self-service registration, hot reloads, an admin interface, and end-to-end observability.</p>
+                <p class="case-kicker">Guild Education · AI Gateway</p>
+                <h3>A multi-tenant path from prototype to production.</h3>
+                <p class="case-copy">Architected Guild’s enterprise AI Gateway for 500+ engineers and business users. Secure routing across model providers, centralized configuration, self-service registration, hot config reloads, a React admin UI, and Datadog observability with audit and SIEM controls.</p>
                 <ul class="tech">
                   <li>Python</li>
                   <li>FastAPI</li>
                   <li>TypeScript</li>
+                  <li>React</li>
                   <li>OAuth 2.1</li>
+                  <li>DynamoDB</li>
+                  <li>Redis</li>
                   <li>Terraform</li>
+                  <li>CDK</li>
                 </ul>
               </div>
-              <p class="outcome"><strong>500+</strong><span>Engineers and business users served through one governed, multi-tenant access layer.</span></p>
+              <p class="outcome"><strong>500+</strong><span>Engineers and business users on one governed, multi-tenant access layer.</span></p>
             </article>
             <article class="case">
               <div>
-                <p class="case-kicker">Self-service infrastructure</p>
-                <h3>Turned a ticket queue into an automated platform.</h3>
-                <p class="case-copy">Built account vending for isolated AWS environments with IAM boundaries, service-control policies, budget controls, and auditability designed into the workflow.</p>
+                <p class="case-kicker">Guild Education · Apollo · patent pending</p>
+                <h3>A context layer that stays out of the request path when a dependency fails.</h3>
+                <p class="case-copy">Co-invented Apollo, a PostgreSQL and pgvector context layer with hierarchical scopes, multi-tenant isolation, semantic ranking, evidence tracking, and lineage. Engineered so a dependency outage does not block user-facing responses.</p>
+                <ul class="tech">
+                  <li>Python</li>
+                  <li>PostgreSQL</li>
+                  <li>pgvector</li>
+                  <li>Databricks</li>
+                </ul>
+              </div>
+              <p class="outcome"><strong class="figure-label">Patent pending</strong><span>Multi-tenant context with isolation, lineage, and graceful degradation.</span></p>
+            </article>
+            <article class="case">
+              <div>
+                <p class="case-kicker">Guild Education · Account vending</p>
+                <h3>Sandboxed AWS accounts without the ticket queue.</h3>
+                <p class="case-copy">Built a self-service account-vending platform for 50–100 sandboxed environments, with IAM boundaries, SCP guardrails, budget controls, and auditability preserved.</p>
                 <ul class="tech">
                   <li>AWS</li>
+                  <li>CloudFormation</li>
                   <li>IAM / SCP</li>
-                  <li>Infrastructure as code</li>
-                  <li>Policy automation</li>
+                  <li>Multi-account</li>
                 </ul>
               </div>
-              <p class="outcome"><strong>~5 min</strong><span>Provisioning time after automation, down from a roughly 2.5-day ticket process across 50–100 environments.</span></p>
+              <p class="outcome"><strong>~5 min</strong><span>Provisioning time after automation, down from a 2.5-day ticket workflow.</span></p>
             </article>
             <article class="case">
               <div>
-                <p class="case-kicker">Production reliability</p>
-                <h3>Made AI quality and operations measurable.</h3>
-                <p class="case-copy">Established session-correlated traces, token and cost telemetry, progressive delivery controls, kill switches, and Terraform-managed SLO monitors for production AI workloads.</p>
+                <p class="case-kicker">Guild Education · Observability</p>
+                <h3>SLOs, traces, and cost metrics enforced as code.</h3>
+                <p class="case-copy">Owned the observability stack: Datadog APM, OpenTelemetry, and MLflow. Session-correlated traces, token and cost metrics, replayable traces, and Terraform-managed SLOs and paging monitors defined with stakeholders.</p>
                 <ul class="tech">
                   <li>Datadog</li>
                   <li>OpenTelemetry</li>
                   <li>MLflow</li>
-                  <li>SLOs as code</li>
+                  <li>Terraform</li>
                 </ul>
               </div>
-              <p class="outcome"><strong>99.5%</strong><span>Request-success target, paired with a 99% tool-call target and defined operational response paths.</span></p>
+              <p class="outcome"><strong>99.5%</strong><span>Request-success target, with a 99% tool-call target, enforced as code.</span></p>
+            </article>
+            <article class="case">
+              <div>
+                <p class="case-kicker">onPeak · Cloud cost</p>
+                <h3>A measured cut in a high-change production environment.</h3>
+                <p class="case-copy">Reduced cloud infrastructure costs by about 70% through EC2 Spot strategies, systematic right-sizing, and infrastructure automation. Also built and maintained CI/CD pipelines, including Jenkins, for more reliable deploys.</p>
+                <ul class="tech">
+                  <li>AWS</li>
+                  <li>EC2 Spot</li>
+                  <li>Jenkins</li>
+                  <li>Right-sizing</li>
+                </ul>
+              </div>
+              <p class="outcome"><strong>~70%</strong><span>Cloud infrastructure cost reduction in a cost-sensitive production environment.</span></p>
             </article>
           </div>
         </div>
@@ -733,76 +804,75 @@
       <section class="section" id="systems" aria-labelledby="systems-title">
         <div class="wrap">
           <div class="section-head">
-            <p class="kicker">03 — System motion</p>
+            <p class="kicker">03 — Control loops</p>
             <div>
-              <h2 id="systems-title">Automation is useful only when the control loop is visible.</h2>
+              <h2 id="systems-title">Auth, delivery, and telemetry you can point at in the platform.</h2>
             </div>
           </div>
           <dl class="signal">
             <div>
-              <dt>Reference architecture</dt>
+              <dt>AI Gateway path</dt>
               <dd>
                 <ol class="signal-path">
                   <li>Request</li>
-                  <li>Policy + auth</li>
-                  <li>Models + tools</li>
-                  <li>Traces + evals</li>
-                  <li>Verified output</li>
+                  <li>OAuth 2.1 and per-tool scopes</li>
+                  <li>Model-provider routing</li>
+                  <li>Traces, cost, and audit</li>
                 </ol>
               </dd>
             </div>
             <div>
-              <dt>Control loop</dt>
-              <dd>Observe → decide → act → verify</dd>
+              <dt>Progressive delivery</dt>
+              <dd>Shadow mode → dual-run sampling → quality gate → kill switch → fail-open</dd>
             </div>
           </dl>
           <div class="flows">
             <article class="flow">
               <header>
-                <h3>Reference flow / AI platform</h3>
-                <p>Secure by default</p>
+                <h3>Gateway auth and tenancy</h3>
+                <p>Human and machine-to-machine</p>
               </header>
               <ol>
-                <li><strong>Request</strong><span>Identity and intent enter the system.</span></li>
-                <li><strong>Authorize</strong><span>Policy determines permitted models and tools.</span></li>
-                <li><strong>Execute</strong><span>Routing balances quality, latency, and cost.</span></li>
-                <li><strong>Trace</strong><span>Every decision leaves operational evidence.</span></li>
+                <li><strong>Authenticate</strong><span>OAuth 2.1 with PKCE, Okta or Auth0, and IAM, including downstream token exchange.</span></li>
+                <li><strong>Scope</strong><span>Per-tool scopes and scope-based access, with multi-tenant isolation.</span></li>
+                <li><strong>Reload</strong><span>Centralized configuration and hot config reloads.</span></li>
+                <li><strong>Audit</strong><span>PII-safe logs, hashed identities, secret redaction, and SIEM-ready delivery to Datadog and cross-account S3.</span></li>
               </ol>
               <dl class="flow-meta">
-                <div><dt>Design principle</dt><dd>Least privilege</dd></div>
-                <div><dt>Operating signal</dt><dd>Quality + cost + latency</dd></div>
+                <div><dt>Access model</dt><dd>OAuth 2.1 and per-tool scopes</dd></div>
+                <div><dt>Record</dt><dd>Audit log and SIEM delivery</dd></div>
               </dl>
             </article>
             <article class="flow">
               <header>
-                <h3>Reference flow / software delivery</h3>
-                <p>Progressive rollout</p>
+                <h3>Progressive delivery</h3>
+                <p>High-risk changes</p>
               </header>
               <ol>
-                <li><strong>Change</strong><span>A reviewable change enters the pipeline.</span></li>
-                <li><strong>Validate</strong><span>Tests, policies, and quality gates run.</span></li>
-                <li><strong>Roll out</strong><span>Shadow, canary, or staged deployment.</span></li>
-                <li><strong>Verify</strong><span>SLOs decide whether to advance or stop.</span></li>
+                <li><strong>Change</strong><span>A high-risk change enters through the pipeline and pre-deployment quality gates.</span></li>
+                <li><strong>Sample</strong><span>Shadow mode and dual-run sampling.</span></li>
+                <li><strong>Compare</strong><span>Quality-parity SLOs are the check before the change advances.</span></li>
+                <li><strong>Stop</strong><span>Kill switches and fail-open behavior so a degradation does not silently reach users.</span></li>
               </ol>
               <dl class="flow-meta">
                 <div><dt>Safety mechanism</dt><dd>Kill switch</dd></div>
-                <div><dt>Evidence</dt><dd>Automated quality gates</dd></div>
+                <div><dt>Evidence</dt><dd>Quality gates and quality-parity SLOs</dd></div>
               </dl>
             </article>
             <article class="flow">
               <header>
-                <h3>Reference flow / operations</h3>
-                <p>Human in control</p>
+                <h3>Observability stack</h3>
+                <p>One instrumentation path</p>
               </header>
               <ol>
-                <li><strong>Observe</strong><span>Traces, metrics, logs, and evaluations align.</span></li>
-                <li><strong>Diagnose</strong><span>Context narrows the real failure mode.</span></li>
-                <li><strong>Respond</strong><span>Automation applies bounded, safe actions.</span></li>
-                <li><strong>Learn</strong><span>The playbook and platform both improve.</span></li>
+                <li><strong>Trace</strong><span>Session-correlated traces across the request, including replayable traces.</span></li>
+                <li><strong>Meter</strong><span>Token and cost metrics alongside the operational trace.</span></li>
+                <li><strong>Page</strong><span>Terraform-managed SLOs and paging monitors.</span></li>
+                <li><strong>Hold</strong><span>99.5% request-success and 99% tool-call targets, defined with stakeholders.</span></li>
               </ol>
               <dl class="flow-meta">
-                <div><dt>Primary artifact</dt><dd>Trace of record</dd></div>
-                <div><dt>Ownership</dt><dd>Clear response paths</dd></div>
+                <div><dt>Primary artifact</dt><dd>Session-correlated trace</dd></div>
+                <div><dt>Enforcement</dt><dd>SLOs as code</dd></div>
               </dl>
             </article>
           </div>
@@ -813,34 +883,36 @@
         <div class="wrap about-grid">
           <div class="about-copy">
             <p class="kicker">04 — Founder</p>
-            <h2 id="about-title">Technical depth, without the handoff gap.</h2>
-            <p>North Peak Labs is led by <strong>Dejan Rajkovic</strong>, a senior MLOps and platform engineer with more than eight years of experience across AI systems, cloud infrastructure, developer platforms, and production operations.</p>
-            <p>His work spans architecture and implementation: multi-tenant AI access, Kubernetes and AWS foundations, developer SDKs, observability, security controls, progressive delivery, and written technical direction teams can operate.</p>
+            <h2 id="about-title">Senior platform and MLOps engineer.</h2>
+            <p><strong>North Peak Labs LLC</strong> is led by <strong>Dejan Rajkovic</strong>, a senior platform and MLOps engineer with 8+ years building paved roads for product teams: multi-account AWS, Kubernetes (EKS), CI/CD, infrastructure as code, observability, and security guardrails.</p>
+            <p>At Guild Education since May 2020 he has held five roles, from DevOps Engineer to Senior MLOps Engineer (2025–present). That span covers the enterprise AI Gateway, production EKS with GitOps, account vending, the observability stack, and Apollo. He ships Python and TypeScript SDKs — typed Pydantic and TypeScript contracts, OAuth and JWT auth, streaming, telemetry hooks, and release automation — plus paved-road templates and pre-deployment quality gates.</p>
+            <p>Direction is written down: ADRs, proposals, and multi-quarter plans covering rollout phases, SLOs, kill switches, and cost and quality governance. Earlier he was a DevOps engineer at onPeak (2018–2020), where cloud costs fell about 70%, and at Cyberfinders (2017–2018), where he led a cloud platform migration.</p>
             <p class="credential">AWS Certified Security – Specialty · Microsoft AI Practitioner · Snyk DevSecOps Leadership Award (2022)</p>
+            <p class="credential">B.S. Cloud Computing, Purdue Global (in progress) · Software Engineering Immersive, Fullstack Academy · B.S. Agricultural Economics, University of Belgrade</p>
           </div>
           <dl class="facts">
-            <div class="fact"><dt>Company</dt><dd>North Peak Labs</dd></div>
-            <div class="fact"><dt>Focus</dt><dd>AI platforms, cloud systems, and automation</dd></div>
-            <div class="fact"><dt>Approach</dt><dd>Senior, hands-on technical delivery</dd></div>
-            <div class="fact"><dt>Location</dt><dd>Arizona, United States</dd></div>
-            <div class="fact"><dt>Availability</dt><dd>Remote consulting and technical partnerships</dd></div>
+            <div class="fact"><dt>Company</dt><dd>North Peak Labs LLC</dd></div>
+            <div class="fact"><dt>Practice</dt><dd>Platform engineering, MLOps, and AI infrastructure</dd></div>
+            <div class="fact"><dt>Founder</dt><dd>Dejan Rajkovic</dd></div>
+            <div class="fact"><dt>Experience</dt><dd>8+ years · Guild Education, onPeak, Cyberfinders</dd></div>
+            <div class="fact"><dt>Profiles</dt><dd><a href="https://github.com/Dejan992">github.com/Dejan992</a><br /><a href="https://www.linkedin.com/in/dejan-rajkovic">linkedin.com/in/dejan-rajkovic</a></dd></div>
           </dl>
         </div>
       </section>
 
-      <section class="section" id="programs" aria-labelledby="programs-title">
+      <section class="section" id="handoff" aria-labelledby="handoff-title">
         <div class="wrap program-grid">
           <div class="program-copy">
-            <p class="kicker">05 — Programs &amp; funding</p>
-            <h2 id="programs-title">Ready for partnerships that move applied AI into the real world.</h2>
-            <p>North Peak Labs is open to accelerators, applied research partnerships, pilot programs, and non-dilutive funding aligned with secure AI infrastructure, developer productivity, and responsible production deployment.</p>
-            <a class="text-link" href="mailto:drajkovic@mail.grokbot.com?subject=North%20Peak%20Labs%20program%20partnership">Discuss a program or partnership</a>
+            <p class="kicker">05 — Handoff</p>
+            <h2 id="handoff-title">The platform stays operable after the engagement.</h2>
+            <p>The working style is async-first and written down. What leaves with the team is the same class of artifact Dejan already maintains: SDKs, templates, quality gates, and a plan that names the rollout, the SLOs, and the kill switch.</p>
+            <a class="text-link" href="mailto:drajkovic@mail.grokbot.com?subject=North%20Peak%20Labs%20inquiry">Discuss a build</a>
           </div>
           <div class="program-list">
-            <article class="program-item"><span>01</span><div><h3>Applied AI R&amp;D</h3><p>Prototype new platform capabilities with explicit hypotheses, evaluation criteria, and production constraints.</p></div></article>
-            <article class="program-item"><span>02</span><div><h3>Pilot delivery</h3><p>Define a bounded pilot, success measures, technical milestones, risks, and an evidence-based path to scale.</p></div></article>
-            <article class="program-item"><span>03</span><div><h3>Technical commercialization</h3><p>Translate a promising technical concept into architecture, delivery plan, operating model, and credible implementation roadmap.</p></div></article>
-            <article class="program-item"><span>04</span><div><h3>Program documentation</h3><p>Support technical narratives with scope, milestones, budget assumptions, evaluation plans, and risk controls.</p></div></article>
+            <article class="program-item"><span>01</span><div><h3>Python and TypeScript SDKs</h3><p>Typed Pydantic and TypeScript contracts, OAuth and JWT auth, streaming, telemetry hooks, and release automation.</p></div></article>
+            <article class="program-item"><span>02</span><div><h3>Paved-road templates</h3><p>Templates and pre-deployment quality gates so the next service is not a one-off script.</p></div></article>
+            <article class="program-item"><span>03</span><div><h3>ADRs and multi-quarter plans</h3><p>Written direction covering rollout phases, SLOs, kill switches, and cost and quality governance.</p></div></article>
+            <article class="program-item"><span>04</span><div><h3>CI-integrated checks</h3><p>At Guild, this included the first CI-integrated agent automation for daily regression-coverage analysis, using Cursor and Claude Code.</p></div></article>
           </div>
         </div>
       </section>
@@ -848,9 +920,9 @@
       <section class="contact" id="contact" aria-labelledby="contact-title">
         <div class="wrap contact-grid">
           <div>
-            <p class="kicker"><i aria-hidden="true"></i>Projects, roles &amp; partnerships</p>
-            <h2 id="contact-title">Bring the hard systems problem.</h2>
-            <p>For consulting engagements, embedded technical leadership, program partnerships, or a focused architecture conversation, get in touch.</p>
+            <p class="kicker"><i aria-hidden="true"></i>Platform, MLOps, and AI infrastructure</p>
+            <h2 id="contact-title">Bring the platform problem.</h2>
+            <p>For an AI gateway, an EKS and GitOps platform, AWS account vending, observability and SLOs, or a cloud-cost program, write directly.</p>
           </div>
           <div class="contact-actions">
             <a class="button button-light" href="mailto:drajkovic@mail.grokbot.com?subject=North%20Peak%20Labs%20inquiry">Start the conversation <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -862,13 +934,13 @@
 
     <footer>
       <div class="wrap footer-inner">
-        <p class="footer-copy">© 2026 North Peak Labs</p>
+        <p class="footer-copy">© 2026 North Peak Labs LLC</p>
         <nav class="footer-nav" aria-label="Footer">
           <a href="#services">Services</a>
           <a href="#work">Work</a>
           <a href="#systems">Systems</a>
           <a href="#about">About</a>
-          <a href="#programs">Programs</a>
+          <a href="#handoff">Handoff</a>
           <a href="#contact">Contact</a>
         </nav>
         <address><a class="footer-email" href="mailto:drajkovic@mail.grokbot.com">drajkovic@mail.grokbot.com</a></address>
