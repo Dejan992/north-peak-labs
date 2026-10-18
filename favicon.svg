@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" fill="#f3f1eb"/>
-  <path fill="#1c2830" d="M 32.00 2.40 L 30.00 9.40 L 32.00 10.66 L 34.00 9.40 Z M 39.00 9.40 L 32.00 7.40 L 30.74 9.40 L 32.00 11.40 Z M 32.00 16.40 L 34.00 9.40 L 32.00 8.14 L 30.00 9.40 Z M 25.00 9.40 L 32.00 11.40 L 33.26 9.40 L 32.00 7.40 Z M 34.76 6.64 L 30.97 8.37 L 31.50 9.90 L 33.03 10.43 Z M 34.76 12.16 L 33.03 8.37 L 31.50 8.90 L 30.97 10.43 Z M 29.24 12.16 L 33.03 10.43 L 32.50 8.90 L 30.97 8.37 Z M 29.24 6.64 L 30.97 10.43 L 32.50 9.90 L 33.03 8.37 Z"/>
-  <path fill="none" stroke="#1c2830" stroke-width="5.8" stroke-linejoin="round" stroke-linecap="round" d="M6.2 58.2 L32 21.2 L57.8 58.2 Z"/>
-  <path fill="none" stroke="#1c2830" stroke-width="3.3" stroke-linecap="round" d="M16.4 44.2 H47.6"/>
-</svg>
