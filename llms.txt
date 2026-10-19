@@ -1,0 +1,8 @@
+# RMD Autopilot (North Peak Labs)
+> Software that helps small voice providers and VoIP resellers keep their FCC Robocall Mitigation Database (RMD) filing complete, current and recertified by March 1. Early access; an officer signs and submits in the FCC portal. Not legal advice.
+## Pages
+- [Home](https://northpeaklabs.studio/): product, filing steps, FAQ
+## Sources
+- [FCC RMD](https://www.fcc.gov/robocall-mitigation-database)
+- [DA 26-72](https://docs.fcc.gov/public/attachments/DA-26-72A1.pdf)
+- [47 CFR 64.6305](https://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/part-64/subpart-HH/section-64.6305)
