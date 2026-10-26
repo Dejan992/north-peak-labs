@@ -43,7 +43,8 @@ The background section is in-house engineering, not client work. Employers are n
 
 ## What is on the page
 
-- `index.html` — the whole site: copy, CSS, and a small script (theme, menu, scroll reveal, mailto form).
+- `index.html` — the home page: copy and a small script (theme, menu, scroll reveal, mailto form). Styles live in `styles.css`.
+- `self-hosting-llms-kubernetes/index.html` — decision checklist for a per-token LLM API versus self-hosting on Kubernetes.
 - `404.html` — branded not-found page, `noindex`.
 - `assets/` — portrait, JPEG and WebP.
 - `fonts/` — self-hosted Newsreader and Inter (SIL Open Font License). License texts are in that folder.
