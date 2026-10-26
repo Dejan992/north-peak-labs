@@ -1,7 +1,7 @@
 # North Peak Labs
 > Consulting practice of Dejan Rajkovic, a senior MLOps and AI platform engineer. North Peak Labs, LLC is a one-person Arizona LLC based in Mesa, in the Phoenix area. Engagements are remote.
 
-The site describes consulting only. It does not sell software. It does not publish client names, logos, testimonials, metrics, or certifications.
+The site describes consulting. Background notes are in-house engineering, not client engagements. No employer is named.
 
 ## Services
 - AI/ML platform and MLOps advisory
@@ -17,8 +17,9 @@ The site describes consulting only. It does not sell software. It does not publi
 
 ## Contact
 - Website: https://northpeaklabs.studio/
-- Email: TODO_CONTACT_EMAIL@northpeaklabs.studio (placeholder — replace before relying on it)
-- Booking: TODO (set data-booking-url in index.html)
+- Email: rajkovic@mail.grokbot.com
+- Advisory call: mailto to that address with the subject "Advisory call request"
+- A calendar link can replace the advisory-call mailto when `data-booking-url` on the page is an https URL
 
 ## Pages
-- [Home](https://northpeaklabs.studio/): services, engagements, about, contact
+- [Home](https://northpeaklabs.studio/): services, engagements, about, background, contact

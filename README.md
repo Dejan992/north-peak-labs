@@ -21,41 +21,34 @@ From the repository root:
 python3 -m http.server 8765
 ```
 
-Open `http://127.0.0.1:8765/`. Fonts, the mark, and the favicon are same-origin files. The page does not call a third party.
+Open `http://127.0.0.1:8765/`. Fonts, the mark, the portrait, and the favicon are same-origin files. The page does not call a third party.
 
 ## Production domain
 
-The production domain is **https://northpeaklabs.studio/**. It is already set in `CNAME`, the canonical URL, Open Graph and Twitter tags, `sitemap.xml`, `robots.txt`, and the JSON-LD. Change those together if the domain ever moves. No domain placeholder is required.
+The production domain is **https://northpeaklabs.studio/**. It is already set in `CNAME`, the canonical URL, Open Graph and Twitter tags, `sitemap.xml`, `robots.txt`, and the JSON-LD. Change those together if the domain ever moves.
 
-## TODO before the contact path is real
+## Contact and booking
 
-Search the repo for `TODO`. These are the ones that matter:
+The public address is `rajkovic@mail.grokbot.com` (`data-contact-email` on `<body>`, the mailto links, and the Organization email in the JSON-LD).
 
-1. **Contact email.** Replace `TODO_CONTACT_EMAIL@northpeaklabs.studio` everywhere it appears (`index.html`, including the `data-contact-email` attribute and the no-JavaScript mailto, plus `llms.txt`). Then add an `"email"` field on the Organization node in the JSON-LD.
-2. **Booking link.** Set `data-booking-url` on `<body>` in `index.html` to an `https://` calendar URL. Leave it empty until that link exists. The “Book an advisory call” button stays on the contact section until then.
-3. **Portrait.** Replace the `DR` monogram in the about section with a real photo. Use `width`, `height`, `alt` that describes the photo, and `loading="lazy"`. A commented example is next to the monogram.
-4. **Selected work.** Replace the work-section placeholder with engagements a client has agreed to describe. Situation, work, outcome. No invented metrics.
-5. **Rates (optional).** A placeholder under Engagements is where call length, fees, or retainer cadence can go. Remove that note if they should stay off the site.
+“Book an advisory call” opens a mailto to that address with the subject `Advisory call request`. If `data-booking-url` is set to an `https://` calendar link, that button uses the calendar instead.
 
-The earlier product page used `dan.rajkovic@icloud.com`. The previous README listed `drajkovic@mail.grokbot.com`. Neither is assumed to be the public consulting inbox. Pick the address on purpose.
+## Portrait
 
-Do not add client logos, testimonials, headcount, certifications, or case studies that are not real. Do not name employers on this site.
+`assets/dejan-rajkovic.webp` is served first, with `assets/dejan-rajkovic.jpg` as the fallback. The image is 400×400 and is displayed at 400px or smaller.
+
+## Background
+
+The background section is in-house engineering, not client work. Employers are not named.
 
 ## What is on the page
 
 - `index.html` — the whole site: copy, CSS, and a small script (theme, menu, scroll reveal, mailto form).
 - `404.html` — branded not-found page, `noindex`.
+- `assets/` — portrait, JPEG and WebP.
 - `fonts/` — self-hosted Newsreader and Inter (SIL Open Font License). License texts are in that folder.
 - `mark.png`, `favicon.ico`, `favicon-32.png`, `apple-touch-icon.png` — existing North Peak mark.
 - `og-image.png` — social preview, 1200×630.
 - `robots.txt`, `sitemap.xml`, `llms.txt`.
 
 Theme follows the operating system until the visitor chooses light or dark. The choice is stored in `localStorage` under `npl-theme`.
-
-## Lighthouse
-
-Scores are recorded in the pull request after a local mobile audit. Re-run from this folder with Chrome installed:
-
-```bash
-npx --yes lighthouse http://127.0.0.1:8765/ --only-categories=performance,accessibility,best-practices,seo --form-factor=mobile --screenEmulation.mobile=true --output=json --output-path=/tmp/lh.json --chrome-flags="--headless --no-sandbox"
-```
