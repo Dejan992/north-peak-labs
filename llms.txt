@@ -23,3 +23,4 @@ The site describes consulting. Background notes are in-house engineering, not cl
 
 ## Pages
 - [Home](https://northpeaklabs.studio/): services, engagements, about, background, contact
+- [Self-hosting LLMs on Kubernetes vs paying per token](https://northpeaklabs.studio/self-hosting-llms-kubernetes/): a decision checklist. Illustrative cost math, not client results.

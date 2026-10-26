@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script>
+      (function () {
+        document.documentElement.classList.add("js");
+        try {
+          var saved = localStorage.getItem("npl-theme");
+          if (saved === "light" || saved === "dark") document.documentElement.setAttribute("data-theme", saved);
+        } catch (e) {}
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("reduced-motion");
+      })();
+    </script>
+    <title>Self-hosting LLMs on Kubernetes vs paying per token | North Peak Labs</title>
+    <meta name="description" content="A checklist for CTOs and engineering leads choosing a per-token LLM API or self-hosted open-weight models on Kubernetes, with illustrative cost math." />
+    <link rel="canonical" href="https://northpeaklabs.studio/self-hosting-llms-kubernetes/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Dejan Rajkovic" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#101614" media="(prefers-color-scheme: dark)" />
+    <meta property="og:title" content="Self-hosting LLMs on Kubernetes vs paying per token: a decision checklist" />
+    <meta property="og:description" content="A checklist for CTOs and engineering leads choosing a per-token LLM API or self-hosted open-weight models on Kubernetes, with illustrative cost math." />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="North Peak Labs" />
+    <meta property="og:url" content="https://northpeaklabs.studio/self-hosting-llms-kubernetes/" />
+    <meta property="og:image" content="https://northpeaklabs.studio/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="North Peak Labs — AI platform, MLOps, and LLM consulting in Mesa, Arizona." />
+    <meta property="article:published_time" content="2026-10-26" />
+    <meta property="article:author" content="Dejan Rajkovic" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Self-hosting LLMs on Kubernetes vs paying per token: a decision checklist" />
+    <meta name="twitter:description" content="A checklist for CTOs and engineering leads choosing a per-token LLM API or self-hosted open-weight models on Kubernetes, with illustrative cost math." />
+    <meta name="twitter:image" content="https://northpeaklabs.studio/og-image.png" />
+    <meta name="twitter:image:alt" content="North Peak Labs — AI platform, MLOps, and LLM consulting in Mesa, Arizona." />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="preload" href="/fonts/newsreader-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Self-hosting LLMs on Kubernetes vs paying per token: a decision checklist",
+            "description": "A checklist for CTOs and engineering leads choosing a per-token LLM API or self-hosted open-weight models on Kubernetes, with illustrative cost math.",
+            "datePublished": "2026-10-26",
+            "dateModified": "2026-10-26",
+            "inLanguage": "en-US",
+            "mainEntityOfPage": "https://northpeaklabs.studio/self-hosting-llms-kubernetes/",
+            "image": "https://northpeaklabs.studio/og-image.png",
+            "author": {
+              "@type": "Person",
+              "@id": "https://northpeaklabs.studio/#dejan",
+              "name": "Dejan Rajkovic",
+              "url": "https://northpeaklabs.studio/#about"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://northpeaklabs.studio/#org",
+              "name": "North Peak Labs",
+              "url": "https://northpeaklabs.studio/",
+              "logo": "https://northpeaklabs.studio/mark.png"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://northpeaklabs.studio/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Self-hosting LLMs on Kubernetes vs paying per token: a decision checklist",
+                "item": "https://northpeaklabs.studio/self-hosting-llms-kubernetes/"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-bar wrap">
+        <a class="wordmark" href="/">
+          <img src="/mark.png" width="43" height="36" alt="" />
+          <span class="wordmark-text">North Peak Labs</span>
+        </a>
+        <nav class="nav-links" id="nav-links" aria-label="Primary">
+          <a href="/#services">Services</a>
+          <a href="/#engagements">Engagements</a>
+          <a href="/#about">About</a>
+          <a href="/#background">Background</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M14.5 3.1a8.8 8.8 0 1 0 6.4 13.6A8.2 8.2 0 0 1 14.5 3.1z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M12 4.2V2.5M12 21.5v-1.7M4.2 12H2.5M21.5 12h-1.7M6.1 6.1 4.9 4.9M19.1 19.1l-1.2-1.2M17.9 6.1l1.2-1.2M4.9 19.1l1.2-1.2"/><circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+          </button>
+          <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+            <span class="menu-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <article class="article section">
+        <div class="wrap prose">
+          <nav class="crumbs" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li aria-current="page">Self-hosting LLMs on Kubernetes</li>
+            </ol>
+          </nav>
+          <p class="kicker">Checklist</p>
+          <h1>Self-hosting LLMs on Kubernetes vs paying per token: a decision checklist</h1>
+          <p class="byline">Dejan Rajkovic · North Peak Labs · 26 October 2026</p>
+          <p class="lede">A per-token API and a model on your own cluster are different operating models. This checklist is for CTOs and engineering leads deciding whether to keep paying per token or to run open-weight models on Kubernetes. Every dollar figure below is illustrative arithmetic for your own rates. None of it is a client result, a benchmark, or a vendor price.</p>
+
+          <h2>What you are actually choosing</h2>
+          <p>You are choosing who carries capacity, the model lifecycle, and the data boundary.</p>
+          <ul>
+            <li>On a per-token API, the vendor holds the GPUs and most of the traffic spike. You pay for tokens, and you accept their regions, retention terms, and model roadmap.</li>
+            <li>Self-hosting means your platform team runs weights, GPU nodes, a model server, autoscaling, authentication, and on-call. You pay for reserved capacity, including idle hours.</li>
+            <li>Kubernetes schedules that work. It does not make a model cheap, private, or fast. A cluster you already run is not a free inference platform.</li>
+          </ul>
+          <p>If you cannot yet say how many input and output tokens a normal day uses, stay on the API and log them. The rest of this page is the worksheet for when those counts exist.</p>
+
+          <h2>When a per-token API wins</h2>
+          <p>Stay on the API when most of these are true. One of them is often enough.</p>
+          <ul>
+            <li>Volume is low, bursty, or still a prototype. You would pay for idle GPUs the API does not charge for.</li>
+            <li>Prompts, retrieved documents, and outputs may leave your network under a contract you have read.</li>
+            <li>A hosted model still meets the quality bar, and the open-weight models you would actually operate do not. Recheck that bar. It moves.</li>
+            <li>Nobody owns model serving, and you will not staff that ownership before launch.</li>
+            <li>A production call this quarter matters more than a lower unit cost next year.</li>
+            <li>You would rather the vendor absorb a bad week of traffic than reserve capacity for a week that may not arrive.</li>
+          </ul>
+          <p>Still put a gateway in front of the API. Authentication, per-team budgets, and a later route to a self-hosted model belong there. Paying per token and owning the front door are compatible.</p>
+
+          <h2>When self-hosting starts to make sense</h2>
+          <p>Self-hosting earns a design review when the constraint is concrete and someone will own the operating load. Already running Kubernetes is not that constraint. The usual reasons are volume, latency, data residency, and customization.</p>
+
+          <h3>Volume</h3>
+          <p>Use sustained input and output tokens for an average day and the peak hour, not a launch-week spike. Self-hosting pays for a GPU floor. It starts to compare when that floor stays busy and the API invoice exceeds the floor plus the people who keep it up.</p>
+          <ul>
+            <li>Price quiet hours on purpose. Nights and weekends are where a reserved node looks expensive next to a meter.</li>
+            <li>Scale-to-zero cuts some idle cost and adds cold-start latency. Put that trade in the latency target before anyone calls it free.</li>
+            <li>Context length drives GPU memory, not only the token invoice. A long prompt can force a bigger node.</li>
+          </ul>
+
+          <h3>Latency</h3>
+          <p>A hosted API is often fast enough. Self-hosting is the latency conversation when you need a private network path, a region the API does not serve, or queueing you set yourself. You then own time to first token and time to last token: queue wait, batching, and cold starts, measured separately. A busy GPU can be slower for the next request than a vendor pool that is not busy.</p>
+
+          <h3>Data residency and privacy</h3>
+          <p>Write down where prompts, retrieved documents, and outputs may be processed and stored. If they cannot cross a VPC, a region, or a contract boundary, a public per-token API is out even when it is cheaper. Self-hosting meets that rule only when weights, logs, traces, backups, and any fallback stay inside the boundary. A model called private, which then calls a hosted moderation or embedding API, has not met it.</p>
+
+          <h3>Customization</h3>
+          <p>Self-host when you need a pinned model version, a fine-tune, or an adapter the API will not run, or when a vendor deprecation would break a workflow you cannot change on their schedule. Budget an evaluation set and a rollback. A changed model you cannot score against the one it replaced is an incident with a quiet start.</p>
+
+          <h2>A cost-comparison framework</h2>
+          <p>Compare one month of the same workload, using your contract and your node price. Skipping the people line is how a cluster looks cheaper than it is.</p>
+          <ol>
+            <li>Tokens. Input and output, for an average day and the peak hour.</li>
+            <li>API cost. Your per-million prices times the month, plus any platform fee.</li>
+            <li>GPU floor. Nodes the latency target needs, times hourly price, times hours they stay up.</li>
+            <li>Idle time. Hours that floor is on while traffic is thin. The API bill hides this line.</li>
+            <li>People. On-call and model operations. If it is nobody’s job, the cluster is unowned.</li>
+            <li>The rest. Weight storage, logging, evaluation jobs, egress, and a fallback API if you keep one.</li>
+          </ol>
+
+          <figure class="example">
+            <figcaption>Illustrative arithmetic. Not a client measurement and not a vendor price.</figcaption>
+            <p>Round numbers, so the multiplication is easy to redo. A month here is 730 hours (a 365-day year divided by 12). Example API rates: $0.80 per million input tokens and $3.20 per million output tokens. Example GPU rate: $3.50 an hour. Example fully loaded engineer: $20,000 a month, a placeholder for your cost, not a North Peak Labs fee.</p>
+            <h3>Lower sustained volume</h3>
+            <dl class="sheet">
+              <div>
+                <dt>Tokens</dt>
+                <dd>2 billion input and 0.4 billion output in the month.</dd>
+              </div>
+              <div>
+                <dt>API</dt>
+                <dd>2,000 × $0.80 = $1,600 input. 400 × $3.20 = $1,280 output. Together, $2,880.</dd>
+              </div>
+              <div>
+                <dt>GPU floor</dt>
+                <dd>2 nodes, always on. 2 × $3.50 × 730 = $5,110.</dd>
+              </div>
+              <div>
+                <dt>People</dt>
+                <dd>A quarter of the example engineer: 0.25 × $20,000 = $5,000.</dd>
+              </div>
+              <div>
+                <dt>Compare</dt>
+                <dd>GPUs plus that time are $10,110 before logs. The API line is smaller, and the cluster still needs an owner.</dd>
+              </div>
+            </dl>
+            <h3>Higher sustained volume</h3>
+            <dl class="sheet">
+              <div>
+                <dt>Tokens</dt>
+                <dd>Ten times the counts above: 20 billion input and 4 billion output.</dd>
+              </div>
+              <div>
+                <dt>API</dt>
+                <dd>20,000 × $0.80 = $16,000 input. 4,000 × $3.20 = $12,800 output. Together, $28,800.</dd>
+              </div>
+              <div>
+                <dt>GPU floor</dt>
+                <dd>An assumed 6 nodes, not a sizing result. 6 × $3.50 × 730 = $15,330.</dd>
+              </div>
+              <div>
+                <dt>People and the rest</dt>
+                <dd>Half the example engineer is $10,000. A $1,500 placeholder covers logs and storage. With the GPUs: $26,830.</dd>
+              </div>
+              <div>
+                <dt>Compare</dt>
+                <dd>The shape of a crossover, not a recommendation. If the peak needs 10 nodes, put 10 in the sheet.</dd>
+              </div>
+            </dl>
+          </figure>
+          <p>Redo both sheets with your contract and the node price your region will actually sell. If that SKU is unavailable where the data has to stay, the sheet is not done.</p>
+
+          <h2>Operational requirements</h2>
+          <p>If you self-host, this is the production bar. A missing line is a reason to stay on the API longer.</p>
+
+          <h3>Autoscaling</h3>
+          <ul>
+            <li>Scale on queue depth and in-flight requests. CPU is the wrong signal for a model server.</li>
+            <li>GPU nodes join slower than application pods. The autoscaler cannot use a node that is still booting or still pulling weights.</li>
+            <li>Write down the warm floor: how many replicas stay up, and what cold start you accept below that.</li>
+            <li>Cap concurrency so one tenant cannot stall the others.</li>
+          </ul>
+
+          <h3>Model serving</h3>
+          <ul>
+            <li>Serve a stable HTTP API with health checks, graceful shutdown, and a pinned model version. vLLM, TensorRT-LLM, and Hugging Face TGI are examples of that category. Pick one the team can operate.</li>
+            <li>Promote weights as a versioned artifact in a private registry, the same way you promote an image.</li>
+            <li>Load-test time to first token at the concurrency you expect. A single-user demo does not size the cluster.</li>
+            <li>Keep a rollback model. A bad release should be a routing change.</li>
+          </ul>
+
+          <h3>Observability</h3>
+          <ul>
+            <li>Trace queue wait, time to first token, and total latency separately.</li>
+            <li>Record input tokens, output tokens, model version, and error class on each request.</li>
+            <li>Watch GPU memory. An out-of-memory kill looks random if you only alert on pod restarts.</li>
+            <li>Alarm on token spend and on GPU hours. Cost is part of the service level.</li>
+          </ul>
+
+          <h3>On-call</h3>
+          <ul>
+            <li>Name the rotation before the first production caller. Drivers, a full disk, and a node that cannot schedule a GPU will page someone.</li>
+            <li>Write the first three responses: model server unhealthy, GPU unschedulable, latency target breached.</li>
+            <li>Decide what the product does when the model is down: a queued retry, a smaller fallback, or a clear error.</li>
+          </ul>
+
+          <h3>Security and secrets</h3>
+          <ul>
+            <li>Prompts are data. Keep them out of logs, traces, and tickets by default.</li>
+            <li>Store weights, registry credentials, and any fallback API keys in the secret store you already trust. Do not bake them into images.</li>
+            <li>Deny egress the workload does not need. A residency promise ends at an open egress rule.</li>
+            <li>Authenticate the serving endpoint. An in-cluster name with no auth will not stay internal.</li>
+            <li>Review the model license before commercial use. Open weights are not one license.</li>
+          </ul>
+
+          <h2>Hidden costs</h2>
+          <p>These lines rarely survive the first spreadsheet, and they move the decision.</p>
+          <ul>
+            <li>GPU quota. The card in the example may be sold out where the data has to stay, or it may require a commitment longer than the project.</li>
+            <li>Evaluation. Every model change needs tasks you score, or quality moves while uptime stays green.</li>
+            <li>Upgrades. Pin drivers, the model server, and the base image, and budget the upgrade.</li>
+            <li>A second region doubles the floor if you promise failover. Do not paste a single-region sheet into that plan.</li>
+            <li>A fallback API brings per-token spend back, and it is a second data path if you self-hosted for residency.</li>
+            <li>Internal playgrounds turn a temporary GPU into a permanent floor.</li>
+            <li>The same people could be hardening the gateway and the evaluations while a vendor runs the GPUs.</li>
+          </ul>
+
+          <h2>Decision checklist</h2>
+          <p>Answer these before a design document. A no on the first questions usually means stay on the API and review the sheet when the token log is real.</p>
+          <ol>
+            <li>Do we have a month of input and output tokens, including a peak hour?</li>
+            <li>Is there a written data boundary a per-token API cannot meet?</li>
+            <li>Is there a quality bar or version pin a per-token API cannot meet?</li>
+            <li>Did we price the GPU floor for the latency target, including idle hours?</li>
+            <li>Did we price the people on call, not only the nodes?</li>
+            <li>Do we have an evaluation set and a rollback model?</li>
+            <li>Is the model license cleared for this use?</li>
+            <li>Do we know what the product does when the model is down?</li>
+            <li>If volume is half the plan, is the API still the safer path for two quarters?</li>
+          </ol>
+          <p>If a boundary or a version pin forces self-hosting, this list becomes the launch list. If nothing forces it, the default is the API.</p>
+
+          <section class="cta-band" aria-labelledby="cta-title">
+            <h2 id="cta-title">Run the checklist on your numbers</h2>
+            <p>North Peak Labs can use a one-hour advisory call to walk this worksheet against your volume, latency target, and data boundary.</p>
+            <p><a class="button button-primary" href="/#contact">Book a one-hour advisory call</a></p>
+          </section>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <div class="wrap footer-inner">
+        <p class="footer-copy">© 2026 North Peak Labs, LLC · Mesa, Arizona</p>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="/#services">Services</a>
+          <a href="/#engagements">Engagements</a>
+          <a href="/#about">About</a>
+          <a href="/#background">Background</a>
+          <a href="/#questions">Questions</a>
+          <a href="/#contact">Contact</a>
+          <a href="#main">Back to top</a>
+        </nav>
+        <div class="footer-meta">
+          <a href="https://www.linkedin.com/in/dejan-rajkovic">LinkedIn</a>
+          <a href="https://github.com/Dejan992">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var header = document.querySelector(".site-header");
+        var button = document.querySelector(".menu-toggle");
+        var nav = document.getElementById("nav-links");
+        var themeButton = document.querySelector(".theme-toggle");
+        var root = document.documentElement;
+
+        function onScroll() {
+          if (header) header.classList.toggle("is-scrolled", window.scrollY > 4);
+        }
+        onScroll();
+        window.addEventListener("scroll", onScroll, { passive: true });
+
+        function setOpen(open) {
+          if (!button || !nav) return;
+          nav.classList.toggle("is-open", open);
+          button.setAttribute("aria-expanded", open ? "true" : "false");
+          button.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+          document.body.classList.toggle("nav-locked", open);
+        }
+        if (button && nav) {
+          button.addEventListener("click", function () {
+            var open = button.getAttribute("aria-expanded") !== "true";
+            setOpen(open);
+            if (open) {
+              var first = nav.querySelector("a");
+              if (first) first.focus();
+            }
+          });
+          nav.addEventListener("click", function (event) {
+            if (event.target.closest("a")) setOpen(false);
+          });
+          document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && button.getAttribute("aria-expanded") === "true") {
+              setOpen(false);
+              button.focus();
+            }
+          });
+          document.addEventListener("click", function (event) {
+            if (button.getAttribute("aria-expanded") !== "true") return;
+            if (event.target.closest("#nav-links") || event.target.closest(".menu-toggle")) return;
+            setOpen(false);
+          });
+          window.addEventListener("resize", function () {
+            if (window.matchMedia("(min-width: 880px)").matches) setOpen(false);
+          });
+        }
+
+        function appliedTheme() {
+          var explicit = root.getAttribute("data-theme");
+          if (explicit === "light" || explicit === "dark") return explicit;
+          return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        function syncThemeControls() {
+          if (!themeButton) return;
+          var next = appliedTheme() === "dark" ? "light" : "dark";
+          themeButton.setAttribute("aria-label", "Switch to " + next + " theme");
+        }
+        function setThemeColor(theme) {
+          document.querySelectorAll('meta[name="theme-color"]').forEach(function (node) { node.remove(); });
+          var meta = document.createElement("meta");
+          meta.setAttribute("name", "theme-color");
+          meta.setAttribute("content", theme === "dark" ? "#101614" : "#f4f1ea");
+          document.head.appendChild(meta);
+        }
+        syncThemeControls();
+        if (root.getAttribute("data-theme")) setThemeColor(appliedTheme());
+        if (themeButton) {
+          themeButton.addEventListener("click", function () {
+            var next = appliedTheme() === "dark" ? "light" : "dark";
+            root.setAttribute("data-theme", next);
+            try { localStorage.setItem("npl-theme", next); } catch (e) {}
+            setThemeColor(next);
+            syncThemeControls();
+          });
+        }
+
+        document.querySelectorAll("a[href^='http']").forEach(function (link) {
+          link.setAttribute("target", "_blank");
+          link.setAttribute("rel", "noopener noreferrer");
+          if (!link.querySelector(".sr-only")) {
+            var hint = document.createElement("span");
+            hint.className = "sr-only";
+            hint.textContent = " (opens in a new tab)";
+            link.appendChild(hint);
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
