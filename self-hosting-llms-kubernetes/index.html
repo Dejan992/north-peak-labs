@@ -13,7 +13,7 @@
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("reduced-motion");
       })();
     </script>
-    <title>Self-hosting LLMs on Kubernetes vs per-token APIs: a checklist</title>
+    <title>Self-hosting LLMs on Kubernetes vs per-token APIs: checklist</title>
     <meta name="description" content="A checklist for CTOs and engineering leads choosing a per-token LLM API or self-hosted open-weight models on Kubernetes, with illustrative cost math." />
     <link rel="canonical" href="https://northpeaklabs.studio/self-hosting-llms-kubernetes/" />
     <meta name="robots" content="index, follow" />
@@ -187,7 +187,7 @@
           <p>Self-host when you need a pinned model version, a fine-tune, or an adapter the API will not run, or when a vendor deprecation would break a workflow you cannot change on their schedule. Budget an evaluation set and a rollback. A changed model you cannot score against the one it replaced is an incident with a quiet start.</p>
 
           <h2>A cost-comparison framework</h2>
-          <p>Compare LLM inference cost for one month of the same workload, a per-token API against self-hosted LLM inference on Kubernetes, using your contract and your node price. Skipping the people line is how a cluster looks cheaper than it is.</p>
+          <p>Compare the LLM inference cost of one month of the same workload on a per-token API and on your own Kubernetes cluster, using your contract and your node price. Skipping the people line is how a cluster looks cheaper than it is.</p>
           <ol>
             <li>Tokens. Input and output, for an average day and the peak hour.</li>
             <li>API cost. Your per-million prices times the month, plus any platform fee.</li>
