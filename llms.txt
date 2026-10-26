@@ -1,8 +1,24 @@
-# RMD Autopilot (North Peak Labs)
-> Software that helps small voice providers and VoIP resellers keep their FCC Robocall Mitigation Database (RMD) filing complete, current and recertified by March 1. Early access; an officer signs and submits in the FCC portal. Not legal advice.
+# North Peak Labs
+> Consulting practice of Dejan Rajkovic, a senior MLOps and AI platform engineer. North Peak Labs, LLC is a one-person Arizona LLC based in Mesa, in the Phoenix area. Engagements are remote.
+
+The site describes consulting only. It does not sell software. It does not publish client names, logos, testimonials, metrics, or certifications.
+
+## Services
+- AI/ML platform and MLOps advisory
+- LLM and AI system architecture
+- Cloud infrastructure and Kubernetes
+- AI strategy for companies
+- Expert-network calls
+
+## Engagements
+- Advisory calls
+- Project-based work
+- Fractional / retainer
+
+## Contact
+- Website: https://northpeaklabs.studio/
+- Email: TODO_CONTACT_EMAIL@northpeaklabs.studio (placeholder — replace before relying on it)
+- Booking: TODO (set data-booking-url in index.html)
+
 ## Pages
-- [Home](https://northpeaklabs.studio/): product, filing steps, FAQ
-## Sources
-- [FCC RMD](https://www.fcc.gov/robocall-mitigation-database)
-- [DA 26-72](https://docs.fcc.gov/public/attachments/DA-26-72A1.pdf)
-- [47 CFR 64.6305](https://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/part-64/subpart-HH/section-64.6305)
+- [Home](https://northpeaklabs.studio/): services, engagements, about, contact
