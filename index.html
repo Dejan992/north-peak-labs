@@ -3,39 +3,65 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Robocall Mitigation Database Filing &amp; RMD Recertification for VoIP Providers | RMD Autopilot</title>
-    <meta name="description" content="Keep your FCC Robocall Mitigation Database (RMD) filing current. RMD Autopilot tracks every field, drafts your mitigation plan, and preps your March 1 recertification for VoIP providers and resellers." />
+    <!--
+      North Peak Labs consulting site. GitHub Pages serves this file as-is (no build).
+      TODO(dejan):
+      1. Replace TODO_CONTACT_EMAIL@northpeaklabs.studio (search the whole repo, including JSON-LD once the inbox is real).
+      2. Set data-booking-url on <body> to an https calendar link. Leave it empty until you have one.
+      3. Replace the about-section monogram with a real photo: loading="lazy", width, height, and alt text.
+      4. Replace the selected-work placeholder with engagements a client has agreed to describe.
+      Do not add logos, quotes, metrics, or certifications you cannot source. Do not name employers.
+    -->
+    <script>
+      (function () {
+        document.documentElement.classList.add("js");
+        try {
+          var saved = localStorage.getItem("npl-theme");
+          if (saved === "light" || saved === "dark") document.documentElement.setAttribute("data-theme", saved);
+        } catch (e) {}
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("reduced-motion");
+      })();
+    </script>
+    <title>AI &amp; MLOps Consulting in Arizona | North Peak Labs</title>
+    <meta name="description" content="North Peak Labs consults on AI platforms, MLOps, and LLM infrastructure from Mesa, Arizona. Advisory calls, project work, and fractional retainers." />
     <link rel="canonical" href="https://northpeaklabs.studio/" />
-    <meta name="color-scheme" content="light" />
-    <meta name="theme-color" content="#f3f1eb" />
-    <meta property="og:title" content="Robocall Mitigation Database Filing &amp; RMD Recertification for VoIP Providers | RMD Autopilot" />
-    <meta property="og:description" content="Keep your FCC Robocall Mitigation Database (RMD) filing current. RMD Autopilot tracks every field, drafts your mitigation plan, and preps your March 1 recertification for VoIP providers and resellers." />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Dejan Rajkovic" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#101614" media="(prefers-color-scheme: dark)" />
+    <meta property="og:title" content="AI &amp; MLOps Consulting in Arizona | North Peak Labs" />
+    <meta property="og:description" content="North Peak Labs consults on AI platforms, MLOps, and LLM infrastructure from Mesa, Arizona. Advisory calls, project work, and fractional retainers." />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="North Peak Labs" />
     <meta property="og:url" content="https://northpeaklabs.studio/" />
     <meta property="og:image" content="https://northpeaklabs.studio/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="RMD Autopilot — Robocall Mitigation Database filing for VoIP providers" />
+    <meta property="og:image:alt" content="North Peak Labs — AI platform, MLOps, and LLM consulting in Mesa, Arizona." />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Robocall Mitigation Database Filing &amp; RMD Recertification for VoIP Providers | RMD Autopilot" />
-    <meta name="twitter:description" content="Keep your FCC Robocall Mitigation Database (RMD) filing current. RMD Autopilot tracks every field, drafts your mitigation plan, and preps your March 1 recertification for VoIP providers and resellers." />
+    <meta name="twitter:title" content="AI &amp; MLOps Consulting in Arizona | North Peak Labs" />
+    <meta name="twitter:description" content="North Peak Labs consults on AI platforms, MLOps, and LLM infrastructure from Mesa, Arizona. Advisory calls, project work, and fractional retainers." />
     <meta name="twitter:image" content="https://northpeaklabs.studio/og-image.png" />
+    <meta name="twitter:image:alt" content="North Peak Labs — AI platform, MLOps, and LLM consulting in Mesa, Arizona." />
     <link rel="icon" href="favicon.ico" sizes="any" />
     <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Inter:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&amp;display=swap" rel="stylesheet" />
-    <script>document.documentElement.classList.add("js");if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("reduced-motion");</script>
+    <link rel="me" href="https://github.com/dejan992" />
+    <link rel="preload" href="fonts/newsreader-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
+          "@type": ["ProfessionalService", "Organization"],
           "@id": "https://northpeaklabs.studio/#org",
           "name": "North Peak Labs",
+          "legalName": "North Peak Labs, LLC",
           "url": "https://northpeaklabs.studio/",
+          "description": "AI consulting practice for MLOps, AI platform engineering, LLM infrastructure, cloud, and Kubernetes. Advisory calls, project-based work, and fractional retainers. Based in Mesa, Arizona.",
           "logo": "https://northpeaklabs.studio/mark.png",
           "image": "https://northpeaklabs.studio/og-image.png",
           "address": {
@@ -44,6 +70,33 @@
             "addressRegion": "AZ",
             "addressCountry": "US"
           },
+          "areaServed": [
+            { "@type": "City", "name": "Mesa" },
+            { "@type": "City", "name": "Phoenix" },
+            { "@type": "State", "name": "Arizona" },
+            { "@type": "Country", "name": "United States" }
+          ],
+          "founder": { "@id": "https://northpeaklabs.studio/#dejan" },
+          "serviceType": "AI and MLOps consulting",
+          "knowsAbout": [
+            "AI consulting",
+            "MLOps consulting",
+            "AI platform engineering",
+            "LLM infrastructure",
+            "Kubernetes",
+            "Cloud infrastructure"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Consulting services",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI/ML platform and MLOps advisory", "provider": { "@id": "https://northpeaklabs.studio/#org" } } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "LLM and AI system architecture", "provider": { "@id": "https://northpeaklabs.studio/#org" } } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cloud infrastructure and Kubernetes", "provider": { "@id": "https://northpeaklabs.studio/#org" } } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI strategy", "provider": { "@id": "https://northpeaklabs.studio/#org" } } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Expert-network calls", "provider": { "@id": "https://northpeaklabs.studio/#org" } } }
+            ]
+          },
           "sameAs": [
             "https://dejan992.github.io/about-me/",
             "https://github.com/dejan992",
@@ -51,150 +104,290 @@
           ]
         },
         {
-          "@type": "SoftwareApplication",
-          "@id": "https://northpeaklabs.studio/#rmd-autopilot",
-          "name": "RMD Autopilot",
-          "applicationCategory": "BusinessApplication",
-          "operatingSystem": "Web",
-          "url": "https://northpeaklabs.studio/",
-          "description": "RMD Autopilot helps small voice providers keep an FCC Robocall Mitigation Database filing complete, current, and recertified. An officer signs and submits the filing in the FCC portal.",
-          "alternateName": "Robocall Mitigation Database Autopilot",
-          "keywords": "Robocall Mitigation Database filing, RMD recertification, RMD filing for VoIP providers, STIR/SHAKEN certification, robocall mitigation plan",
-          "audience": {
-            "@type": "BusinessAudience",
-            "audienceType": "Small voice service providers and VoIP resellers"
+          "@type": "Person",
+          "@id": "https://northpeaklabs.studio/#dejan",
+          "name": "Dejan Rajkovic",
+          "jobTitle": "Senior MLOps / AI Platform Engineer",
+          "description": "Founder of North Peak Labs, LLC in Mesa, Arizona. Senior MLOps and AI platform engineer. Immigrated from Serbia and worked as a truck driver before moving into software.",
+          "url": "https://northpeaklabs.studio/#about",
+          "worksFor": { "@id": "https://northpeaklabs.studio/#org" },
+          "homeLocation": {
+            "@type": "Place",
+            "name": "Mesa, Arizona",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Mesa",
+              "addressRegion": "AZ",
+              "addressCountry": "US"
+            }
           },
-          "releaseNotes": "Early access; not yet generally available.",
-          "provider": { "@id": "https://northpeaklabs.studio/#org" }
+          "knowsAbout": [
+            "MLOps",
+            "AI platform engineering",
+            "LLM infrastructure",
+            "Kubernetes",
+            "Cloud infrastructure"
+          ],
+          "sameAs": [
+            "https://dejan992.github.io/about-me/",
+            "https://github.com/dejan992",
+            "https://www.linkedin.com/in/dejan-rajkovic"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://northpeaklabs.studio/#website",
+          "url": "https://northpeaklabs.studio/",
+          "name": "North Peak Labs",
+          "description": "AI and MLOps consulting in Mesa, Arizona.",
+          "publisher": { "@id": "https://northpeaklabs.studio/#org" },
+          "inLanguage": "en-US"
         },
         {
           "@type": "WebPage",
           "@id": "https://northpeaklabs.studio/#webpage",
           "url": "https://northpeaklabs.studio/",
-          "name": "Robocall Mitigation Database Filing & RMD Recertification for VoIP Providers",
-          "about": { "@id": "https://northpeaklabs.studio/#rmd-autopilot" },
-          "publisher": { "@id": "https://northpeaklabs.studio/#org" },
-          "dateModified": "2026-10-19",
+          "name": "AI & MLOps Consulting in Arizona | North Peak Labs",
+          "description": "North Peak Labs consults on AI platforms, MLOps, and LLM infrastructure from Mesa, Arizona. Advisory calls, project work, and fractional retainers.",
+          "isPartOf": { "@id": "https://northpeaklabs.studio/#website" },
+          "about": { "@id": "https://northpeaklabs.studio/#org" },
+          "mainEntity": { "@id": "https://northpeaklabs.studio/#org" },
+          "primaryImageOfPage": "https://northpeaklabs.studio/og-image.png",
+          "dateModified": "2026-10-26",
           "inLanguage": "en-US"
-        }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Who has to file in the Robocall Mitigation Database?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Every voice service provider and intermediate provider, including gateway providers, VoIP resellers and MVNOs that meet the 47 CFR § 64.6300 definitions, must file in the Robocall Mitigation Database. An affiliate or subsidiary that independently meets the definition submits its own filing. A voice service provider furnishes voice to an end user over the public switched telephone network using North American Numbering Plan numbers. An intermediate provider carries or processes that traffic and neither originates nor terminates it. A gateway provider is a U.S.-based intermediate provider that receives a call directly from a foreign provider at its U.S. facilities. The definitions are in 47 CFR § 64.6300."
-          }
         },
         {
-          "@type": "Question",
-          "name": "What do I need before I can submit a filing?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You need an FCC username and a business-type FCC Registration Number from CORES. The Robocall Mitigation Database form cannot be submitted with an individual-type FRN. The business name and address on the form come from CORES and are changed there, not on the form. CORES information has to be updated within 10 business days of a change."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When is the next RMD recertification deadline?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The next annual Robocall Mitigation Database recertification is due on or before March 1, 2027. The filing window opens February 1, 2027. Only providers with an existing filing recertify, and a filing can be recertified once per window."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When is the annual recertification due?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A provider with an existing filing recertifies on or before March 1 each year that the information in the database is true and correct. The recertification window opens on February 1. Filers also update a filing within 10 business days of a change to the information in it. The Commission adopted a $100 fee for an initial submission and for each annual recertification. As of the Wireline Competition Bureau’s January 22, 2026 public notice, that fee was not yet effective. Routine updates do not carry it."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is updating my RMD filing the same as recertifying?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. You must update a filing within 10 business days of any change to its information, and that update does not count as the annual recertification. Recertification happens once a year, between February 1 and March 1."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is there an FCC fee to file or recertify in the RMD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Not yet. The FCC adopted a $100 fee for initial filings and annual recertifications, but as of the Wireline Competition Bureau's January 22, 2026 public notice (DA 26-72) it was not effective. The FCC will announce when it takes effect. Routine updates do not carry the fee."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What happens if a provider is not in the database?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Downstream providers may accept traffic directly only from a provider whose filing appears in the Robocall Mitigation Database. A deficient filing can be removed. The base forfeiture for failing to update changed information within 10 business days is $1,000 per violation, and it continues until cured. The base forfeiture for false or inaccurate information is $10,000 per violation, continuing until cured, up to the statutory maximum. Both amounts took effect on February 5, 2026."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does RMD Autopilot file with the FCC?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. RMD Autopilot prepares your filing. An officer of your company signs and submits it in the FCC portal. It does not guarantee that the FCC will accept the filing or that other providers will carry your traffic."
-          }
+          "@type": "FAQPage",
+          "@id": "https://northpeaklabs.studio/#faq",
+          "url": "https://northpeaklabs.studio/#questions",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What does North Peak Labs consult on?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "North Peak Labs consults on AI and ML platforms, MLOps, LLM and AI system architecture, cloud infrastructure, and Kubernetes. The practice also takes expert-network calls and helps companies decide where AI is worth funding."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who does the work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dejan Rajkovic, a senior MLOps and AI platform engineer. North Peak Labs, LLC is a one-person practice based in Mesa, Arizona."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do engagements work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Three shapes: an advisory call on a defined question, a scoped project with a written outcome, and a fractional retainer for ongoing senior coverage. Scope is agreed before the work starts."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you work only with companies in Arizona?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The practice is based in Mesa, in the Phoenix area. Engagements are remote. Clients do not need to be in Arizona."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do we start?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Email a short description of the system and the kind of help you want. A calendar link is not published yet. Email is how a call gets booked until that link exists."
+              }
+            }
+          ]
         }
       ]
     }
     </script>
     <style>
+      @font-face {
+        font-family: "Newsreader";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url("fonts/newsreader-500.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Newsreader Fallback";
+        src: local("Georgia");
+        size-adjust: 97%;
+        ascent-override: 92%;
+        descent-override: 24%;
+        line-gap-override: 0%;
+      }
+      @font-face {
+        font-family: "Newsreader";
+        font-style: italic;
+        font-weight: 500;
+        font-display: swap;
+        src: url("fonts/newsreader-500-italic.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("fonts/inter-400.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Inter Fallback";
+        src: local("Arial");
+        size-adjust: 107%;
+        ascent-override: 90%;
+        descent-override: 22%;
+        line-gap-override: 0%;
+      }
+      @font-face {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url("fonts/inter-500.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
       :root {
-        --paper: #f3f1eb;
-        --paper-raised: #fafaf7;
-        --ink: #161c19;
-        --ink-soft: #3d4944;
-        --muted: #5c6762;
-        --line: #ddd8cc;
-        --line-strong: #c9c2b4;
-        --pine: #0e4f47;
-        --ember: #9a3412;
-        --night: #101614;
-        --night-ink: #f4f1ea;
-        --night-muted: #c5cec8;
-        --serif: "Newsreader", "Iowan Old Style", Palatino, Georgia, serif;
-        --sans: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
-        --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-        --header: 76px;
-        --shadow: 0 18px 50px rgba(16, 22, 20, 0.08);
+        color-scheme: light;
+        --bg: #f4f1ea;
+        --bg-elev: #fbfaf6;
+        --ink: #13201c;
+        --ink-soft: #24332d;
+        --muted: #3e5149;
+        --line: #ddd6c8;
+        --pine: #0d4a42;
+        --pine-hover: #08352f;
+        --button-ink: #f7f4ee;
+        --ember: #8d3412;
+        --wash: #e7f1ed;
+        --focus: #0d4a42;
+        --input-border: #5c6b64;
+        --header-bg: rgba(244, 241, 234, 0.92);
+        --shadow: 0 16px 40px rgba(16, 22, 20, 0.08);
+        --inv-bg: #101614;
+        --inv-bg-elev: #18211e;
+        --inv-ink: #f3f0e8;
+        --inv-ink-soft: #dce4df;
+        --inv-muted: #b7c4bd;
+        --inv-line: #2c3a35;
+        --inv-pine: #9ed9cb;
+        --inv-pine-hover: #d5f3ea;
+        --inv-button-ink: #10201c;
+        --inv-ember: #f0b089;
+        --inv-wash: #1c2c28;
+        --inv-focus: #d5f3ea;
+        --inv-input: #8aa097;
+        --inv-header: rgba(16, 22, 20, 0.92);
+        --serif: "Newsreader", "Newsreader Fallback", "Iowan Old Style", Palatino, Georgia, serif;
+        --sans: Inter, "Inter Fallback", "Segoe UI", system-ui, -apple-system, sans-serif;
+        --mono: ui-monospace, "Cascadia Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        --header-h: 4.5rem;
+        --max: 1120px;
+      }
+      :root[data-theme="dark"] {
+        color-scheme: dark;
+        --bg: #101614;
+        --bg-elev: #18211e;
+        --ink: #f3f0e8;
+        --ink-soft: #dce4df;
+        --muted: #b7c4bd;
+        --line: #2c3a35;
+        --pine: #9ed9cb;
+        --pine-hover: #d5f3ea;
+        --button-ink: #10201c;
+        --ember: #f0b089;
+        --wash: #1c2c28;
+        --focus: #d5f3ea;
+        --input-border: #8aa097;
+        --header-bg: rgba(16, 22, 20, 0.92);
+        --shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+        --inv-bg: #f4f1ea;
+        --inv-bg-elev: #fbfaf6;
+        --inv-ink: #13201c;
+        --inv-ink-soft: #24332d;
+        --inv-muted: #3e5149;
+        --inv-line: #ddd6c8;
+        --inv-pine: #0d4a42;
+        --inv-pine-hover: #08352f;
+        --inv-button-ink: #f7f4ee;
+        --inv-ember: #8d3412;
+        --inv-wash: #e7f1ed;
+        --inv-focus: #0d4a42;
+        --inv-input: #5c6b64;
+        --inv-header: rgba(244, 241, 234, 0.92);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          color-scheme: dark;
+          --bg: #101614;
+          --bg-elev: #18211e;
+          --ink: #f3f0e8;
+          --ink-soft: #dce4df;
+          --muted: #b7c4bd;
+          --line: #2c3a35;
+          --pine: #9ed9cb;
+          --pine-hover: #d5f3ea;
+          --button-ink: #10201c;
+          --ember: #f0b089;
+          --wash: #1c2c28;
+          --focus: #d5f3ea;
+          --input-border: #8aa097;
+          --header-bg: rgba(16, 22, 20, 0.92);
+          --shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+          --inv-bg: #f4f1ea;
+          --inv-bg-elev: #fbfaf6;
+          --inv-ink: #13201c;
+          --inv-ink-soft: #24332d;
+          --inv-muted: #3e5149;
+          --inv-line: #ddd6c8;
+          --inv-pine: #0d4a42;
+          --inv-pine-hover: #08352f;
+          --inv-button-ink: #f7f4ee;
+          --inv-ember: #8d3412;
+          --inv-wash: #e7f1ed;
+          --inv-focus: #0d4a42;
+          --inv-input: #5c6b64;
+          --inv-header: rgba(244, 241, 234, 0.92);
+        }
       }
 
       * { box-sizing: border-box; }
-      html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header) + 12px); }
+      html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 0.75rem); }
       body {
         margin: 0;
-        background: var(--paper);
+        background: var(--bg);
         color: var(--ink);
         font-family: var(--sans);
         font-size: 1.0625rem;
+        font-weight: 400;
         line-height: 1.6;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
         overflow-x: clip;
       }
       body.nav-locked { overflow: hidden; }
-      img { max-width: 100%; }
-      a { color: inherit; }
+      img { max-width: 100%; height: auto; }
+      a { color: var(--pine); }
+      button, input, textarea, select { font: inherit; color: inherit; }
       button, a { -webkit-tap-highlight-color: transparent; }
-      button { font: inherit; }
       h1, h2, h3, p { margin-top: 0; }
-      h1, h2, h3 { text-wrap: balance; }
-      p { text-wrap: pretty; }
-      ::selection { background: #d7ebe4; color: var(--ink); }
+      h1, h2, h3 { text-wrap: balance; color: var(--ink); font-family: var(--serif); font-weight: 500; letter-spacing: -0.028em; line-height: 1.08; }
+      p { text-wrap: pretty; overflow-wrap: break-word; }
+      strong { font-weight: 500; }
+      ::selection { background: #c9e4db; color: #13201c; }
+      :root[data-theme="dark"] ::selection { background: #1d4a42; color: #f4f1ea; }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) ::selection { background: #1d4a42; color: #f4f1ea; }
+      }
 
       .skip {
         position: fixed;
@@ -202,155 +395,179 @@
         top: 12px;
         z-index: 1000;
         transform: translateY(-160%);
-        padding: 10px 14px;
+        padding: 0.7rem 0.9rem;
         background: var(--ink);
-        color: var(--paper);
+        color: var(--bg);
         text-decoration: none;
+        font-weight: 500;
       }
       .skip:focus { transform: none; }
       :focus { outline: none; }
-      :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
-      .contact :focus-visible { outline-color: var(--night-ink); }
-
-      .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+      :focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .wrap { width: min(var(--max), calc(100% - 2rem)); margin-inline: auto; }
+      section[id], #top { scroll-margin-top: calc(var(--header-h) + 0.75rem); }
 
       .site-header {
         position: sticky;
         top: 0;
         z-index: 40;
-        min-height: var(--header);
-        background: rgba(243, 241, 235, 0.92);
+        min-height: var(--header-h);
+        background: var(--header-bg);
+        -webkit-backdrop-filter: blur(16px);
         backdrop-filter: blur(16px);
         border-bottom: 1px solid transparent;
       }
       .site-header.is-scrolled { border-bottom-color: var(--line); }
       .nav-bar {
-        min-height: var(--header);
+        min-height: var(--header-h);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 24px;
+        gap: 1rem;
       }
       .wordmark {
+        position: relative;
         display: inline-flex;
         align-items: center;
-        gap: 10px;
+        gap: 0.6rem;
+        min-height: 44px;
         color: var(--ink);
         text-decoration: none;
         font-family: var(--serif);
-        font-size: 1.22rem;
+        font-size: 1.2rem;
         font-weight: 500;
         letter-spacing: -0.02em;
-        min-height: 44px;
       }
-      .wordmark img { width: auto; height: 52px; display: block; }
-      .nav-links { display: flex; align-items: center; gap: 22px; }
+      .wordmark img { width: 43px; height: 36px; display: block; }
+      .nav-actions { display: flex; align-items: center; gap: 0.25rem; }
+      .nav-links { display: flex; align-items: center; gap: 0.25rem 1.15rem; }
       .nav-links a {
         display: inline-flex;
         align-items: center;
         min-height: 44px;
         color: var(--ink-soft);
         text-decoration: none;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         font-weight: 500;
       }
       .nav-links a:hover { color: var(--ink); }
-      .menu-toggle {
+      .nav-links a[aria-current="true"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ember); }
+      .icon-btn {
         display: none;
         width: 44px;
         height: 44px;
         padding: 0;
-        border: 1px solid var(--line-strong);
+        border: 1px solid var(--line);
         background: transparent;
         color: var(--ink);
         align-items: center;
         justify-content: center;
         cursor: pointer;
       }
-      .menu-icon {
+      .icon-btn:hover { background: var(--wash); }
+      .js .theme-toggle { display: inline-flex; }
+      .icon-sun { display: none; }
+      .icon-moon { display: block; }
+      :root[data-theme="dark"] .icon-moon { display: none; }
+      :root[data-theme="dark"] .icon-sun { display: block; }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme]) .icon-moon { display: none; }
+        :root:not([data-theme]) .icon-sun { display: block; }
+      }
+      .menu-icon, .menu-icon::before, .menu-icon::after {
+        display: block;
         width: 16px;
         height: 1.5px;
-        display: block;
         background: currentColor;
         position: relative;
       }
-      .menu-icon::before, .menu-icon::after { content: ""; position: absolute; left: 0; width: 16px; height: 1.5px; background: currentColor; }
+      .menu-icon::before, .menu-icon::after { content: ""; position: absolute; left: 0; }
       .menu-icon::before { top: -6px; }
       .menu-icon::after { top: 6px; }
       .menu-toggle[aria-expanded="true"] .menu-icon { background: transparent; }
       .menu-toggle[aria-expanded="true"] .menu-icon::before { top: 0; transform: rotate(45deg); }
       .menu-toggle[aria-expanded="true"] .menu-icon::after { top: 0; transform: rotate(-45deg); }
 
-      .hero { padding: clamp(56px, 8vw, 104px) 0 clamp(48px, 6vw, 72px); }
+      .hero { padding: clamp(2.75rem, 7vw, 6rem) 0 clamp(2.5rem, 6vw, 4.5rem); }
+      .hero-grid { display: grid; gap: 2rem; align-items: end; }
       .kicker {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 0.75rem;
         margin: 0;
-        color: var(--pine);
+        color: var(--ember);
         font-family: var(--mono);
-        font-size: 0.72rem;
+        font-size: 0.75rem;
         font-weight: 500;
-        letter-spacing: 0.14em;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
       }
-      .kicker i { width: 28px; height: 1px; background: var(--ember); display: block; }
+      .kicker::before { content: ""; width: 1.75rem; height: 1px; background: currentColor; flex: none; }
       h1 {
-        max-width: 16em;
-        margin: 18px 0 14px;
-        font-family: var(--serif);
-        font-weight: 500;
-        font-size: clamp(2.45rem, 4.7vw, 4.15rem);
-        line-height: 1.02;
-        letter-spacing: -0.028em;
+        max-width: 11em;
+        margin: 0.85rem 0 0.85rem;
+        font-size: clamp(2.45rem, 6vw, 4.7rem);
+        line-height: 0.98;
+        letter-spacing: -0.034em;
       }
       .subline {
         max-width: 22em;
-        margin: 0 0 18px;
+        margin: 0 0 1rem;
+        color: var(--ink-soft);
         font-family: var(--serif);
         font-style: italic;
         font-weight: 500;
-        font-size: clamp(1.35rem, 2.2vw, 1.85rem);
-        line-height: 1.25;
+        font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+        line-height: 1.3;
         letter-spacing: -0.02em;
       }
-      .lede {
-        max-width: 40rem;
-        margin: 0;
-        color: var(--ink-soft);
-        font-size: clamp(1.08rem, 1.5vw, 1.28rem);
-        line-height: 1.55;
-      }
-      .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 22px; margin-top: 30px; }
+      .lede { max-width: 40rem; margin: 0; color: var(--ink-soft); font-size: 1.08rem; }
+      .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-top: 1.5rem; }
       .button {
         min-height: 48px;
-        padding: 12px 18px;
+        padding: 0.75rem 1.05rem;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 10px;
+        gap: 0.55rem;
         border: 1px solid var(--ink);
         background: var(--ink);
-        color: var(--paper);
+        color: var(--bg);
         text-decoration: none;
-        font-weight: 600;
-        font-size: 0.95rem;
+        font-weight: 500;
+        font-size: 0.98rem;
         letter-spacing: -0.011em;
-        transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+        cursor: pointer;
+        line-height: 1.2;
       }
-      .button:hover { background: var(--pine); border-color: var(--pine); color: #fff; }
-      .button svg { display: block; }
+      .button-primary { background: var(--pine); border-color: var(--pine); color: var(--button-ink); }
+      .button-primary:hover { background: var(--pine-hover); border-color: var(--pine-hover); color: var(--button-ink); }
+      .button-secondary { background: transparent; color: var(--ink); border-color: var(--ink); }
+      .button-secondary:hover { background: var(--ink); color: var(--bg); }
+      .button .arrow { display: block; }
+      .hero-todo { margin: 0.9rem 0 0; max-width: 38rem; color: var(--muted); font-size: 0.92rem; }
       .hero-notes {
         display: flex;
         flex-wrap: wrap;
-        gap: 8px 22px;
-        margin: 22px 0 0;
+        gap: 0.4rem 1.25rem;
+        margin: 1.25rem 0 0;
         padding: 0;
         list-style: none;
         color: var(--muted);
-        font-size: 0.9rem;
+        font-size: 0.92rem;
       }
-      .hero-notes li { display: inline-flex; align-items: center; gap: 8px; }
+      .hero-notes li { display: inline-flex; align-items: center; gap: 0.5rem; }
       .hero-notes li::before {
         content: "";
         width: 6px;
@@ -360,258 +577,202 @@
         flex: none;
       }
 
-      .section { padding: clamp(72px, 9vw, 120px) 0; }
+      .practice {
+        border: 1px solid var(--input-border);
+        background: var(--bg-elev);
+        padding: 1.15rem 1.15rem 0.4rem;
+      }
+      .ridge { display: block; width: 100%; height: auto; color: var(--pine); margin-top: 0.85rem; }
+      .ridge-path { stroke-dasharray: 520; stroke-dashoffset: 0; }
+      .practice dl { margin: 0.35rem 0 0; }
+      .practice-row {
+        display: grid;
+        grid-template-columns: 6.25rem minmax(0, 1fr);
+        gap: 0.75rem;
+        align-items: baseline;
+        padding: 0.75rem 0;
+        border-top: 1px solid var(--line);
+      }
+      .practice dt {
+        margin: 0;
+        color: var(--muted);
+        font-family: var(--mono);
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .practice dd { margin: 0; color: var(--ink); font-weight: 500; }
+
+      .section { padding: clamp(3.5rem, 8vw, 6.75rem) 0; }
+      .band { background: var(--bg-elev); border-block: 1px solid var(--line); }
       .section-head {
         display: grid;
-        grid-template-columns: 14rem minmax(0, 1fr);
-        gap: 16px 40px;
-        margin-bottom: 36px;
-        align-items: start;
+        gap: 0.75rem;
+        margin-bottom: 1.75rem;
       }
-      .section-head > .kicker { padding-top: 0.85rem; }
-      h2 {
-        margin: 0;
-        max-width: 16em;
-        font-family: var(--serif);
-        font-weight: 500;
-        font-size: clamp(2.15rem, 3.8vw, 3.35rem);
-        line-height: 1.12;
-        letter-spacing: -0.024em;
-      }
-      .section-intro { max-width: 40rem; margin: 16px 0 0; color: var(--ink-soft); font-size: 1.125rem; }
+      h2 { margin: 0; max-width: 14em; font-size: clamp(2.05rem, 4vw, 3.2rem); }
+      .section-intro { max-width: 40rem; margin: 0.85rem 0 0; color: var(--ink-soft); font-size: 1.08rem; }
 
-      .stakes {
+      .service {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        margin: 8px 0 36px;
-        border-top: 1px solid var(--line-strong);
-      }
-      .stake {
+        gap: 0.35rem 1.25rem;
         margin: 0;
-        padding: 22px 28px 22px 0;
-        border-bottom: 1px solid var(--line);
+        padding: 1.25rem 0.25rem;
+        border-top: 1px solid var(--line);
       }
-      .stake + .stake { padding-left: 28px; border-left: 1px solid var(--line); }
-      .stake:nth-child(3n + 1) { padding-left: 0; border-left: 0; }
-      .stake strong {
-        display: block;
-        font-family: var(--serif);
+      .service:last-child { border-bottom: 1px solid var(--line); }
+      .num {
+        color: var(--ember);
+        font-family: var(--mono);
+        font-size: 0.75rem;
         font-weight: 500;
-        font-size: clamp(1.7rem, 2.6vw, 2.35rem);
-        line-height: 1;
+        letter-spacing: 0.08em;
+      }
+      .service h3 { margin: 0; font-size: clamp(1.4rem, 2vw, 1.75rem); letter-spacing: -0.02em; }
+      .service p, .engage p, .faq-item p, .about-copy p { margin: 0; color: var(--ink-soft); }
+      @media (hover: hover) {
+        .service:hover { background: var(--wash); }
+      }
+
+      .engage-grid { display: grid; gap: 0.9rem; }
+      .engage {
+        margin: 0;
+        padding: 1.2rem 1.15rem 1.35rem;
+        border: 1px solid var(--input-border);
+        background: var(--bg);
+      }
+      .engage h3 { margin: 0.45rem 0 0.55rem; font-size: 1.65rem; }
+      .engage .num { display: block; }
+
+      .about-grid { display: grid; gap: 1.5rem; }
+      .portrait {
+        aspect-ratio: 4 / 5;
+        display: grid;
+        place-items: center;
+        background: var(--wash);
+        border: 1px solid var(--input-border);
+        color: var(--pine);
+        font-family: var(--serif);
+        font-size: clamp(2.5rem, 6vw, 3.4rem);
         letter-spacing: -0.03em;
       }
-      .stake span { display: block; margin-top: 10px; color: var(--ink-soft); font-size: 0.98rem; line-height: 1.45; }
-      .brief { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line-strong); }
-      .brief li {
-        padding: 14px 0;
-        border-bottom: 1px solid var(--line);
+      .about-copy { display: grid; gap: 0.95rem; max-width: 42rem; }
+      .role { margin: 0; color: var(--muted); font-size: 0.95rem; }
+      .about-links { display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; margin: 0.25rem 0 0; padding: 0; list-style: none; }
+      .about-links a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 500; text-underline-offset: 0.18em; }
+
+      .placeholder {
+        margin: 1rem 0 0;
+        padding: 0.85rem 0.95rem;
+        border: 1px dashed var(--input-border);
         color: var(--ink-soft);
+        font-size: 0.95rem;
       }
-      .brief strong { color: var(--ink); font-weight: 600; }
-      .tag {
-        display: inline-flex;
-        align-items: center;
-        min-height: 28px;
-        margin-left: 12px;
-        padding: 0 10px;
-        border: 1px solid var(--line-strong);
-        color: var(--pine);
+      .ph-label {
+        display: inline-block;
+        margin-right: 0.45rem;
+        color: var(--ember);
         font-family: var(--mono);
-        font-size: 0.68rem;
+        font-size: 0.75rem;
         font-weight: 500;
         letter-spacing: 0.12em;
         text-transform: uppercase;
-        vertical-align: middle;
       }
-      .fine-print {
-        margin: 18px 0 0;
-        max-width: 34rem;
-        color: var(--night-muted);
-        font-size: 0.92rem;
-        line-height: 1.45;
-      }
+      .email-link { overflow-wrap: anywhere; font-weight: 500; }
 
-      .band { background: var(--paper-raised); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-
-      .filing-path {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 4px 0;
-        margin: 8px 0 8px;
-        padding: 0;
-        list-style: none;
-      }
-      .filing-path li {
-        display: inline-flex;
-        align-items: center;
-        min-height: 44px;
-        font-weight: 600;
-        letter-spacing: -0.01em;
-      }
-      .filing-path li:not(:last-child)::after {
-        content: "→";
-        margin: 0 14px;
-        color: var(--ember);
-        font-weight: 500;
-      }
-      .filing-steps {
-        list-style: none;
-        margin: 28px 0 0;
-        padding: 0;
-        border-top: 1px solid var(--line-strong);
-      }
-      .filing-steps li {
-        display: grid;
-        grid-template-columns: 3.2rem minmax(0, 1fr);
-        gap: 12px 18px;
-        padding: 18px 0;
-        border-bottom: 1px solid var(--line);
-      }
-      .filing-steps .num {
-        padding-top: 3px;
-        color: var(--ember);
-        font-family: var(--mono);
-        font-size: 0.75rem;
-        letter-spacing: 0.06em;
-      }
-      .filing-steps strong { display: block; font-size: 1.05rem; font-weight: 600; }
-      .filing-steps span { display: block; margin-top: 4px; color: var(--muted); font-size: 0.98rem; line-height: 1.5; }
-
-      .facts { margin: 0; }
-      .fact {
-        display: grid;
-        grid-template-columns: minmax(9rem, 14rem) minmax(0, 1fr);
-        gap: 12px 32px;
-        padding: 22px 0;
-        border-top: 1px solid var(--line);
-      }
-      .fact:last-child { border-bottom: 1px solid var(--line); }
-      .fact dt {
-        margin: 0;
-        color: var(--pine);
-        font-family: var(--mono);
-        font-size: 0.68rem;
-        font-weight: 500;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-      }
-      .fact dd { margin: 0; color: var(--ink-soft); }
-      .fact dd p { margin: 0 0 12px; }
-      .fact dd p:last-child { margin-bottom: 0; }
-
-      .sources { margin: 22px 0 0; color: var(--muted); font-size: 0.92rem; }
-      .sources a { text-underline-offset: 0.18em; }
-      .rules-brief-title {
-        margin: 8px 0 0;
-        font-family: var(--serif);
-        font-weight: 500;
-        font-size: clamp(1.6rem, 2.4vw, 2.1rem);
-        letter-spacing: -0.02em;
-      }
-
-      .planned {
-        display: grid;
-        grid-template-columns: 4.2rem minmax(0, 0.7fr) minmax(0, 1.2fr);
-        gap: 12px 24px;
-        align-items: start;
-        padding: 22px 0;
-        border-top: 1px solid var(--line);
-      }
-      .planned:last-child { border-bottom: 1px solid var(--line); }
-      .planned .num {
-        padding-top: 6px;
-        color: var(--ember);
-        font-family: var(--mono);
-        font-size: 0.75rem;
-        letter-spacing: 0.06em;
-      }
-      .planned h3 {
-        margin: 0;
-        font-family: var(--serif);
-        font-weight: 500;
-        font-size: clamp(1.35rem, 2vw, 1.7rem);
-        line-height: 1.2;
-        letter-spacing: -0.02em;
-      }
-      .planned p { margin: 0; color: var(--ink-soft); }
-
-      .faq-item { padding: 22px 0; border-top: 1px solid var(--line); }
+      .faq-item { padding: 1.2rem 0; border-top: 1px solid var(--line); }
       .faq-item:last-child { border-bottom: 1px solid var(--line); }
-      .faq-item h3 {
-        margin: 0 0 8px;
-        font-family: var(--serif);
-        font-weight: 500;
-        font-size: clamp(1.35rem, 2vw, 1.7rem);
-        letter-spacing: -0.02em;
-        line-height: 1.25;
-      }
-      .faq-item p { max-width: 42rem; margin: 0; color: var(--ink-soft); }
+      .faq-item h3 { margin: 0 0 0.45rem; font-size: clamp(1.35rem, 2vw, 1.65rem); }
 
-      .contact {
-        background: var(--night);
-        color: var(--night-ink);
-        padding: clamp(80px, 11vw, 140px) 0;
-        border-top: 4px solid var(--ember);
+      .inverse {
+        background: var(--inv-bg);
+        color: var(--inv-ink);
+        color-scheme: dark;
+        --bg: var(--inv-bg);
+        --bg-elev: var(--inv-bg-elev);
+        --ink: var(--inv-ink);
+        --ink-soft: var(--inv-ink-soft);
+        --muted: var(--inv-muted);
+        --line: var(--inv-line);
+        --pine: var(--inv-pine);
+        --pine-hover: var(--inv-pine-hover);
+        --button-ink: var(--inv-button-ink);
+        --ember: var(--inv-ember);
+        --wash: var(--inv-wash);
+        --focus: var(--inv-focus);
+        --input-border: var(--inv-input);
       }
-      .contact-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1.4fr) minmax(240px, 0.6fr);
-        gap: 36px;
-        align-items: end;
+      :root[data-theme="dark"] .inverse { color-scheme: light; }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) .inverse { color-scheme: light; }
       }
-      .contact .kicker { color: #d5e4de; }
-      .contact h2 {
-        max-width: 11em;
-        margin: 16px 0 18px;
-        color: var(--night-ink);
-        font-size: clamp(2.6rem, 5.4vw, 4.4rem);
-        line-height: 0.98;
+      .contact { border-top: 4px solid var(--ember); padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
+      .contact-grid { display: grid; gap: 2rem; }
+      .contact h2 { max-width: 10em; font-size: clamp(2.3rem, 5vw, 3.8rem); line-height: 1.02; }
+      .contact .lede { color: var(--ink-soft); }
+      .fine { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; }
+      .field { display: flex; flex-direction: column; gap: 0.35rem; margin: 0 0 0.85rem; }
+      .field-row { display: grid; gap: 0.85rem; }
+      .field label { font-size: 0.92rem; font-weight: 500; color: var(--ink); }
+      .req { color: var(--ember); }
+      .field input, .field textarea, .field select {
+        width: 100%;
+        min-height: 48px;
+        padding: 0.7rem 0.75rem;
+        border: 1px solid var(--input-border);
+        border-radius: 0;
+        background: transparent;
+        font-size: 1rem;
       }
-      .contact p { max-width: 36rem; margin: 0; color: var(--night-muted); font-size: 1.1rem; }
-      .contact .fine-print {
-        margin-top: 18px;
-        max-width: 36rem;
-        color: var(--night-muted);
-        font-size: 0.92rem;
-        line-height: 1.45;
-      }
-      .contact-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
-      .button-light { background: var(--night-ink); color: var(--night); border-color: var(--night-ink); }
-      .button-light:hover { background: transparent; color: var(--night-ink); border-color: var(--night-ink); }
+      .field textarea { min-height: 9rem; resize: vertical; }
+      .form-status { min-height: 1.4em; margin: 0.75rem 0 0; color: var(--ink-soft); font-size: 0.95rem; }
 
       footer { border-top: 1px solid var(--line); }
       .footer-inner {
-        min-height: 96px;
         display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem 1.5rem;
         align-items: center;
         justify-content: space-between;
-        gap: 18px 32px;
-        padding: 22px 0;
+        padding: 1.25rem 0 1.75rem;
         color: var(--muted);
-        font-size: 0.875rem;
+        font-size: 0.92rem;
       }
-      .footer-nav { display: flex; flex-wrap: wrap; gap: 8px 18px; }
-      .footer-nav a {
-        color: var(--ink-soft);
-        text-decoration: none;
-        min-height: 44px;
+      .footer-nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
+      .footer-nav a, .footer-meta a {
         display: inline-flex;
         align-items: center;
+        min-height: 44px;
+        color: var(--ink-soft);
+        text-decoration: none;
+        font-weight: 500;
       }
-      .footer-nav a:hover { color: var(--ink); }
+      .footer-nav a:hover, .footer-meta a:hover { color: var(--ink); }
       .footer-copy { margin: 0; }
+      .footer-meta { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
 
-      @media (max-width: 900px) {
-        .footer-inner { flex-direction: column; align-items: flex-start; padding: 28px 0; }
+      @media (min-width: 720px) {
+        .wrap { width: min(var(--max), calc(100% - 3rem)); }
+        .field-row { grid-template-columns: 1fr 1fr; }
+        .engage-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .about-grid { grid-template-columns: minmax(180px, 240px) minmax(0, 1fr); gap: 2.5rem; align-items: start; }
+        .service {
+          grid-template-columns: 3.5rem minmax(14rem, 0.8fr) minmax(0, 1.15fr);
+          align-items: baseline;
+          padding: 1.4rem 0.75rem;
+          margin: 0 -0.75rem;
+        }
+        .section-head { grid-template-columns: 11rem minmax(0, 1fr); gap: 1rem 2rem; align-items: start; }
+        .section-head > .kicker { padding-top: 0.85rem; }
       }
-      @media (max-width: 860px) {
-        .wrap { width: min(1120px, calc(100% - 32px)); }
-        .menu-toggle { display: none; }
+      @media (min-width: 880px) {
+        .js .menu-toggle { display: none; }
+        .hero-grid { grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.72fr); gap: 3.5rem; }
+        .contact-grid { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr); gap: 3rem; align-items: start; }
+      }
+      @media (max-width: 879px) {
         .js .menu-toggle { display: inline-flex; }
-        html:not(.js) .nav-bar { flex-wrap: wrap; padding-bottom: 8px; }
-        html:not(.js) .nav-links { flex-wrap: wrap; gap: 4px 16px; }
         .js .nav-links {
           display: none;
           position: absolute;
@@ -619,8 +780,8 @@
           top: 100%;
           left: 0;
           right: 0;
-          padding: 6px 16px 16px;
-          background: var(--paper-raised);
+          padding: 0.35rem 1rem 1rem;
+          background: var(--bg-elev);
           border-bottom: 1px solid var(--line);
           box-shadow: var(--shadow);
           flex-direction: column;
@@ -631,293 +792,329 @@
         .js .nav-links a {
           min-height: 48px;
           font-family: var(--serif);
-          font-size: 1.65rem;
+          font-size: 1.55rem;
           font-weight: 500;
           color: var(--ink);
           border-top: 1px solid var(--line);
         }
-        .section-head, .contact-grid, .planned, .fact, .stakes {
-          grid-template-columns: 1fr;
-        }
-        .stake, .stake + .stake, .stake:nth-child(3n + 1) {
-          padding-left: 0;
-          border-left: 0;
-        }
-        .section-head { gap: 12px; margin-bottom: 28px; }
-        .fact { gap: 6px; }
-        .planned { gap: 6px; }
+        html:not(.js) .nav-bar { flex-wrap: wrap; padding-bottom: 0.4rem; }
+        html:not(.js) .nav-links { flex-wrap: wrap; gap: 0.15rem 0.9rem; }
       }
-
+      @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+        .button .arrow { transition: transform 160ms ease; }
+        .button:hover .arrow { transform: translateX(4px); }
+        .engage { transition: transform 180ms ease, border-color 180ms ease; }
+        .engage:hover { transform: translateY(-3px); border-color: var(--pine); }
+        .service { transition: background-color 160ms ease; }
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        .js .ridge-path { stroke-dashoffset: 520; animation: draw 2.2s ease forwards; }
+        .js .ridge-soft { animation: drift 8s ease-in-out infinite alternate; }
+        .js .reveal { transition: opacity 0.65s ease, transform 0.65s ease; }
+        .js .reveal:not(.is-in) { opacity: 0; transform: translateY(14px); }
+        .js .service.reveal:nth-child(2) { transition-delay: 0.05s; }
+        .js .service.reveal:nth-child(3) { transition-delay: 0.1s; }
+        .js .service.reveal:nth-child(4) { transition-delay: 0.15s; }
+        .js .service.reveal:nth-child(5) { transition-delay: 0.2s; }
+      }
+      @keyframes draw { to { stroke-dashoffset: 0; } }
+      @keyframes drift { to { transform: translateY(-5px); } }
       @media (prefers-reduced-motion: reduce) {
         html { scroll-behavior: auto; }
         *, *::before, *::after {
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
         }
       }
-      @media (prefers-reduced-motion: no-preference) {
-        .hero .kicker, .hero h1, .hero .subline, .hero .lede, .hero .actions, .hero .hero-notes {
-          animation: rise 700ms ease both;
-        }
-        .hero h1 { animation-delay: 60ms; }
-        .hero .subline { animation-delay: 110ms; }
-        .hero .lede { animation-delay: 160ms; }
-        .hero .actions { animation-delay: 210ms; }
-        .hero .hero-notes { animation-delay: 260ms; }
-      }
-      @keyframes rise {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: none; }
-      }
-      @keyframes stage-on { from { color: var(--muted); } to { color: var(--ink); } }
-      @keyframes step-mark {
-        0% { box-shadow: inset 3px 0 0 transparent; }
-        40% { box-shadow: inset 3px 0 0 var(--ember); }
-        100% { box-shadow: inset 3px 0 0 transparent; }
-      }
-      .js:not(.reduced-motion) .filing-path:not(.is-playing) li { color: var(--muted); }
-      .js:not(.reduced-motion) .filing-path.is-playing li {
-        animation: stage-on 0.45s ease both;
-        animation-delay: calc(0.12s + var(--i) * 0.42s);
-      }
-      .js:not(.reduced-motion) .filing-steps.is-playing li {
-        animation: step-mark 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
-        animation-delay: calc(var(--i) * 0.32s);
-      }
-
       @media print {
-        .menu-toggle, .skip { display: none !important; }
+        .menu-toggle, .theme-toggle, .skip { display: none !important; }
         .site-header { position: static; background: white; }
         .nav-links { display: flex !important; position: static !important; box-shadow: none !important; }
-        .contact { background: white; color: black; }
-        .contact h2, .contact p, .contact a, .contact .kicker, .contact .fine-print { color: black; }
-        body { background: white; }
+        .inverse, .inverse h2, .inverse p, .inverse label { background: white !important; color: black !important; }
+        body { background: white; color: black; }
+        .reveal { opacity: 1 !important; transform: none !important; }
       }
     </style>
   </head>
-  <body>
+  <body data-contact-email="TODO_CONTACT_EMAIL@northpeaklabs.studio" data-booking-url="">
     <a class="skip" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="nav-bar wrap">
         <a class="wordmark" href="#top">
-          <img src="mark.png" width="62" height="52" alt="" />
-          North Peak Labs
+          <img src="mark.png" width="43" height="36" alt="" />
+          <span class="wordmark-text">North Peak Labs</span>
         </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
-          <span class="menu-icon" aria-hidden="true"></span>
-        </button>
         <nav class="nav-links" id="nav-links" aria-label="Primary">
-          <a href="#stakes">Stakes</a>
-          <a href="#filing">Filing</a>
-          <a href="#product">Product</a>
-          <a href="#faq">FAQ</a>
-          <a href="mailto:dan.rajkovic@icloud.com?subject=RMD%20Autopilot%20early%20access">Early access</a>
+          <a href="#services">Services</a>
+          <a href="#engagements">Engagements</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
         </nav>
+        <div class="nav-actions">
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M14.5 3.1a8.8 8.8 0 1 0 6.4 13.6A8.2 8.2 0 0 1 14.5 3.1z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M12 4.2V2.5M12 21.5v-1.7M4.2 12H2.5M21.5 12h-1.7M6.1 6.1 4.9 4.9M19.1 19.1l-1.2-1.2M17.9 6.1l1.2-1.2M4.9 19.1l1.2-1.2"/><circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+          </button>
+          <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+            <span class="menu-icon" aria-hidden="true"></span>
+          </button>
+        </div>
       </div>
     </header>
 
-    <main id="main">
-      <section class="hero wrap" id="top">
-        <p class="kicker"><i aria-hidden="true"></i>RMD Autopilot</p>
-        <h1>Robocall Mitigation Database filing and recertification for small VoIP providers</h1>
-        <p class="subline">Stay in the RMD. Keep your traffic flowing.</p>
-        <p class="lede">RMD Autopilot keeps your FCC filing complete, current, and recertified by March 1. Downstream providers may accept traffic directly only from providers on that list.</p>
-        <div class="actions">
-          <a class="button" href="mailto:dan.rajkovic@icloud.com?subject=RMD%20Autopilot%20early%20access">Join the early-access list <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <main id="main" tabindex="-1">
+      <section class="hero wrap" id="top" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <div>
+            <p class="kicker">AI consulting · Mesa, Arizona</p>
+            <h1 id="hero-title">Senior engineering for AI platforms that need to run in production.</h1>
+            <p class="subline">MLOps, LLM infrastructure, and the cloud underneath.</p>
+            <p class="lede">North Peak Labs is the consulting practice of Dejan Rajkovic, a senior MLOps and AI platform engineer in Mesa, Arizona. He helps companies architect AI systems and keep them running. Engagements are an advisory call, a defined project, or a fractional retainer.</p>
+            <div class="actions">
+              <a class="button button-primary" href="mailto:TODO_CONTACT_EMAIL@northpeaklabs.studio?subject=Consulting%20inquiry">Email North Peak Labs <svg class="arrow" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <a class="button button-secondary" data-booking href="#contact" aria-describedby="booking-todo">Book an advisory call</a>
+            </div>
+            <p class="hero-todo" id="booking-todo"><span class="ph-label">TODO</span> Booking link and public contact email are not set yet. The email button uses a placeholder address.</p>
+            <ul class="hero-notes">
+              <li>Mesa, Arizona</li>
+              <li>Phoenix area</li>
+              <li>Remote</li>
+            </ul>
+          </div>
+          <aside class="practice" aria-label="Practice summary">
+            <p class="kicker">The practice</p>
+            <svg class="ridge" viewBox="0 0 360 120" fill="none" aria-hidden="true">
+              <path class="ridge-soft" d="M4 100 H40 L78 86 L120 94 L168 68 L210 78 L258 56 L300 70 L356 60" stroke="currentColor" stroke-width="1.25" opacity="0.45" />
+              <path class="ridge-path" d="M4 86 H36 L70 66 L104 76 L146 38 L180 56 L214 26 L250 48 L292 16 L328 44 L356 34" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" />
+            </svg>
+            <dl>
+              <div class="practice-row">
+                <dt>Based in</dt>
+                <dd>Mesa, Arizona</dd>
+              </div>
+              <div class="practice-row">
+                <dt>Serves</dt>
+                <dd>Phoenix area and remote</dd>
+              </div>
+              <div class="practice-row">
+                <dt>Company</dt>
+                <dd>North Peak Labs, LLC</dd>
+              </div>
+              <div class="practice-row">
+                <dt>Shapes</dt>
+                <dd>Call, project, retainer</dd>
+              </div>
+            </dl>
+          </aside>
         </div>
       </section>
 
-      <section class="section" id="stakes" aria-labelledby="stakes-title">
+      <section class="section" id="services" aria-labelledby="services-title">
         <div class="wrap">
           <div class="section-head">
-            <p class="kicker"><i aria-hidden="true"></i>What’s at stake</p>
+            <p class="kicker">Services</p>
             <div>
-              <h2 id="stakes-title">What happens if you're not in the Robocall Mitigation Database</h2>
-              <p class="section-intro">The rules are short. The cost of missing one is not.</p>
+              <h2 id="services-title">What a senior platform engineer is for</h2>
+              <p class="section-intro">AI consulting for the platform itself: MLOps consulting, AI platform engineering, and LLM infrastructure, for teams in the Phoenix area and anywhere the work is remote.</p>
             </div>
           </div>
-          <div class="stakes">
-            <p class="stake"><strong>The list</strong><span>Downstream providers may take traffic directly only from a provider whose filing is in the RMD.</span></p>
-            <p class="stake"><strong>Removal</strong><span>A deficient filing can be taken out of the database.</span></p>
-            <p class="stake"><strong>$1,000</strong><span>Base forfeiture for each missed update. It continues until you cure it.</span></p>
-            <p class="stake"><strong>$10,000</strong><span>Base forfeiture for false or inaccurate information, continuing until cured.</span></p>
-            <p class="stake"><strong>10 days</strong><span>Update the filing within 10 business days of a change.</span></p>
-            <p class="stake"><strong>March 1</strong><span>Recertify every year. The window opens February 1.</span></p>
-          </div>
-          <h3 class="rules-brief-title" id="rules-title">RMD filing rules, in brief</h3>
-          <ul class="brief">
-            <li><strong>Who files.</strong> Voice providers, gateway providers, and other intermediate providers. VoIP resellers and MVNOs that meet the definitions file too.</li>
-            <li><strong>What you need first.</strong> A business-type FRN from CORES. An individual FRN will not submit.</li>
-            <li><strong>STIR/SHAKEN.</strong> “Complete” means the whole network is IP. Anything less needs a current exemption. The extensions for non-facilities-based and facilities-based small voice service providers expired on June 30, 2022, and June 30, 2023 (<a href="https://www.fcc.gov/sites/default/files/rmd-faq.pdf">RMD FAQ, question 10</a>).</li>
-            <li><strong>People.</strong> Name at least one principal. That person is an individual (<a href="https://www.fcc.gov/sites/default/files/rmd-faq.pdf">RMD FAQ, question 4</a>).</li>
-          </ul>
-          <p class="sources">Last updated October 19, 2026.</p>
-          <p class="sources">Numbers and duties: <a href="https://docs.fcc.gov/public/attachments/DA-26-72A1.pdf">DA 26-72</a>, <a href="https://docs.fcc.gov/public/attachments/FCC-24-135A1.pdf">FCC 24-135</a>, <a href="https://www.fcc.gov/sites/default/files/rmd-faq.pdf">RMD FAQ</a>, <a href="https://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/part-64/subpart-HH/section-64.6305">47 CFR § 64.6305</a>.</p>
-        </div>
-      </section>
-
-      <section class="section band" id="filing" aria-labelledby="filing-title">
-        <div class="wrap">
-          <div class="section-head">
-            <p class="kicker"><i aria-hidden="true"></i>The filing</p>
-            <div>
-              <h2 id="filing-title">How RMD filing works: five steps to March 1 recertification</h2>
-              <p class="section-intro">Intake to recertification, in the order the work actually happens.</p>
-            </div>
-          </div>
-          <ol class="filing-path" data-animate aria-label="Filing flow">
-            <li style="--i:0">Intake</li>
-            <li style="--i:1">STIR/SHAKEN status</li>
-            <li style="--i:2">Mitigation plan</li>
-            <li style="--i:3">FCC RMD submission</li>
-            <li style="--i:4">Recertification reminders</li>
-          </ol>
-          <ol class="filing-steps" data-animate>
-            <li style="--i:0">
-              <span class="num">01</span>
-              <div>
-                <strong>Intake</strong>
-                <span>FRN, role in the call path, principals.</span>
-              </div>
-            </li>
-            <li style="--i:1">
-              <span class="num">02</span>
-              <div>
-                <strong>STIR/SHAKEN status</strong>
-                <span>Complete, partial, or none — and the exemption if you need one.</span>
-              </div>
-            </li>
-            <li style="--i:2">
-              <span class="num">03</span>
-              <div>
-                <strong>Mitigation plan</strong>
-                <span>The program description that goes in with the filing.</span>
-              </div>
-            </li>
-            <li style="--i:3">
-              <span class="num">04</span>
-              <div>
-                <strong>FCC RMD submission</strong>
-                <span>Packaged for an officer to sign in the FCC portal.</span>
-              </div>
-            </li>
-            <li style="--i:4">
-              <span class="num">05</span>
-              <div>
-                <strong>Recertification reminders</strong>
-                <span>February 1 opens the window. March 1 closes it.</span>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="section" id="product" aria-labelledby="product-title">
-        <div class="wrap">
-          <div class="section-head">
-            <p class="kicker"><i aria-hidden="true"></i>The product <span class="tag">Early access</span></p>
-            <div>
-              <h2 id="product-title">RMD Autopilot features for VoIP providers</h2>
-              <p class="section-intro">Track the fields, draft the plan, and hit March 1.</p>
-            </div>
-          </div>
-          <article class="planned">
+          <article class="service reveal" id="mlops">
             <span class="num">01</span>
-            <h3>Track every field the FCC asks for</h3>
-            <p>FRN, role, principals, affiliates, and the rest of the form, in one record.</p>
+            <h3>AI/ML platform and MLOps advisory</h3>
+            <p>How models get trained, evaluated, shipped, and watched. Platform shape, delivery, observability, and the operating habits around them, so a notebook is not the production system.</p>
           </article>
-          <article class="planned">
+          <article class="service reveal" id="llm-architecture">
             <span class="num">02</span>
-            <h3>Lock your STIR/SHAKEN status</h3>
-            <p>Complete, partial, or none, plus the exemption you are actually allowed to claim.</p>
+            <h3>LLM and AI system architecture</h3>
+            <p>Retrieval, tools, evaluation, latency, and where a model does and does not belong. Architecture a team can build, aimed at the system you already have.</p>
           </article>
-          <article class="planned">
+          <article class="service reveal" id="cloud-kubernetes">
             <span class="num">03</span>
-            <h3>Draft your mitigation plan</h3>
-            <p>Write the program description beside the filing it belongs to.</p>
+            <h3>Cloud infrastructure and Kubernetes</h3>
+            <p>The substrate under the platform: clusters, delivery, identity, cost, and reliability on the major clouds. Kubernetes when it is the right tool, and a simpler path when it is not.</p>
           </article>
-          <article class="planned">
+          <article class="service reveal" id="ai-strategy">
             <span class="num">04</span>
-            <h3>Hand an officer a finished packet</h3>
-            <p>Everything the portal asks for, ready for the signature.</p>
+            <h3>AI strategy</h3>
+            <p>A plain recommendation for operators. What to fund, what to ignore, and what has to be true in the systems you already run before a model is worth deploying.</p>
           </article>
-          <article class="planned">
+          <article class="service reveal" id="expert-calls">
             <span class="num">05</span>
-            <h3>Never miss March 1</h3>
-            <p>The February 1 window, the March 1 deadline, and the 10-business-day update.</p>
+            <h3>Expert-network calls</h3>
+            <p>A focused call for investors, operators, and product teams who want a senior practitioner’s view of an AI platform, an MLOps setup, or LLM infrastructure before they commit.</p>
           </article>
         </div>
       </section>
 
-      <section class="section" id="faq" aria-labelledby="faq-title">
+      <section class="section band" id="engagements" aria-labelledby="engagements-title">
         <div class="wrap">
           <div class="section-head">
-            <p class="kicker"><i aria-hidden="true"></i>FAQ</p>
-            <h2 id="faq-title">Robocall Mitigation Database FAQ</h2>
+            <p class="kicker">Engagements</p>
+            <div>
+              <h2 id="engagements-title">How an engagement works</h2>
+              <p class="section-intro">Pick the length of the commitment. Scope is written down before the work starts. Rates are discussed on the first call, not listed here.</p>
+            </div>
+          </div>
+          <div class="engage-grid">
+            <article class="engage reveal" id="advisory">
+              <span class="num">01</span>
+              <h3>Advisory call</h3>
+              <p>One working session on a defined question. A useful start before a build, a hire, or a vendor decision, and the usual shape of an expert-network call.</p>
+            </article>
+            <article class="engage reveal" id="projects">
+              <span class="num">02</span>
+              <h3>Project</h3>
+              <p>Scoped work with a written outcome. An architecture review, a platform design, a production-readiness pass, or hands-on help through one milestone.</p>
+            </article>
+            <article class="engage reveal" id="retainer">
+              <span class="num">03</span>
+              <h3>Fractional retainer</h3>
+              <p>Ongoing senior coverage when a team needs an AI platform engineer and is not opening a full-time role. Cadence and scope are agreed up front.</p>
+            </article>
+          </div>
+          <p class="placeholder"><span class="ph-label">TODO</span> Add call length, fees, or retainer cadence here if you want them public. Leave this note out if those stay in the first conversation.</p>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">About</p>
+            <h2 id="about-title">Dejan Rajkovic</h2>
+          </div>
+          <div class="about-grid">
+            <figure>
+              <div class="portrait" aria-hidden="true"><span>DR</span></div>
+              <!-- TODO(dejan): replace the monogram with a photo.
+                   <img src="dejan.jpg" width="800" height="1000" alt="Dejan Rajkovic, founder of North Peak Labs, in Mesa, Arizona." loading="lazy" decoding="async"> -->
+              <figcaption class="placeholder"><span class="ph-label">TODO</span> Portrait of Dejan Rajkovic. A photo has not been added yet.</figcaption>
+            </figure>
+            <div class="about-copy">
+              <p class="role">Senior MLOps / AI Platform Engineer · Founder, North Peak Labs, LLC</p>
+              <p>Dejan Rajkovic is a senior MLOps and AI platform engineer, and the founder of North Peak Labs, LLC in Mesa, Arizona.</p>
+              <p>He immigrated from Serbia and worked as a truck driver before moving into software. He still works the same way: learn the real system, then make it operable.</p>
+              <p>He consults on AI and ML platforms, LLM architecture, cloud infrastructure, and Kubernetes, and he takes expert-network calls when a team wants a practitioner’s view before they commit.</p>
+              <ul class="about-links">
+                <li><a href="https://www.linkedin.com/in/dejan-rajkovic">LinkedIn</a></li>
+                <li><a href="https://github.com/dejan992">GitHub</a></li>
+                <li><a href="https://dejan992.github.io/about-me/">Personal site</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section band" id="work" aria-labelledby="work-title">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">Work</p>
+            <div>
+              <h2 id="work-title">Selected work</h2>
+              <p class="section-intro">Published when a client agrees to be described. Nothing is listed yet. North Peak Labs does not put up logos, quotes, or numbers it cannot show you.</p>
+              <p class="placeholder"><span class="ph-label">TODO</span> Add approved engagement notes: the situation, the work, and the outcome.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="questions" aria-labelledby="faq-title">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">Questions</p>
+            <h2 id="faq-title">Before the first conversation</h2>
           </div>
           <div class="faq-list">
             <article class="faq-item">
-              <h3>Who has to file in the Robocall Mitigation Database?</h3>
-              <p>Every voice service provider and intermediate provider, including gateway providers, VoIP resellers and MVNOs that meet the 47 CFR § 64.6300 definitions, must file in the Robocall Mitigation Database. An affiliate or subsidiary that independently meets the definition submits its own filing. A voice service provider furnishes voice to an end user over the public switched telephone network using North American Numbering Plan numbers. An intermediate provider carries or processes that traffic and neither originates nor terminates it. A gateway provider is a U.S.-based intermediate provider that receives a call directly from a foreign provider at its U.S. facilities. The definitions are in 47 CFR § 64.6300.</p>
+              <h3>What does North Peak Labs consult on?</h3>
+              <p>North Peak Labs consults on AI and ML platforms, MLOps, LLM and AI system architecture, cloud infrastructure, and Kubernetes. The practice also takes expert-network calls and helps companies decide where AI is worth funding.</p>
             </article>
             <article class="faq-item">
-              <h3>What do I need before I can submit a filing?</h3>
-              <p>You need an FCC username and a business-type FCC Registration Number from CORES. The Robocall Mitigation Database form cannot be submitted with an individual-type FRN. The business name and address on the form come from CORES and are changed there, not on the form. CORES information has to be updated within 10 business days of a change.</p>
+              <h3>Who does the work?</h3>
+              <p>Dejan Rajkovic, a senior MLOps and AI platform engineer. North Peak Labs, LLC is a one-person practice based in Mesa, Arizona.</p>
             </article>
             <article class="faq-item">
-              <h3>When is the next RMD recertification deadline?</h3>
-              <p>The next annual Robocall Mitigation Database recertification is due on or before March 1, 2027. The filing window opens February 1, 2027. Only providers with an existing filing recertify, and a filing can be recertified once per window.</p>
+              <h3>How do engagements work?</h3>
+              <p>Three shapes: an advisory call on a defined question, a scoped project with a written outcome, and a fractional retainer for ongoing senior coverage. Scope is agreed before the work starts.</p>
             </article>
             <article class="faq-item">
-              <h3>When is the annual recertification due?</h3>
-              <p>A provider with an existing filing recertifies on or before March 1 each year that the information in the database is true and correct. The recertification window opens on February 1. Filers also update a filing within 10 business days of a change to the information in it. The Commission adopted a $100 fee for an initial submission and for each annual recertification. As of the Wireline Competition Bureau’s January 22, 2026 public notice, that fee was not yet effective. Routine updates do not carry it.</p>
+              <h3>Do you work only with companies in Arizona?</h3>
+              <p>The practice is based in Mesa, in the Phoenix area. Engagements are remote. Clients do not need to be in Arizona.</p>
             </article>
             <article class="faq-item">
-              <h3>Is updating my RMD filing the same as recertifying?</h3>
-              <p>No. You must update a filing within 10 business days of any change to its information, and that update does not count as the annual recertification. Recertification happens once a year, between February 1 and March 1.</p>
-            </article>
-            <article class="faq-item">
-              <h3>Is there an FCC fee to file or recertify in the RMD?</h3>
-              <p>Not yet. The FCC adopted a $100 fee for initial filings and annual recertifications, but as of the Wireline Competition Bureau's January 22, 2026 public notice (DA 26-72) it was not effective. The FCC will announce when it takes effect. Routine updates do not carry the fee.</p>
-            </article>
-            <article class="faq-item">
-              <h3>What happens if a provider is not in the database?</h3>
-              <p>Downstream providers may accept traffic directly only from a provider whose filing appears in the Robocall Mitigation Database. A deficient filing can be removed. The base forfeiture for failing to update changed information within 10 business days is $1,000 per violation, and it continues until cured. The base forfeiture for false or inaccurate information is $10,000 per violation, continuing until cured, up to the statutory maximum. Both amounts took effect on February 5, 2026.</p>
-            </article>
-            <article class="faq-item">
-              <h3>Does RMD Autopilot file with the FCC?</h3>
-              <p>No. RMD Autopilot prepares your filing. An officer of your company signs and submits it in the FCC portal. It does not guarantee that the FCC will accept the filing or that other providers will carry your traffic.</p>
+              <h3>How do we start?</h3>
+              <p>Email a short description of the system and the kind of help you want. A calendar link is not published yet. Email is how a call gets booked until that link exists.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="contact" id="start" aria-labelledby="start-title">
+      <section class="contact inverse" id="contact" aria-labelledby="contact-title">
         <div class="wrap contact-grid">
           <div>
-            <p class="kicker"><i aria-hidden="true"></i>Early access opening soon</p>
-            <h2 id="start-title">Get on the list before March 1.</h2>
-            <p>Small voice providers and VoIP resellers. We’ll open the door in waves.</p>
-            <p class="fine-print">RMD Autopilot prepares your filing; an officer of your company signs and submits it in the FCC portal. Not legal advice.</p>
+            <p class="kicker">Contact</p>
+            <h2 id="contact-title">Start with the system you have.</h2>
+            <p class="lede">An advisory call, a project, or a retainer. Send a note with the problem and the shape of help you want.</p>
+            <p class="placeholder" data-email-todo><span class="ph-label">TODO</span> Replace the placeholder inbox. Mail to this address will not reach Dejan until it is changed.</p>
+            <p class="fine">Email <a class="email-link" data-email href="mailto:TODO_CONTACT_EMAIL@northpeaklabs.studio?subject=Consulting%20inquiry">TODO_CONTACT_EMAIL@northpeaklabs.studio</a></p>
+            <p class="fine">The form opens your email app. This site does not store the message.</p>
+            <noscript>
+              <p class="fine">JavaScript is off, so the form cannot open your mail app. Email <a href="mailto:TODO_CONTACT_EMAIL@northpeaklabs.studio?subject=Consulting%20inquiry">TODO_CONTACT_EMAIL@northpeaklabs.studio</a> directly. That address is still a placeholder.</p>
+            </noscript>
           </div>
-          <div class="contact-actions">
-            <a class="button button-light" href="mailto:dan.rajkovic@icloud.com?subject=RMD%20Autopilot%20early%20access">Join the early-access list <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          </div>
+          <form id="contact-form" novalidate>
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+                <input id="name" name="name" type="text" autocomplete="name" required maxlength="120" />
+              </div>
+              <div class="field">
+                <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required maxlength="200" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="company">Company (optional)</label>
+              <input id="company" name="company" type="text" autocomplete="organization" maxlength="160" />
+            </div>
+            <div class="field">
+              <label for="engagement">What shape of help <span class="req" aria-hidden="true">*</span></label>
+              <select id="engagement" name="engagement" required>
+                <option value="">Choose one</option>
+                <option>Advisory call</option>
+                <option>Project</option>
+                <option>Fractional retainer</option>
+                <option>Expert-network call</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">What are you trying to run? <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" required maxlength="4000"></textarea>
+            </div>
+            <button class="button button-primary" type="submit">Email this note <svg class="arrow" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </section>
     </main>
 
     <footer>
       <div class="wrap footer-inner">
-        <p class="footer-copy">© 2026 North Peak Labs</p>
+        <p class="footer-copy">© 2026 North Peak Labs, LLC · Mesa, Arizona</p>
         <nav class="footer-nav" aria-label="Footer">
-          <a href="#stakes">Stakes</a>
-          <a href="#filing">Filing</a>
-          <a href="#product">Product</a>
-          <a href="#faq">FAQ</a>
+          <a href="#services">Services</a>
+          <a href="#engagements">Engagements</a>
+          <a href="#about">About</a>
+          <a href="#questions">Questions</a>
+          <a href="#contact">Contact</a>
+          <a href="#top">Back to top</a>
         </nav>
-        <a href="https://dejan992.github.io/about-me/">Built by Dejan Rajkovic</a>
+        <div class="footer-meta">
+          <a href="https://www.linkedin.com/in/dejan-rajkovic">LinkedIn</a>
+          <a href="https://github.com/dejan992">GitHub</a>
+        </div>
       </div>
     </footer>
 
@@ -926,62 +1123,184 @@
         var header = document.querySelector(".site-header");
         var button = document.querySelector(".menu-toggle");
         var nav = document.getElementById("nav-links");
-        if (!header || !button || !nav) return;
+        var themeButton = document.querySelector(".theme-toggle");
+        var root = document.documentElement;
+        var email = document.body.getAttribute("data-contact-email") || "";
+        var booking = (document.body.getAttribute("data-booking-url") || "").trim();
 
         function onScroll() {
-          header.classList.toggle("is-scrolled", window.scrollY > 4);
+          if (header) header.classList.toggle("is-scrolled", window.scrollY > 4);
         }
         onScroll();
         window.addEventListener("scroll", onScroll, { passive: true });
 
         function setOpen(open) {
+          if (!button || !nav) return;
           nav.classList.toggle("is-open", open);
           button.setAttribute("aria-expanded", open ? "true" : "false");
           button.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
           document.body.classList.toggle("nav-locked", open);
         }
-
-        button.addEventListener("click", function () {
-          var open = button.getAttribute("aria-expanded") !== "true";
-          setOpen(open);
-          if (open) {
-            var first = nav.querySelector("a");
-            if (first) first.focus();
-          }
-        });
-
-        nav.addEventListener("click", function (event) {
-          if (event.target.closest("a")) setOpen(false);
-        });
-
-        document.addEventListener("keydown", function (event) {
-          if (event.key === "Escape" && button.getAttribute("aria-expanded") === "true") {
-            setOpen(false);
-            button.focus();
-          }
-        });
-
-        window.addEventListener("resize", function () {
-          if (window.matchMedia("(min-width: 860px)").matches) setOpen(false);
-        });
-      })();
-
-      (function () {
-        var reduce = document.documentElement.classList.contains("reduced-motion");
-        var nodes = document.querySelectorAll("[data-animate]");
-        if (!nodes.length || reduce) return;
-        if (!("IntersectionObserver" in window)) {
-          nodes.forEach(function (node) { node.classList.add("is-playing"); });
-          return;
-        }
-        var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add("is-playing");
-            io.unobserve(entry.target);
+        if (button && nav) {
+          button.addEventListener("click", function () {
+            var open = button.getAttribute("aria-expanded") !== "true";
+            setOpen(open);
+            if (open) {
+              var first = nav.querySelector("a");
+              if (first) first.focus();
+            }
           });
-        }, { threshold: 0.28, rootMargin: "0px 0px -8% 0px" });
-        nodes.forEach(function (node) { io.observe(node); });
+          nav.addEventListener("click", function (event) {
+            if (event.target.closest("a")) setOpen(false);
+          });
+          document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && button.getAttribute("aria-expanded") === "true") {
+              setOpen(false);
+              button.focus();
+            }
+          });
+          document.addEventListener("click", function (event) {
+            if (button.getAttribute("aria-expanded") !== "true") return;
+            if (event.target.closest("#nav-links") || event.target.closest(".menu-toggle")) return;
+            setOpen(false);
+          });
+          window.addEventListener("resize", function () {
+            if (window.matchMedia("(min-width: 880px)").matches) setOpen(false);
+          });
+        }
+
+        function appliedTheme() {
+          var explicit = root.getAttribute("data-theme");
+          if (explicit === "light" || explicit === "dark") return explicit;
+          return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        function syncThemeControls() {
+          if (!themeButton) return;
+          var next = appliedTheme() === "dark" ? "light" : "dark";
+          themeButton.setAttribute("aria-label", "Switch to " + next + " theme");
+        }
+        function setThemeColor(theme) {
+          document.querySelectorAll('meta[name="theme-color"]').forEach(function (node) { node.remove(); });
+          var meta = document.createElement("meta");
+          meta.setAttribute("name", "theme-color");
+          meta.setAttribute("content", theme === "dark" ? "#101614" : "#f4f1ea");
+          document.head.appendChild(meta);
+        }
+        syncThemeControls();
+        if (root.getAttribute("data-theme")) setThemeColor(appliedTheme());
+        if (themeButton) {
+          themeButton.addEventListener("click", function () {
+            var next = appliedTheme() === "dark" ? "light" : "dark";
+            root.setAttribute("data-theme", next);
+            try { localStorage.setItem("npl-theme", next); } catch (e) {}
+            setThemeColor(next);
+            syncThemeControls();
+          });
+        }
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
+          if (!root.getAttribute("data-theme")) syncThemeControls();
+        });
+
+        var reduce = root.classList.contains("reduced-motion");
+        var nodes = document.querySelectorAll(".reveal");
+        if (!reduce && nodes.length && "IntersectionObserver" in window) {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("is-in");
+              io.unobserve(entry.target);
+            });
+          }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
+          nodes.forEach(function (node) { io.observe(node); });
+        } else {
+          nodes.forEach(function (node) { node.classList.add("is-in"); });
+        }
+
+        var sections = ["services", "engagements", "about", "contact"];
+        var navLinks = nav ? Array.prototype.slice.call(nav.querySelectorAll("a")) : [];
+        if (navLinks.length && "IntersectionObserver" in window) {
+          var spy = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              var id = entry.target.id;
+              navLinks.forEach(function (link) {
+                if (link.getAttribute("href") === "#" + id) link.setAttribute("aria-current", "true");
+                else link.removeAttribute("aria-current");
+              });
+            });
+          }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+          sections.forEach(function (id) {
+            var el = document.getElementById(id);
+            if (el) spy.observe(el);
+          });
+        }
+
+        document.querySelectorAll("a[href^='http']").forEach(function (link) {
+          link.setAttribute("target", "_blank");
+          link.setAttribute("rel", "noopener noreferrer");
+          if (!link.querySelector(".sr-only")) {
+            var hint = document.createElement("span");
+            hint.className = "sr-only";
+            hint.textContent = " (opens in a new tab)";
+            link.appendChild(hint);
+          }
+        });
+
+        var mailto = "mailto:" + email + "?subject=" + encodeURIComponent("Consulting inquiry");
+        document.querySelectorAll("a[href^='mailto:']").forEach(function (el) {
+          el.setAttribute("href", mailto);
+        });
+        document.querySelectorAll("[data-email]").forEach(function (el) {
+          el.textContent = email;
+        });
+        var emailIsTodo = !email || email.indexOf("TODO") !== -1;
+        document.querySelectorAll("[data-email-todo]").forEach(function (el) { el.hidden = !emailIsTodo; });
+
+        if (/^https?:\/\//i.test(booking)) {
+          document.querySelectorAll("[data-booking]").forEach(function (link) {
+            link.href = booking;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.removeAttribute("aria-describedby");
+            if (!link.querySelector(".sr-only")) {
+              var note = document.createElement("span");
+              note.className = "sr-only";
+              note.textContent = " (opens in a new tab)";
+              link.appendChild(note);
+            }
+          });
+          var bookingTodo = document.getElementById("booking-todo");
+          if (bookingTodo) bookingTodo.hidden = true;
+        }
+
+        var form = document.getElementById("contact-form");
+        var status = document.getElementById("form-status");
+        if (form) {
+          form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            if (!form.checkValidity()) {
+              form.reportValidity();
+              return;
+            }
+            var data = new FormData(form);
+            var subject = "Consulting inquiry from " + String(data.get("name") || "").trim();
+            var body = [
+              "Name: " + String(data.get("name") || "").trim(),
+              "Email: " + String(data.get("email") || "").trim(),
+              "Company: " + (String(data.get("company") || "").trim() || "—"),
+              "Engagement: " + String(data.get("engagement") || "").trim(),
+              "",
+              String(data.get("message") || "").trim()
+            ].join("\n");
+            var href = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+            if (status) {
+              status.textContent = emailIsTodo
+                ? "Your email app should open with this note, addressed to the placeholder inbox " + email + ". That address still needs to be replaced."
+                : "Your email app should open with this note. If it does not, send it to " + email + ".";
+            }
+            window.location.href = href;
+          });
+        }
       })();
     </script>
   </body>
