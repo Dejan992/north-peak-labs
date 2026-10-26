@@ -13,7 +13,7 @@
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("reduced-motion");
       })();
     </script>
-    <title>Self-hosting LLMs on Kubernetes vs paying per token | North Peak Labs</title>
+    <title>Self-hosting LLMs on Kubernetes vs per-token APIs: a checklist</title>
     <meta name="description" content="A checklist for CTOs and engineering leads choosing a per-token LLM API or self-hosted open-weight models on Kubernetes, with illustrative cost math." />
     <link rel="canonical" href="https://northpeaklabs.studio/self-hosting-llms-kubernetes/" />
     <meta name="robots" content="index, follow" />
@@ -50,6 +50,8 @@
         "@graph": [
           {
             "@type": "Article",
+            "@id": "https://northpeaklabs.studio/self-hosting-llms-kubernetes/#article",
+            "isPartOf": { "@id": "https://northpeaklabs.studio/#website" },
             "headline": "Self-hosting LLMs on Kubernetes vs paying per token: a decision checklist",
             "description": "A checklist for CTOs and engineering leads choosing a per-token LLM API or self-hosted open-weight models on Kubernetes, with illustrative cost math.",
             "datePublished": "2026-10-26",
@@ -61,7 +63,8 @@
               "@type": "Person",
               "@id": "https://northpeaklabs.studio/#dejan",
               "name": "Dejan Rajkovic",
-              "url": "https://northpeaklabs.studio/#about"
+              "url": "https://northpeaklabs.studio/#about",
+              "sameAs": ["https://github.com/Dejan992", "https://www.linkedin.com/in/dejan-rajkovic"]
             },
             "publisher": {
               "@type": "Organization",
@@ -130,8 +133,17 @@
           </nav>
           <p class="kicker">Checklist</p>
           <h1>Self-hosting LLMs on Kubernetes vs paying per token: a decision checklist</h1>
-          <p class="byline">Dejan Rajkovic · North Peak Labs · 26 October 2026</p>
+          <p class="byline"><a href="/#about">Dejan Rajkovic</a> · North Peak Labs · October 26, 2026</p>
           <p class="lede">A per-token API and a model on your own cluster are different operating models. This checklist is for CTOs and engineering leads deciding whether to keep paying per token or to run open-weight models on Kubernetes. Every dollar figure below is illustrative arithmetic for your own rates. None of it is a client result, a benchmark, or a vendor price.</p>
+          <h2>Five questions first</h2>
+          <ol>
+            <li>What does your traffic actually look like: steady all day, or a few spiky hours?</li>
+            <li>Can you get capacity when the autoscaler asks for it, in the region the data has to stay in?</li>
+            <li>How bad are your cold starts, and will you pay to keep capacity warm?</li>
+            <li>Who is on call when it breaks at 2am?</li>
+            <li>Do you have evals that show a cheaper open model is not worse for your use case?</li>
+          </ol>
+          <p>If most answers are "not sure," stay on the API for now. Nothing wrong with that. The rest of this page is for when you can answer them.</p>
 
           <h2>What you are actually choosing</h2>
           <p>You are choosing who carries capacity, the model lifecycle, and the data boundary.</p>
@@ -143,7 +155,7 @@
           <p>If you cannot yet say how many input and output tokens a normal day uses, stay on the API and log them. The rest of this page is the worksheet for when those counts exist.</p>
 
           <h2>When a per-token API wins</h2>
-          <p>Stay on the API when most of these are true. One of them is often enough.</p>
+          <p>Stay on the API if any of these is true. Two or more, and it is not close.</p>
           <ul>
             <li>Volume is low, bursty, or still a prototype. You would pay for idle GPUs the API does not charge for.</li>
             <li>Prompts, retrieved documents, and outputs may leave your network under a contract you have read.</li>
@@ -175,7 +187,7 @@
           <p>Self-host when you need a pinned model version, a fine-tune, or an adapter the API will not run, or when a vendor deprecation would break a workflow you cannot change on their schedule. Budget an evaluation set and a rollback. A changed model you cannot score against the one it replaced is an incident with a quiet start.</p>
 
           <h2>A cost-comparison framework</h2>
-          <p>Compare one month of the same workload, using your contract and your node price. Skipping the people line is how a cluster looks cheaper than it is.</p>
+          <p>Compare LLM inference cost for one month of the same workload, a per-token API against self-hosted LLM inference on Kubernetes, using your contract and your node price. Skipping the people line is how a cluster looks cheaper than it is.</p>
           <ol>
             <li>Tokens. Input and output, for an average day and the peak hour.</li>
             <li>API cost. Your per-million prices times the month, plus any platform fee.</li>
@@ -231,7 +243,7 @@
               </div>
               <div>
                 <dt>Compare</dt>
-                <dd>The shape of a crossover, not a recommendation. If the peak needs 10 nodes, put 10 in the sheet.</dd>
+                <dd>With these made-up inputs, the two lines get close. That is the shape of a crossover, not a recommendation. If the peak needs 10 nodes, put 10 in the sheet.</dd>
               </div>
             </dl>
           </figure>
@@ -250,7 +262,7 @@
 
           <h3>Model serving</h3>
           <ul>
-            <li>Serve a stable HTTP API with health checks, graceful shutdown, and a pinned model version. vLLM, TensorRT-LLM, and Hugging Face TGI are examples of that category. Pick one the team can operate.</li>
+            <li>Serve a stable HTTP API with health checks, graceful shutdown, and a pinned model version. vLLM, SGLang, and TensorRT-LLM are examples of that category. Pick one the team can operate.</li>
             <li>Promote weights as a versioned artifact in a private registry, the same way you promote an image.</li>
             <li>Load-test time to first token at the concurrency you expect. A single-user demo does not size the cluster.</li>
             <li>Keep a rollback model. A bad release should be a routing change.</li>
@@ -283,7 +295,7 @@
           <h2>Hidden costs</h2>
           <p>These lines rarely survive the first spreadsheet, and they move the decision.</p>
           <ul>
-            <li>GPU quota. The card in the example may be sold out where the data has to stay, or it may require a commitment longer than the project.</li>
+            <li>GPU quota. The GPU type you priced may be sold out where the data has to stay, or it may require a commitment longer than the project.</li>
             <li>Evaluation. Every model change needs tasks you score, or quality moves while uptime stays green.</li>
             <li>Upgrades. Pin drivers, the model server, and the base image, and budget the upgrade.</li>
             <li>A second region doubles the floor if you promise failover. Do not paste a single-region sheet into that plan.</li>
@@ -298,6 +310,7 @@
             <li>Do we have a month of input and output tokens, including a peak hour?</li>
             <li>Is there a written data boundary a per-token API cannot meet?</li>
             <li>Is there a quality bar or version pin a per-token API cannot meet?</li>
+            <li>Can we get the GPU capacity the floor needs, in the region the data has to stay in, without a commitment longer than the project?</li>
             <li>Did we price the GPU floor for the latency target, including idle hours?</li>
             <li>Did we price the people on call, not only the nodes?</li>
             <li>Do we have an evaluation set and a rollback model?</li>
@@ -309,7 +322,7 @@
 
           <section class="cta-band" aria-labelledby="cta-title">
             <h2 id="cta-title">Run the checklist on your numbers</h2>
-            <p>North Peak Labs can use a one-hour advisory call to walk this worksheet against your volume, latency target, and data boundary.</p>
+            <p>Bring your token counts, latency target, and data boundary. In a one-hour advisory call, Dejan runs this worksheet on your numbers and tells you whether to stay on the API.</p>
             <p><a class="button button-primary" href="/#contact">Book a one-hour advisory call</a></p>
           </section>
         </div>
