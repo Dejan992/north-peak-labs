@@ -132,61 +132,95 @@
             <a class="teaser-email" href="mailto:hello@northpeaklabs.studio">hello@northpeaklabs.studio</a>
           </div>
         </div>
-        <figure class="learn">
-          <div class="learn-graphic" role="img" aria-label="Concept illustration. Three development runs share the same budget. The first takes a long path with failed attempts and little accepted work. What passes evals is kept in memory, a semantic layer, evals, and an RL policy, and feeds the next run. Later runs take shorter paths and produce more accepted work. Real gains depend on the workload and on learning that passes evals. Not a measured result.">
-            <p class="kicker">Concept illustration</p>
-            <p class="budget-rule"><span>Same budget</span></p>
-            <div class="learn-runs">
-              <div class="run">
-                <p class="run-name">Run 1</p>
-                <div class="run-frame">
-                  <svg class="run-svg" viewBox="0 0 80 120" width="80" height="120" preserveAspectRatio="xMidYMin meet" aria-hidden="true" focusable="false">
-                    <polyline class="run-path" points="40,6 40,28 66,28 40,28 40,54 14,54 40,54 40,96" />
-                    <polygon class="run-miss" data-tip="2" points="-3.2,0 0,-3.2 3.2,0 0,3.2" transform="translate(66 28)" />
-                    <polygon class="run-miss" data-tip="5" points="-3.2,0 0,-3.2 3.2,0 0,3.2" transform="translate(14 54)" />
-                    <polygon class="run-packet" points="0,-4 4,0 0,4 -4,0" />
-                  </svg>
-                  <div class="run-out"><i class="block"></i></div>
-                </div>
-                <p class="run-note">Most rework</p>
-              </div>
-              <div class="run">
-                <p class="run-name">Run 2</p>
-                <div class="run-frame">
-                  <svg class="run-svg" viewBox="0 0 80 120" width="80" height="120" preserveAspectRatio="xMidYMin meet" aria-hidden="true" focusable="false">
-                    <polyline class="run-path" points="40,6 40,32 64,32 40,32 40,72" />
-                    <polygon class="run-miss" data-tip="2" points="-3.2,0 0,-3.2 3.2,0 0,3.2" transform="translate(64 32)" />
-                    <polygon class="run-packet" points="0,-4 4,0 0,4 -4,0" />
-                  </svg>
-                  <div class="run-out"><i class="block"></i><i class="block"></i><i class="block"></i></div>
-                </div>
-                <p class="run-note">Less rework</p>
-              </div>
-              <div class="run">
-                <p class="run-name">Run 3</p>
-                <div class="run-frame">
-                  <svg class="run-svg" viewBox="0 0 80 120" width="80" height="120" preserveAspectRatio="xMidYMin meet" aria-hidden="true" focusable="false">
-                    <polyline class="run-path" points="40,6 40,44" />
-                    <polygon class="run-packet" points="0,-4 4,0 0,4 -4,0" />
-                  </svg>
-                  <div class="run-out"><i class="block"></i><i class="block"></i><i class="block"></i><i class="block"></i><i class="block"></i></div>
-                </div>
-                <p class="run-note">Least rework</p>
-              </div>
-            </div>
-            <div class="learn-rail" aria-hidden="true"></div>
-            <p class="learn-key"><span><i class="key-work"></i> Accepted work</span><span><i class="key-miss"></i> Failed attempt</span></p>
-            <p class="learn-feed">Feeds the next run</p>
-            <ul class="layers">
-              <li class="layer"><span class="layer-name">Memory</span><span class="marks"><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i></span></li>
-              <li class="layer"><span class="layer-name">Semantic</span><span class="marks"><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i></span></li>
-              <li class="layer"><span class="layer-name">Evals</span><span class="marks"><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i></span></li>
-              <li class="layer"><span class="layer-name">RL policy</span><span class="marks"><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i></span></li>
-            </ul>
+        <figure class="flow">
+          <p class="kicker">Concept illustration</p>
+          <p class="flow-lead">Learns from your team’s ongoing work</p>
+          <div class="flow-canvas">
+            <span class="flow-end">Early</span>
+            <span class="flow-end">Later</span>
+            <svg class="flow-svg" viewBox="0 0 400 236" width="400" height="236" role="img" aria-label="Concept illustration of work flowing through a memory and reinforcement-learning layer. Early work branches into an open question and loops back. An eval gate checks it before the signal enters the network and lights connections. Later work reuses the brighter paths and ships with fewer corrections. Not a diagram of literal neural weights." focusable="false">
+              <defs>
+                <filter id="flow-glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="1.7" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <path class="flow-loop" d="M58 78 C44 38 96 30 88 62 C84 80 70 88 58 78" />
+              <path class="p-a" d="M12 122 C30 122 34 66 58 78" />
+              <path class="p-b" d="M58 78 C78 112 92 124 128 112" />
+              <g class="flow-gate">
+                <path d="M98 86 L98 104" />
+                <path d="M98 128 L98 150" />
+                <path class="flow-gate-bar" d="M98 104 L98 128" />
+              </g>
+              <g class="flow-edges">
+                <line x1="128" y1="58" x2="206" y2="42" />
+                <line x1="128" y1="58" x2="220" y2="88" />
+                <line x1="128" y1="112" x2="206" y2="42" />
+                <line x1="128" y1="166" x2="204" y2="132" />
+                <line x1="128" y1="166" x2="220" y2="176" />
+                <line x1="206" y1="42" x2="314" y2="64" />
+                <line x1="204" y1="132" x2="314" y2="170" />
+                <line x1="220" y1="176" x2="328" y2="116" />
+                <line x1="220" y1="176" x2="314" y2="170" />
+                <line class="is-key" data-step="1" x1="128" y1="112" x2="220" y2="88" />
+                <line class="is-key" data-step="1" x1="220" y1="88" x2="328" y2="116" />
+                <line class="is-key" data-step="2" x1="128" y1="112" x2="204" y2="132" />
+                <line class="is-key" data-step="2" x1="204" y1="132" x2="328" y2="116" />
+                <line class="is-key" data-step="2" x1="220" y1="88" x2="314" y2="64" />
+              </g>
+              <g class="flow-nodes">
+                <circle class="flow-node is-open" cx="70" cy="46" r="4.5" />
+                <circle class="flow-node" cx="128" cy="58" r="5.5" />
+                <circle class="flow-node" data-learn="1" cx="128" cy="112" r="5.5" />
+                <circle class="flow-node" cx="128" cy="166" r="5.5" />
+                <circle class="flow-node" cx="206" cy="42" r="5.5" />
+                <circle class="flow-node" data-learn="1" cx="220" cy="88" r="5.5" />
+                <circle class="flow-node" data-learn="2" cx="204" cy="132" r="5.5" />
+                <circle class="flow-node" cx="220" cy="176" r="5.5" />
+                <circle class="flow-node" data-learn="2" cx="314" cy="64" r="5.5" />
+                <circle class="flow-node" data-learn="1" cx="328" cy="116" r="5.5" />
+                <circle class="flow-node" cx="314" cy="170" r="5.5" />
+              </g>
+              <path class="p-fast" d="M128 112 C168 112 188 90 220 88 C262 86 296 116 328 116 C354 116 372 110 388 104" />
+              <rect class="flow-ship" x="378" y="98" width="10" height="10" />
+              <circle class="flow-ghost" r="3.2" cx="0" cy="0" />
+              <circle class="flow-ghost" r="2.2" cx="0" cy="0" />
+              <circle class="flow-bead" r="4.2" cx="0" cy="0" />
+            </svg>
           </div>
-          <figcaption class="learn-caption">
-            <p>Faster paths. Smarter choices. More accepted work for the same budget.</p>
-            <p class="learn-fine">A concept. Real gains depend on the workload and on learning that passes evals.</p>
+          <p class="flow-name">Memory · RL</p>
+          <p class="flow-role">Memory retains what worked. The semantic layer connects it to the business, code, and dependencies. Evals check a change before it ships. Reinforcement learning prefers approaches that passed.</p>
+          <p class="flow-reuse">Reuses validated answers and company context.</p>
+          <ul class="trends">
+            <li class="trend">
+              <span class="trend-name">Cost per accepted change</span>
+              <svg class="trend-svg" viewBox="0 0 128 36" aria-hidden="true" focusable="false">
+                <path class="trend-line" d="M4 7 C36 8 72 16 118 30" />
+                <polygon class="trend-head" points="122,32 110,24 112,34" />
+              </svg>
+            </li>
+            <li class="trend">
+              <span class="trend-name">Quality <small>accepted, tested</small></span>
+              <svg class="trend-svg" viewBox="0 0 128 36" aria-hidden="true" focusable="false">
+                <path class="trend-line" d="M4 30 C40 28 74 16 118 7" />
+                <polygon class="trend-head" points="122,5 110,2 112,14" />
+              </svg>
+            </li>
+            <li class="trend">
+              <span class="trend-name">Delivery speed</span>
+              <svg class="trend-svg" viewBox="0 0 128 36" aria-hidden="true" focusable="false">
+                <path class="trend-line" d="M4 28 C46 26 78 14 118 8" />
+                <polygon class="trend-head" points="122,6 110,3 112,15" />
+              </svg>
+            </li>
+          </ul>
+          <figcaption class="flow-caption">
+            <p>Designed for lower cost per accepted change, higher quality, and faster delivery.</p>
+            <p class="flow-fine">A concept. Gains depend on the workload and on learning that passes evals. Higher quality means accepted, tested work, not more activity.</p>
           </figcaption>
         </figure>
       </div>
@@ -248,107 +282,135 @@
     </script>
     <script>
       (function () {
-        var root = document.querySelector(".learn");
+        var root = document.querySelector(".flow");
         if (!root) return;
-        var runs = Array.prototype.map.call(root.querySelectorAll(".run"), function (el) {
-          var path = el.querySelector(".run-path");
-          var len = path.getTotalLength();
-          var tips = [];
-          Array.prototype.forEach.call(el.querySelectorAll(".run-miss"), function (miss) {
-            var idx = Number(miss.getAttribute("data-tip"));
-            var pts = path.points;
-            var at = 0;
-            for (var i = 1; i <= idx && i < pts.numberOfItems; i++) {
-              var a = pts.getItem(i - 1);
-              var b = pts.getItem(i);
-              at += Math.hypot(b.x - a.x, b.y - a.y);
-            }
-            tips.push({ el: miss, at: len ? at / len : 1 });
-          });
-          return {
-            el: el,
-            path: path,
-            len: len,
-            tips: tips,
-            blocks: el.querySelectorAll(".block"),
-            packet: el.querySelector(".run-packet")
-          };
-        });
-        var layers = root.querySelectorAll(".layer");
+        var svg = root.querySelector(".flow-svg");
+        var bead = svg.querySelector(".flow-bead");
+        var ghosts = svg.querySelectorAll(".flow-ghost");
+        var paths = {
+          a: svg.querySelector(".p-a"),
+          loop: svg.querySelector(".flow-loop"),
+          b: svg.querySelector(".p-b"),
+          fast: svg.querySelector(".p-fast")
+        };
+        var edges = svg.querySelectorAll(".flow-edges line.is-key");
+        var nodes = svg.querySelectorAll(".flow-node[data-learn]");
+        var trends = root.querySelectorAll(".trend-line");
+        var ship = svg.querySelector(".flow-ship");
         var reduceQ = window.matchMedia("(prefers-reduced-motion: reduce)");
         var phases = [];
         var total = 0;
-        function phase(type, run, dur) {
-          phases.push({ type: type, run: run, at: total, dur: dur });
+        function add(name, dur) {
+          phases.push({ name: name, at: total, dur: dur });
           total += dur;
         }
-        phase("run", 0, 3000);
-        phase("out", 0, 420);
-        phase("learn", 0, 880);
-        phase("run", 1, 2100);
-        phase("out", 1, 480);
-        phase("learn", 1, 880);
-        phase("run", 2, 1400);
-        phase("out", 2, 560);
-        phase("learn", 2, 880);
-        phase("hold", 0, 2400);
+        add("a", 800);
+        add("loop", 1200);
+        add("b", 900);
+        add("gate", 420);
+        add("fast1", 900);
+        add("grow", 520);
+        add("fast2", 720);
+        add("ship", 240);
+        add("trends", 860);
+        add("hold", 1800);
 
-        function phaseOf(type, run) {
+        function local(name, t) {
           for (var i = 0; i < phases.length; i++) {
-            if (phases[i].type === type && phases[i].run === run) return phases[i];
+            var phase = phases[i];
+            if (phase.name !== name) continue;
+            if (t >= phase.at + phase.dur) return 1;
+            if (t < phase.at) return 0;
+            return (t - phase.at) / phase.dur;
           }
-          return null;
+          return 0;
+        }
+        function live(name, t) {
+          for (var i = 0; i < phases.length; i++) {
+            var phase = phases[i];
+            if (phase.name === name && t >= phase.at && t < phase.at + phase.dur) return (t - phase.at) / phase.dur;
+          }
+          return -1;
         }
         function ease(u) {
           return u < 0.5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2;
         }
-        function progress(type, run, t) {
-          var item = phaseOf(type, run);
-          if (!item) return 0;
-          if (t >= item.at + item.dur) return 1;
-          if (t < item.at) return 0;
-          return (t - item.at) / item.dur;
+        function len(el) {
+          if (!el._len) el._len = el.getTotalLength();
+          return el._len;
+        }
+        function point(el, t) {
+          var n = len(el);
+          var pt = el.getPointAtLength(Math.max(0, Math.min(n, n * t)));
+          return [pt.x, pt.y];
+        }
+        function dash(el, t) {
+          var n = len(el);
+          el.style.strokeDasharray = n;
+          el.style.strokeDashoffset = String(n * (1 - t));
+        }
+        var trail = [];
+        function place(x, y, question) {
+          bead.setAttribute("cx", x.toFixed(2));
+          bead.setAttribute("cy", y.toFixed(2));
+          bead.classList.toggle("is-question", !!question);
+          bead.style.opacity = "1";
+          trail.push([x, y]);
+          if (trail.length > 10) trail.shift();
+          var g1 = trail[Math.max(0, trail.length - 4)];
+          var g2 = trail[Math.max(0, trail.length - 8)];
+          ghosts[0].setAttribute("cx", g1[0].toFixed(2));
+          ghosts[0].setAttribute("cy", g1[1].toFixed(2));
+          ghosts[1].setAttribute("cx", g2[0].toFixed(2));
+          ghosts[1].setAttribute("cy", g2[1].toFixed(2));
+          ghosts[0].style.opacity = trail.length > 4 ? "0.4" : "0";
+          ghosts[1].style.opacity = trail.length > 8 ? "0.2" : "0";
+        }
+        function hideBead() {
+          bead.style.opacity = "0";
+          ghosts[0].style.opacity = "0";
+          ghosts[1].style.opacity = "0";
+          trail = [];
         }
         function render(now) {
           var t = now % total;
-          var feeding = false;
-          runs.forEach(function (run, r) {
-            var lin = progress("run", r, t);
-            var rp = lin <= 0 || lin >= 1 ? lin : ease(lin);
-            var op = progress("out", r, t);
-            var lp = progress("learn", r, t);
-            run.path.style.strokeDasharray = run.len;
-            run.path.style.strokeDashoffset = String(run.len * (1 - rp));
-            run.tips.forEach(function (tip) {
-              tip.el.style.opacity = rp + 0.02 >= tip.at ? "1" : "0";
-            });
-            var n = run.blocks.length;
-            var shown = Math.max(0, Math.ceil(op * n - 0.001));
-            for (var b = 0; b < n; b++) run.blocks[b].style.opacity = b < shown ? "1" : "0";
-            if (rp > 0 && rp < 1) {
-              var pt = run.path.getPointAtLength(Math.max(0, Math.min(run.len, run.len * rp)));
-              run.packet.setAttribute("transform", "translate(" + pt.x.toFixed(2) + " " + pt.y.toFixed(2) + ")");
-              run.packet.style.opacity = "1";
-            } else {
-              run.packet.style.opacity = "0";
-            }
-            run.el.classList.toggle("is-live", rp > 0 && rp < 1);
-            run.el.classList.toggle("is-source", lp > 0 && lp < 1);
-            if (lp > 0 && lp < 1) feeding = true;
+          var level = 0;
+          if (local("fast2", t) > 0.2) level = 2;
+          else if (local("fast1", t) > 0.35) level = 1;
+          edges.forEach(function (edge) {
+            var step = Number(edge.getAttribute("data-step"));
+            edge.classList.toggle("is-lit", level >= step);
+            edge.classList.toggle("is-strong", level >= 2 && step === 1);
           });
-          layers.forEach(function (layer, li) {
-            var marks = layer.querySelectorAll(".marks i");
-            var hot = false;
-            for (var r = 0; r < marks.length; r++) {
-              var lp = progress("learn", r, t);
-              var start = li / 4;
-              var end = (li + 1) / 4;
-              marks[r].classList.toggle("is-on", lp + 0.001 >= end);
-              if (lp > start && lp < end) hot = true;
-            }
-            layer.classList.toggle("is-hot", hot);
+          nodes.forEach(function (node) {
+            node.classList.toggle("is-lit", level >= Number(node.getAttribute("data-learn")));
           });
-          root.classList.toggle("is-feeding", feeding);
+          var trendT = local("trends", t);
+          trends.forEach(function (line) {
+            dash(line, trendT);
+            var head = line.parentNode.querySelector(".trend-head");
+            if (head) head.classList.toggle("is-on", trendT > 0.82);
+          });
+          ship.classList.toggle("is-on", local("ship", t) > 0);
+          root.classList.toggle("is-checking", live("gate", t) >= 0);
+          var moving = null;
+          var question = false;
+          var u = live("a", t);
+          if (u >= 0) moving = point(paths.a, ease(u));
+          u = live("loop", t);
+          if (u >= 0) { moving = point(paths.loop, ease(u)); question = true; }
+          u = live("b", t);
+          if (u >= 0) moving = point(paths.b, ease(u));
+          u = live("gate", t);
+          if (u >= 0) moving = point(paths.b, 1);
+          u = live("fast1", t);
+          if (u >= 0) moving = point(paths.fast, ease(u) * 0.48);
+          u = live("grow", t);
+          if (u >= 0) moving = point(paths.fast, 0.48);
+          u = live("fast2", t);
+          if (u >= 0) moving = point(paths.fast, 0.48 + ease(u) * 0.52);
+          if (moving) place(moving[0], moving[1], question);
+          else hideBead();
         }
 
         var running = false;
@@ -356,11 +418,10 @@
         var elapsed = 0;
         var origin = 0;
         var onScreen = false;
-
-        function frame(now) {
+        function frame(ts) {
           if (!running) return;
-          if (!origin) origin = now - elapsed;
-          elapsed = now - origin;
+          if (!origin) origin = ts - elapsed;
+          elapsed = ts - origin;
           render(elapsed);
           raf = requestAnimationFrame(frame);
         }
@@ -381,25 +442,20 @@
         function settle() {
           stop();
           root.classList.remove("is-playing");
-          root.classList.remove("is-feeding");
+          root.classList.remove("is-checking");
           root.classList.add("is-static");
-          runs.forEach(function (run) {
-            run.path.style.strokeDasharray = "";
-            run.path.style.strokeDashoffset = "";
-            run.packet.style.opacity = "0";
-            run.tips.forEach(function (tip) { tip.el.style.opacity = ""; });
-            Array.prototype.forEach.call(run.blocks, function (block) { block.style.opacity = ""; });
-            run.el.classList.remove("is-live");
-            run.el.classList.remove("is-source");
+          edges.forEach(function (edge) {
+            edge.classList.add("is-lit");
+            edge.classList.toggle("is-strong", edge.getAttribute("data-step") === "1");
           });
-          layers.forEach(function (layer) {
-            layer.classList.remove("is-hot");
-            Array.prototype.forEach.call(layer.querySelectorAll(".marks i"), function (mark) {
-              mark.classList.add("is-on");
-            });
+          nodes.forEach(function (node) { node.classList.add("is-lit"); });
+          ship.classList.add("is-on");
+          trends.forEach(function (line) {
+            line.style.strokeDasharray = "";
+            line.style.strokeDashoffset = "";
           });
+          hideBead();
         }
-
         document.addEventListener("visibilitychange", function () {
           if (document.hidden) stop();
           else play();
@@ -409,12 +465,12 @@
           else play();
         });
         if ("IntersectionObserver" in window) {
-          var io = new IntersectionObserver(function (entries) {
+          var watch = new IntersectionObserver(function (entries) {
             onScreen = entries[0].isIntersecting;
             if (onScreen) play();
             else stop();
-          }, { threshold: 0.2 });
-          io.observe(root);
+          }, { threshold: 0.18 });
+          watch.observe(root);
         } else {
           onScreen = true;
         }
