@@ -5,7 +5,7 @@ The home page is a teaser. It does not list product features, pricing, dates, cu
 
 ## Contact
 - Website: https://northpeaklabs.studio/
-- Email: rajkovic@mail.grokbot.com
+- Email: hello@northpeaklabs.studio
 - The home page uses a mailto link. There is no form and the site does not store messages.
 
 ## Pages
