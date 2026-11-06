@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <!--
-      North Peak Labs consulting site. GitHub Pages serves this file as-is (no build).
-      data-booking-url on body may be set to an https calendar link. When it is empty, "Book an advisory call" is a mailto.
+      North Peak Labs teaser. GitHub Pages serves this file as-is (no build).
+      The previous homepage remains in git history.
     -->
     <script>
       (function () {
@@ -17,17 +17,17 @@
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("reduced-motion");
       })();
     </script>
-    <title>AI &amp; MLOps Consulting in Arizona | North Peak Labs</title>
-    <meta name="description" content="Hands-on AI platform, MLOps, and LLM infrastructure consulting from Mesa, Arizona. Advisory calls, project work, and fractional retainers." />
+    <title>Software factories as a service (coming soon) | North Peak Labs</title>
+    <meta name="description" content="Something big is coming: software factories as a service, and the future of automated software development. From builders who’ve been at Replit." />
     <link rel="canonical" href="https://northpeaklabs.studio/" />
     <meta name="robots" content="index, follow" />
-    <meta name="author" content="Dejan Rajkovic" />
+    <meta name="author" content="North Peak Labs" />
     <meta name="google-site-verification" content="gvaEY32qJc1qwaP7-pYh64ipRtgOFbgGZ_pUyJgfM-o" />
     <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#101614" media="(prefers-color-scheme: dark)" />
-    <meta property="og:title" content="AI &amp; MLOps Consulting in Arizona | North Peak Labs" />
-    <meta property="og:description" content="Hands-on AI platform, MLOps, and LLM infrastructure consulting from Mesa, Arizona. Advisory calls, project work, and fractional retainers." />
+    <meta property="og:title" content="Software factories as a service (coming soon) | North Peak Labs" />
+    <meta property="og:description" content="Something big is coming: software factories as a service, and the future of automated software development. From builders who’ve been at Replit." />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="North Peak Labs" />
@@ -35,18 +35,17 @@
     <meta property="og:image" content="https://northpeaklabs.studio/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="North Peak Labs — AI platform, MLOps, and LLM consulting in Mesa, Arizona." />
+    <meta property="og:image:alt" content="North Peak Labs. Something big is coming. Software factories as a service." />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="AI &amp; MLOps Consulting in Arizona | North Peak Labs" />
-    <meta name="twitter:description" content="Hands-on AI platform, MLOps, and LLM infrastructure consulting from Mesa, Arizona. Advisory calls, project work, and fractional retainers." />
+    <meta name="twitter:title" content="Software factories as a service (coming soon) | North Peak Labs" />
+    <meta name="twitter:description" content="Something big is coming: software factories as a service, and the future of automated software development. From builders who’ve been at Replit." />
     <meta name="twitter:image" content="https://northpeaklabs.studio/og-image.png" />
-    <meta name="twitter:image:alt" content="North Peak Labs — AI platform, MLOps, and LLM consulting in Mesa, Arizona." />
+    <meta name="twitter:image:alt" content="North Peak Labs. Something big is coming. Software factories as a service." />
     <link rel="icon" href="favicon.ico" sizes="any" />
     <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
-    <link rel="me" href="https://github.com/Dejan992" />
-    <link rel="me" href="https://www.linkedin.com/in/dejan-rajkovic" />
     <link rel="preload" href="fonts/newsreader-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/newsreader-500-italic.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="styles.css" />
     <script type="application/ld+json">
@@ -54,47 +53,16 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": ["ProfessionalService", "Organization"],
+          "@type": "Organization",
           "@id": "https://northpeaklabs.studio/#org",
           "name": "North Peak Labs",
           "legalName": "North Peak Labs, LLC",
           "url": "https://northpeaklabs.studio/",
           "email": "rajkovic@mail.grokbot.com",
-          "description": "AI consulting practice for MLOps, AI platform engineering, LLM infrastructure, cloud, and Kubernetes. Advisory calls, project-based work, and fractional retainers. Based in Mesa, Arizona.",
+          "description": "Something big is coming from North Peak Labs: software factories as a service, and the future of automated software development.",
           "logo": "https://northpeaklabs.studio/mark.png",
           "image": "https://northpeaklabs.studio/og-image.png",
-          "areaServed": [
-            { "@type": "Place", "name": "Mesa, Arizona" },
-            { "@type": "Place", "name": "Phoenix area" },
-            { "@type": "Place", "name": "Remote, United States" }
-          ],
           "founder": { "@id": "https://northpeaklabs.studio/#dejan" },
-          "serviceType": "AI and MLOps consulting",
-          "knowsAbout": [
-            "AI consulting",
-            "MLOps consulting",
-            "AI platform engineering",
-            "LLM infrastructure",
-            "LLM gateways",
-            "Kubernetes",
-            "Amazon EKS",
-            "Terraform",
-            "AWS CDK",
-            "GitOps",
-            "OpenTelemetry",
-            "pgvector"
-          ],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Consulting services",
-            "itemListElement": [
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI/ML platform and MLOps advisory", "provider": { "@id": "https://northpeaklabs.studio/#org" } } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "LLM and AI system architecture", "provider": { "@id": "https://northpeaklabs.studio/#org" } } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cloud infrastructure and Kubernetes", "provider": { "@id": "https://northpeaklabs.studio/#org" } } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI strategy", "provider": { "@id": "https://northpeaklabs.studio/#org" } } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Expert-network calls", "provider": { "@id": "https://northpeaklabs.studio/#org" } } }
-            ]
-          },
           "sameAs": [
             "https://github.com/Dejan992",
             "https://www.linkedin.com/in/dejan-rajkovic"
@@ -104,25 +72,6 @@
           "@type": "Person",
           "@id": "https://northpeaklabs.studio/#dejan",
           "name": "Dejan Rajkovic",
-          "jobTitle": "Senior MLOps / AI Platform Engineer",
-          "description": "Founder of North Peak Labs, LLC in Mesa, Arizona. Senior MLOps and AI platform engineer. Immigrated from Serbia and worked as a truck driver before moving into software.",
-          "image": "https://northpeaklabs.studio/assets/dejan-rajkovic.jpg",
-          "url": "https://northpeaklabs.studio/#about",
-          "worksFor": { "@id": "https://northpeaklabs.studio/#org" },
-          "homeLocation": { "@type": "Place", "name": "Mesa, Arizona" },
-          "knowsAbout": [
-            "MLOps",
-            "AI platform engineering",
-            "LLM infrastructure",
-            "LLM gateways",
-            "Kubernetes",
-            "Amazon EKS",
-            "Terraform",
-            "AWS CDK",
-            "GitOps",
-            "OpenTelemetry",
-            "pgvector"
-          ],
           "sameAs": [
             "https://github.com/Dejan992",
             "https://www.linkedin.com/in/dejan-rajkovic"
@@ -133,7 +82,7 @@
           "@id": "https://northpeaklabs.studio/#website",
           "url": "https://northpeaklabs.studio/",
           "name": "North Peak Labs",
-          "description": "AI and MLOps consulting in Mesa, Arizona.",
+          "description": "Something big is coming from North Peak Labs: software factories as a service, and the future of automated software development.",
           "publisher": { "@id": "https://northpeaklabs.studio/#org" },
           "inLanguage": "en-US"
         },
@@ -141,421 +90,75 @@
           "@type": "WebPage",
           "@id": "https://northpeaklabs.studio/#webpage",
           "url": "https://northpeaklabs.studio/",
-          "name": "AI & MLOps Consulting in Arizona | North Peak Labs",
-          "description": "Hands-on AI platform, MLOps, and LLM infrastructure consulting from Mesa, Arizona. Advisory calls, project work, and fractional retainers.",
+          "name": "Software factories as a service (coming soon) | North Peak Labs",
+          "description": "Something big is coming: software factories as a service, and the future of automated software development. From builders who’ve been at Replit.",
           "isPartOf": { "@id": "https://northpeaklabs.studio/#website" },
           "about": { "@id": "https://northpeaklabs.studio/#org" },
           "mainEntity": { "@id": "https://northpeaklabs.studio/#org" },
           "primaryImageOfPage": "https://northpeaklabs.studio/og-image.png",
-          "dateModified": "2026-10-26",
+          "dateModified": "2026-11-06",
           "inLanguage": "en-US"
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://northpeaklabs.studio/#faq",
-          "url": "https://northpeaklabs.studio/#questions",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What does North Peak Labs consult on?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "North Peak Labs consults on AI and ML platforms, MLOps, LLM and AI system architecture, cloud infrastructure, and Kubernetes. That includes AWS, Terraform, delivery pipelines, and the access and observability around production models. The practice also takes expert-network calls and helps companies decide where AI is worth funding. For the choice between a per-token API and self-hosting open-weight LLMs on Kubernetes, read the decision checklist."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Who does the work?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Dejan Rajkovic, a senior MLOps and AI platform engineer. North Peak Labs, LLC is a one-person practice based in Mesa, Arizona."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How do engagements work?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Three shapes: an advisory call on a defined question, a scoped project with a written outcome, and a fractional retainer for ongoing senior coverage. Scope is agreed before the work starts."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do you work only with companies in Arizona?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The practice is based in Mesa, in the Phoenix area. Engagements are remote. Clients do not need to be in Arizona."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How do we start?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Email rajkovic@mail.grokbot.com with a short description of the system. Say whether you want an advisory call, a project, or a retainer, and you’ll get a reply within one business day."
-              }
-            }
-          ]
         }
       ]
     }
     </script>
   </head>
-  <body data-contact-email="rajkovic@mail.grokbot.com" data-booking-url="">
+  <body class="page-teaser">
     <a class="skip" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="nav-bar wrap">
-        <a class="wordmark" href="#top">
+        <a class="wordmark" href="/">
           <img src="mark.png" width="43" height="36" alt="" />
           <span class="wordmark-text">North Peak Labs</span>
         </a>
-        <nav class="nav-links" id="nav-links" aria-label="Primary">
-          <a href="#services">Services</a>
-          <a href="#engagements">Engagements</a>
-          <a href="#about">About</a>
-          <a href="#background">Background</a>
-          <a href="#contact">Contact</a>
-        </nav>
         <div class="nav-actions">
           <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme">
             <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M14.5 3.1a8.8 8.8 0 1 0 6.4 13.6A8.2 8.2 0 0 1 14.5 3.1z"/></svg>
             <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M12 4.2V2.5M12 21.5v-1.7M4.2 12H2.5M21.5 12h-1.7M6.1 6.1 4.9 4.9M19.1 19.1l-1.2-1.2M17.9 6.1l1.2-1.2M4.9 19.1l1.2-1.2"/><circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
-          </button>
-          <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
-            <span class="menu-icon" aria-hidden="true"></span>
           </button>
         </div>
       </div>
     </header>
 
     <main id="main" tabindex="-1">
-      <section class="hero wrap" id="top" aria-labelledby="hero-title">
-        <div class="hero-grid">
-          <div>
-            <p class="kicker">AI consulting · Mesa, Arizona</p>
-            <h1 id="hero-title">Senior engineering for AI platforms that need to run in production.</h1>
-            <p class="subline">MLOps, LLM infrastructure, and the cloud underneath.</p>
-            <p class="lede">North Peak Labs is the consulting practice of Dejan Rajkovic, a hands-on senior MLOps and AI platform engineer in Mesa, Arizona. He helps CTOs, engineering leads, and heads of ML at startups and mid-size teams get AI out of the demo and into production: AI platforms, LLM infrastructure, Kubernetes, latency and cost. Start with a one-hour advisory call.</p>
-            <div class="actions">
-              <a class="button button-primary" href="mailto:rajkovic@mail.grokbot.com?subject=Consulting%20inquiry">Start with a project or question <svg class="arrow" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-              <a class="button button-secondary" data-booking href="mailto:rajkovic@mail.grokbot.com?subject=Advisory%20call%20request">Book an advisory call</a>
-            </div>
-            <ul class="hero-notes">
-              <li>Mesa, Arizona</li>
-              <li>Phoenix area</li>
-              <li>Remote</li>
-            </ul>
-          </div>
-          <aside class="practice" aria-label="Practice summary">
-            <p class="kicker">The practice</p>
-            <svg class="ridge" viewBox="0 0 360 120" fill="none" aria-hidden="true">
-              <path class="ridge-soft" d="M4 100 H40 L78 86 L120 94 L168 68 L210 78 L258 56 L300 70 L356 60" stroke="currentColor" stroke-width="1.25" opacity="0.45" />
-              <path class="ridge-path" d="M4 86 H36 L70 66 L104 76 L146 38 L180 56 L214 26 L250 48 L292 16 L328 44 L356 34" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" />
-            </svg>
-            <dl>
-              <div class="practice-row">
-                <dt>Based in</dt>
-                <dd>Mesa, Arizona</dd>
-              </div>
-              <div class="practice-row">
-                <dt>Serves</dt>
-                <dd>Phoenix area and remote</dd>
-              </div>
-              <div class="practice-row">
-                <dt>Company</dt>
-                <dd>North Peak Labs, LLC</dd>
-              </div>
-              <div class="practice-row">
-                <dt>Shapes</dt>
-                <dd>Call, project, retainer</dd>
-              </div>
-            </dl>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section" id="services" aria-labelledby="services-title">
-        <div class="wrap">
-          <div class="section-head">
-            <p class="kicker">Services</p>
-            <div>
-              <h2 id="services-title">What a senior platform engineer is for</h2>
-              <p class="section-intro">AI consulting for the platform itself: MLOps consulting, AI platform engineering, and LLM infrastructure, for teams in the Phoenix area and anywhere the work is remote.</p>
-            </div>
-          </div>
-          <article class="service reveal" id="mlops">
-            <span class="num">01</span>
-            <h3>AI/ML platform and MLOps advisory</h3>
-            <p>How models get trained, evaluated, shipped, and watched. GitOps CI/CD, Python and TypeScript SDKs, and observability for the platform, including token and cost tracking, so a notebook is not the production system.</p>
-          </article>
-          <article class="service reveal" id="llm-architecture">
-            <span class="num">02</span>
-            <h3>LLM and AI system architecture</h3>
-            <p>LLM gateways, RAG data layers such as pgvector, and where a model does and does not belong. Access for AI tools with OAuth 2.1 and Okta when that is already how the company signs people in. Read the <a href="/self-hosting-llms-kubernetes/">checklist for self-hosting LLMs on Kubernetes versus paying per token</a>.</p>
-          </article>
-          <article class="service reveal" id="cloud-kubernetes">
-            <span class="num">03</span>
-            <h3>Cloud infrastructure and Kubernetes</h3>
-            <p>AWS, including EKS and multi-account IAM and SCP guardrails, with Terraform and CDK. Kubernetes when it is the right tool, and a simpler path when it is not.</p>
-          </article>
-          <article class="service reveal" id="ai-strategy">
-            <span class="num">04</span>
-            <h3>AI strategy</h3>
-            <p>A plain recommendation for operators. What to fund, what to ignore, and what has to be true in the systems you already run before a model is worth deploying.</p>
-          </article>
-          <article class="service reveal" id="expert-calls">
-            <span class="num">05</span>
-            <h3>Expert-network calls</h3>
-            <p>A focused call for investors, operators, and product teams who want a senior practitioner’s view of an AI platform, an MLOps setup, or LLM infrastructure before they commit.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section band" id="engagements" aria-labelledby="engagements-title">
-        <div class="wrap">
-          <div class="section-head">
-            <p class="kicker">Engagements</p>
-            <div>
-              <h2 id="engagements-title">How an engagement works</h2>
-              <p class="section-intro">Pick the length of the commitment. Scope is written down before the work starts. Rates are discussed on the first call, not listed here.</p>
-            </div>
-          </div>
-          <div class="engage-grid">
-            <article class="engage reveal" id="advisory">
-              <span class="num">01</span>
-              <h3>Advisory call</h3>
-              <p>One working session on a defined question. A useful start before a build, a hire, or a vendor decision, and the usual shape of an expert-network call.</p>
-            </article>
-            <article class="engage reveal" id="projects">
-              <span class="num">02</span>
-              <h3>Project</h3>
-              <p>Scoped work with a written outcome. An architecture review, a platform design, a production-readiness pass, or hands-on help through one milestone.</p>
-            </article>
-            <article class="engage reveal" id="retainer">
-              <span class="num">03</span>
-              <h3>Fractional retainer</h3>
-              <p>Ongoing senior coverage when a team needs an AI platform engineer and is not opening a full-time role. Cadence and scope are agreed up front.</p>
-            </article>
+      <div class="teaser wrap">
+        <div class="teaser-copy">
+          <p class="kicker">Coming soon</p>
+          <h1 id="hero-title">Something big<br>is coming.</h1>
+          <p class="subline">Software factories as a service — <br>the future of automated software development.</p>
+          <p class="roots">From builders who’ve been at Replit.</p>
+          <div class="teaser-contact">
+            <a class="button button-primary" href="mailto:rajkovic@mail.grokbot.com?subject=Get%20notified">Get notified <svg class="arrow" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="teaser-email" href="mailto:rajkovic@mail.grokbot.com">rajkovic@mail.grokbot.com</a>
           </div>
         </div>
-      </section>
-
-      <section class="section" id="about" aria-labelledby="about-title">
-        <div class="wrap">
-          <div class="section-head">
-            <p class="kicker">About</p>
-            <h2 id="about-title">Dejan Rajkovic</h2>
-          </div>
-          <div class="about-grid">
-            <figure class="about-photo">
-              <picture>
-                <source srcset="assets/dejan-rajkovic.webp" type="image/webp" />
-                <img src="assets/dejan-rajkovic.jpg" width="400" height="400" alt="Headshot of Dejan Rajkovic, founder of North Peak Labs" loading="lazy" decoding="async" />
-              </picture>
-            </figure>
-            <div class="about-copy">
-              <p class="role">Senior MLOps / AI Platform Engineer · Founder, North Peak Labs, LLC · Mesa, Arizona</p>
-              <p>Dejan Rajkovic is a senior MLOps and AI platform engineer, and the founder of North Peak Labs, LLC in Mesa, Arizona.</p>
-              <p>He immigrated from Serbia and worked as a truck driver before moving into software. He still works the same way: learn the real system, then make it operable.</p>
-              <p>He consults on AI and ML platforms, LLM architecture, cloud infrastructure, and Kubernetes. He also takes expert-network calls when a team wants a practitioner’s view before they commit.</p>
-              <ul class="about-links">
-                <li><a href="https://www.linkedin.com/in/dejan-rajkovic">LinkedIn</a></li>
-                <li><a href="https://github.com/Dejan992">GitHub</a></li>
-                <li><a href="https://dejan992.github.io/about-me/">Personal site</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section band" id="background" aria-labelledby="background-title">
-        <div class="wrap">
-          <div class="section-head">
-            <p class="kicker">Background</p>
-            <div>
-              <h2 id="background-title">What he’s built</h2>
-              <p class="section-intro">Systems Dejan built in his in-house engineering roles. These are not client engagements.</p>
-              <p class="credentials">8+ years in platform, DevOps, and MLOps. AWS Certified Security – Specialty. Microsoft AI Practitioner. Snyk DevSecOps Leadership Award (2022).</p>
-            </div>
-          </div>
-          <article class="service reveal">
-            <span class="num">01</span>
-            <h3>Enterprise AI gateway</h3>
-            <p>Architected a governed, multi-tenant platform serving 500+ engineers and business users, with secure routing across model providers, self-service registration, hot config reloads, and audit and SIEM controls.</p>
-          </article>
-          <article class="service reveal">
-            <span class="num">02</span>
-            <h3>AWS account vending</h3>
-            <p>Built self-service AWS account vending for 50–100 sandboxed environments with IAM and SCP guardrails and budget controls, cutting provisioning from a 2.5-day ticket workflow to about 5 minutes.</p>
-          </article>
-          <article class="service reveal">
-            <span class="num">03</span>
-            <h3>Observability</h3>
-            <p>Observability and SLOs as code, with Datadog, OpenTelemetry, MLflow, and Terraform, including token and cost tracking for LLM workloads.</p>
-          </article>
-          <article class="service reveal">
-            <span class="num">04</span>
-            <h3>Progressive delivery</h3>
-            <p>Progressive delivery for risky AI changes: shadow mode, dual-run sampling, quality gates, kill switches, and fail-open design.</p>
-          </article>
-          <article class="service reveal">
-            <span class="num">05</span>
-            <h3>Cloud cost</h3>
-            <p>Reduced cloud infrastructure costs about 70% through Spot strategies and right-sizing, in an earlier role.</p>
-          </article>
-          <p class="background-note">From an in-house engineering role: co-inventor on a pending patent in AI memory. Not North Peak Labs work.</p>
-        </div>
-      </section>
-
-      <section class="section" id="questions" aria-labelledby="faq-title">
-        <div class="wrap">
-          <div class="section-head">
-            <p class="kicker">Questions</p>
-            <h2 id="faq-title">Before the first conversation</h2>
-          </div>
-          <div class="faq-list">
-            <article class="faq-item">
-              <h3>What does North Peak Labs consult on?</h3>
-              <p>North Peak Labs consults on AI and ML platforms, MLOps, LLM and AI system architecture, cloud infrastructure, and Kubernetes. That includes AWS, Terraform, delivery pipelines, and the access and observability around production models. The practice also takes expert-network calls and helps companies decide where AI is worth funding. For the choice between a per-token API and self-hosting open-weight LLMs on Kubernetes, read the <a href="/self-hosting-llms-kubernetes/">decision checklist</a>.</p>
-            </article>
-            <article class="faq-item">
-              <h3>Who does the work?</h3>
-              <p>Dejan Rajkovic, a senior MLOps and AI platform engineer. North Peak Labs, LLC is a one-person practice based in Mesa, Arizona.</p>
-            </article>
-            <article class="faq-item">
-              <h3>How do engagements work?</h3>
-              <p>Three shapes: an advisory call on a defined question, a scoped project with a written outcome, and a fractional retainer for ongoing senior coverage. Scope is agreed before the work starts.</p>
-            </article>
-            <article class="faq-item">
-              <h3>Do you work only with companies in Arizona?</h3>
-              <p>The practice is based in Mesa, in the Phoenix area. Engagements are remote. Clients do not need to be in Arizona.</p>
-            </article>
-            <article class="faq-item">
-              <h3>How do we start?</h3>
-              <p>Email rajkovic@mail.grokbot.com with a short description of the system. Say whether you want an advisory call, a project, or a retainer, and you’ll get a reply within one business day.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact inverse" id="contact" aria-labelledby="contact-title">
-        <div class="wrap contact-grid">
-          <div>
-            <p class="kicker">Contact</p>
-            <h2 id="contact-title">Start with the system you have.</h2>
-            <p class="lede">An advisory call, a project, or a retainer. Send a note with the problem and the shape of help you want.</p>
-            <p class="fine">Email <a class="email-link" data-email href="mailto:rajkovic@mail.grokbot.com?subject=Consulting%20inquiry">rajkovic@mail.grokbot.com</a></p>
-            <p class="fine">The form opens your email app. This site does not store the message.</p>
-            <noscript>
-              <p class="fine">JavaScript is off, so the form cannot open your mail app. Email <a href="mailto:rajkovic@mail.grokbot.com?subject=Consulting%20inquiry">rajkovic@mail.grokbot.com</a> directly.</p>
-            </noscript>
-          </div>
-          <form id="contact-form" novalidate>
-            <div class="field-row">
-              <div class="field">
-                <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
-                <input id="name" name="name" type="text" autocomplete="name" required maxlength="120" />
-              </div>
-              <div class="field">
-                <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
-                <input id="email" name="email" type="email" autocomplete="email" required maxlength="200" />
-              </div>
-            </div>
-            <div class="field">
-              <label for="company">Company (optional)</label>
-              <input id="company" name="company" type="text" autocomplete="organization" maxlength="160" />
-            </div>
-            <div class="field">
-              <label for="engagement">What shape of help <span class="req" aria-hidden="true">*</span></label>
-              <select id="engagement" name="engagement" required>
-                <option value="">Choose one</option>
-                <option>Advisory call</option>
-                <option>Project</option>
-                <option>Fractional retainer</option>
-                <option>Expert-network call</option>
-                <option>Not sure yet</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="message">What are you trying to run? <span class="req" aria-hidden="true">*</span></label>
-              <textarea id="message" name="message" required maxlength="4000"></textarea>
-            </div>
-            <button class="button button-primary" type="submit">Email this note <svg class="arrow" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-          </form>
-        </div>
-      </section>
+        <svg class="ridge teaser-ridge" viewBox="0 0 360 120" fill="none" aria-hidden="true">
+          <path class="ridge-soft" d="M4 100 H40 L78 86 L120 94 L168 68 L210 78 L258 56 L300 70 L356 60" stroke="currentColor" stroke-width="1.25" opacity="0.45" />
+          <path class="ridge-path" d="M4 86 H36 L70 66 L104 76 L146 38 L180 56 L214 26 L250 48 L292 16 L328 44 L356 34" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" />
+        </svg>
+      </div>
     </main>
 
     <footer>
       <div class="wrap footer-inner">
-        <p class="footer-copy">© 2026 North Peak Labs, LLC · Mesa, Arizona</p>
+        <p class="footer-copy">© 2026 North Peak Labs, LLC</p>
         <nav class="footer-nav" aria-label="Footer">
-          <a href="#services">Services</a>
-          <a href="#engagements">Engagements</a>
-          <a href="#about">About</a>
-          <a href="#background">Background</a>
-          <a href="#questions">Questions</a>
-          <a href="#contact">Contact</a>
-          <a href="#top">Back to top</a>
+          <a href="/self-hosting-llms-kubernetes/">Writing</a>
         </nav>
-        <div class="footer-meta">
-          <a href="https://www.linkedin.com/in/dejan-rajkovic">LinkedIn</a>
-          <a href="https://github.com/Dejan992">GitHub</a>
-        </div>
       </div>
     </footer>
 
     <script>
       (function () {
         var header = document.querySelector(".site-header");
-        var button = document.querySelector(".menu-toggle");
-        var nav = document.getElementById("nav-links");
         var themeButton = document.querySelector(".theme-toggle");
         var root = document.documentElement;
-        var email = document.body.getAttribute("data-contact-email") || "";
-        var booking = (document.body.getAttribute("data-booking-url") || "").trim();
 
         function onScroll() {
           if (header) header.classList.toggle("is-scrolled", window.scrollY > 4);
         }
         onScroll();
         window.addEventListener("scroll", onScroll, { passive: true });
-
-        function setOpen(open) {
-          if (!button || !nav) return;
-          nav.classList.toggle("is-open", open);
-          button.setAttribute("aria-expanded", open ? "true" : "false");
-          button.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
-          document.body.classList.toggle("nav-locked", open);
-        }
-        if (button && nav) {
-          button.addEventListener("click", function () {
-            var open = button.getAttribute("aria-expanded") !== "true";
-            setOpen(open);
-            if (open) {
-              var first = nav.querySelector("a");
-              if (first) first.focus();
-            }
-          });
-          nav.addEventListener("click", function (event) {
-            if (event.target.closest("a")) setOpen(false);
-          });
-          document.addEventListener("keydown", function (event) {
-            if (event.key === "Escape" && button.getAttribute("aria-expanded") === "true") {
-              setOpen(false);
-              button.focus();
-            }
-          });
-          document.addEventListener("click", function (event) {
-            if (button.getAttribute("aria-expanded") !== "true") return;
-            if (event.target.closest("#nav-links") || event.target.closest(".menu-toggle")) return;
-            setOpen(false);
-          });
-          window.addEventListener("resize", function () {
-            if (window.matchMedia("(min-width: 880px)").matches) setOpen(false);
-          });
-        }
 
         function appliedTheme() {
           var explicit = root.getAttribute("data-theme");
@@ -588,104 +191,6 @@
         window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
           if (!root.getAttribute("data-theme")) syncThemeControls();
         });
-
-        var reduce = root.classList.contains("reduced-motion");
-        var nodes = document.querySelectorAll(".reveal");
-        if (!reduce && nodes.length && "IntersectionObserver" in window) {
-          var io = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-              if (!entry.isIntersecting) return;
-              entry.target.classList.add("is-in");
-              io.unobserve(entry.target);
-            });
-          }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
-          nodes.forEach(function (node) { io.observe(node); });
-        } else {
-          nodes.forEach(function (node) { node.classList.add("is-in"); });
-        }
-
-        var sections = ["services", "engagements", "about", "background", "contact"];
-        var navLinks = nav ? Array.prototype.slice.call(nav.querySelectorAll("a")) : [];
-        if (navLinks.length && "IntersectionObserver" in window) {
-          var spy = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-              if (!entry.isIntersecting) return;
-              var id = entry.target.id;
-              navLinks.forEach(function (link) {
-                if (link.getAttribute("href") === "#" + id) link.setAttribute("aria-current", "true");
-                else link.removeAttribute("aria-current");
-              });
-            });
-          }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
-          sections.forEach(function (id) {
-            var el = document.getElementById(id);
-            if (el) spy.observe(el);
-          });
-        }
-
-        document.querySelectorAll("a[href^='http']").forEach(function (link) {
-          link.setAttribute("target", "_blank");
-          link.setAttribute("rel", "noopener noreferrer");
-          if (!link.querySelector(".sr-only")) {
-            var hint = document.createElement("span");
-            hint.className = "sr-only";
-            hint.textContent = " (opens in a new tab)";
-            link.appendChild(hint);
-          }
-        });
-
-        document.querySelectorAll("[data-booking]").forEach(function (link) {
-          if (/^https?:\/\//i.test(booking)) {
-            link.href = booking;
-            link.target = "_blank";
-            link.rel = "noopener noreferrer";
-            if (!link.querySelector(".sr-only")) {
-              var note = document.createElement("span");
-              note.className = "sr-only";
-              note.textContent = " (opens in a new tab)";
-              link.appendChild(note);
-            }
-          } else {
-            link.href = "mailto:" + email + "?subject=" + encodeURIComponent("Advisory call request");
-            link.removeAttribute("target");
-            link.removeAttribute("rel");
-          }
-        });
-        var mailto = "mailto:" + email + "?subject=" + encodeURIComponent("Consulting inquiry");
-        document.querySelectorAll("a[href^='mailto:']").forEach(function (el) {
-          if (el.hasAttribute("data-booking")) return;
-          el.setAttribute("href", mailto);
-        });
-        document.querySelectorAll("[data-email]").forEach(function (el) {
-          el.textContent = email;
-        });
-
-        var form = document.getElementById("contact-form");
-        var status = document.getElementById("form-status");
-        if (form) {
-          form.addEventListener("submit", function (event) {
-            event.preventDefault();
-            if (!form.checkValidity()) {
-              form.reportValidity();
-              return;
-            }
-            var data = new FormData(form);
-            var subject = "Consulting inquiry from " + String(data.get("name") || "").trim();
-            var body = [
-              "Name: " + String(data.get("name") || "").trim(),
-              "Email: " + String(data.get("email") || "").trim(),
-              "Company: " + (String(data.get("company") || "").trim() || "—"),
-              "Engagement: " + String(data.get("engagement") || "").trim(),
-              "",
-              String(data.get("message") || "").trim()
-            ].join("\n");
-            var href = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-            if (status) {
-              status.textContent = "Your email app should open with this note. If it does not, send it to " + email + ".";
-            }
-            window.location.href = href;
-          });
-        }
       })();
     </script>
   </body>

@@ -1,6 +1,6 @@
 # North Peak Labs
 
-Consulting site for [North Peak Labs](https://northpeaklabs.studio/), the one-person Arizona practice of Dejan Rajkovic. The page covers AI platform and MLOps advisory, LLM system architecture, cloud and Kubernetes, AI strategy, and expert-network calls.
+Teaser site for [North Peak Labs](https://northpeaklabs.studio/). The home page says something big is coming: software factories as a service, and the future of automated software development. The earlier consulting homepage is in git history (through `47ed5cc`) and is not published.
 
 ## Deploy
 
@@ -21,34 +21,26 @@ From the repository root:
 python3 -m http.server 8765
 ```
 
-Open `http://127.0.0.1:8765/`. Fonts, the mark, the portrait, and the favicon are same-origin files. The page does not call a third party.
+Open `http://127.0.0.1:8765/`. Fonts, the mark, and the favicon are same-origin files. The page does not call a third party.
 
 ## Production domain
 
 The production domain is **https://northpeaklabs.studio/**. It is already set in `CNAME`, the canonical URL, Open Graph and Twitter tags, `sitemap.xml`, `robots.txt`, and the JSON-LD. Change those together if the domain ever moves.
 
-## Contact and booking
+The Google Search Console verification meta tag on the home page stays as it is.
 
-The public address is `rajkovic@mail.grokbot.com` (`data-contact-email` on `<body>`, the mailto links, and the Organization email in the JSON-LD).
+## Contact
 
-“Book an advisory call” opens a mailto to that address with the subject `Advisory call request`. If `data-booking-url` is set to an `https://` calendar link, that button uses the calendar instead.
+The public address is `rajkovic@mail.grokbot.com`. “Get notified” and the address on the home page are mailto links. There is no form and no calendar embed.
 
-## Portrait
+## What is on the site
 
-`assets/dejan-rajkovic.webp` is served first, with `assets/dejan-rajkovic.jpg` as the fallback. The image is 400×400 and is displayed at 400px or smaller.
-
-## Background
-
-The background section is in-house engineering, not client work. Employers are not named.
-
-## What is on the page
-
-- `index.html` — the home page: copy and a small script (theme, menu, scroll reveal, mailto form). Styles live in `styles.css`.
-- `self-hosting-llms-kubernetes/index.html` — decision checklist for a per-token LLM API versus self-hosting on Kubernetes.
+- `index.html` — coming-soon teaser. Styles live in `styles.css`. A small script handles the theme choice.
+- `self-hosting-llms-kubernetes/index.html` — decision checklist for a per-token LLM API versus self-hosting on Kubernetes. Linked from the home page footer as “Writing”.
 - `404.html` — branded not-found page, `noindex`.
-- `assets/` — portrait, JPEG and WebP.
+- `assets/` — portrait from the previous home page, kept in the repository and not linked.
 - `fonts/` — self-hosted Newsreader and Inter (SIL Open Font License). License texts are in that folder.
-- `mark.png`, `favicon.ico`, `favicon-32.png`, `apple-touch-icon.png` — existing North Peak mark.
+- `mark.png`, `favicon.ico`, `favicon-32.png`, `apple-touch-icon.png` — North Peak mark.
 - `og-image.png` — social preview, 1200×630.
 - `robots.txt`, `sitemap.xml`, `llms.txt`.
 

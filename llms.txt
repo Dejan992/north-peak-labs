@@ -1,26 +1,13 @@
 # North Peak Labs
-> Consulting practice of Dejan Rajkovic, a senior MLOps and AI platform engineer. North Peak Labs, LLC is a one-person Arizona LLC based in Mesa, in the Phoenix area. Engagements are remote.
+> North Peak Labs, LLC. Something big is coming: software factories as a service, and the future of automated software development. From builders who've been at Replit.
 
-The site describes consulting. Background notes are in-house engineering, not client engagements. No employer is named.
-
-## Services
-- AI/ML platform and MLOps advisory
-- LLM and AI system architecture
-- Cloud infrastructure and Kubernetes
-- AI strategy for companies
-- Expert-network calls
-
-## Engagements
-- Advisory calls
-- Project-based work
-- Fractional / retainer
+The home page is a teaser. It does not list product features, pricing, dates, customers, or results.
 
 ## Contact
 - Website: https://northpeaklabs.studio/
 - Email: rajkovic@mail.grokbot.com
-- Advisory call: mailto to that address with the subject "Advisory call request"
-- A calendar link can replace the advisory-call mailto when `data-booking-url` on the page is an https URL
+- The home page uses a mailto link. There is no form and the site does not store messages.
 
 ## Pages
-- [Home](https://northpeaklabs.studio/): services, engagements, about, background, contact
+- [Home](https://northpeaklabs.studio/): coming-soon teaser
 - [Self-hosting LLMs on Kubernetes vs paying per token](https://northpeaklabs.studio/self-hosting-llms-kubernetes/): a decision checklist. Illustrative cost math, not client results.

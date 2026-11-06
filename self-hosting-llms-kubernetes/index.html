@@ -27,17 +27,17 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="North Peak Labs" />
     <meta property="og:url" content="https://northpeaklabs.studio/self-hosting-llms-kubernetes/" />
-    <meta property="og:image" content="https://northpeaklabs.studio/og-image.png" />
+    <meta property="og:image" content="https://northpeaklabs.studio/self-hosting-llms-kubernetes/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="North Peak Labs — AI platform, MLOps, and LLM consulting in Mesa, Arizona." />
+    <meta property="og:image:alt" content="Self-hosting LLMs on Kubernetes vs paying per token: a decision checklist." />
     <meta property="article:published_time" content="2026-10-26" />
     <meta property="article:author" content="Dejan Rajkovic" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Self-hosting LLMs on Kubernetes vs paying per token: a decision checklist" />
     <meta name="twitter:description" content="A checklist for CTOs and engineering leads choosing a per-token LLM API or self-hosted open-weight models on Kubernetes, with illustrative cost math." />
-    <meta name="twitter:image" content="https://northpeaklabs.studio/og-image.png" />
-    <meta name="twitter:image:alt" content="North Peak Labs — AI platform, MLOps, and LLM consulting in Mesa, Arizona." />
+    <meta name="twitter:image" content="https://northpeaklabs.studio/self-hosting-llms-kubernetes/og-image.png" />
+    <meta name="twitter:image:alt" content="Self-hosting LLMs on Kubernetes vs paying per token: a decision checklist." />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
@@ -55,17 +55,11 @@
             "headline": "Self-hosting LLMs on Kubernetes vs paying per token: a decision checklist",
             "description": "A checklist for CTOs and engineering leads choosing a per-token LLM API or self-hosted open-weight models on Kubernetes, with illustrative cost math.",
             "datePublished": "2026-10-26",
-            "dateModified": "2026-10-26",
+            "dateModified": "2026-11-06",
             "inLanguage": "en-US",
             "mainEntityOfPage": "https://northpeaklabs.studio/self-hosting-llms-kubernetes/",
-            "image": "https://northpeaklabs.studio/og-image.png",
-            "author": {
-              "@type": "Person",
-              "@id": "https://northpeaklabs.studio/#dejan",
-              "name": "Dejan Rajkovic",
-              "url": "https://northpeaklabs.studio/#about",
-              "sameAs": ["https://github.com/Dejan992", "https://www.linkedin.com/in/dejan-rajkovic"]
-            },
+            "image": "https://northpeaklabs.studio/self-hosting-llms-kubernetes/og-image.png",
+            "author": { "@id": "https://northpeaklabs.studio/#dejan" },
             "publisher": {
               "@type": "Organization",
               "@id": "https://northpeaklabs.studio/#org",
@@ -103,20 +97,10 @@
           <img src="/mark.png" width="43" height="36" alt="" />
           <span class="wordmark-text">North Peak Labs</span>
         </a>
-        <nav class="nav-links" id="nav-links" aria-label="Primary">
-          <a href="/#services">Services</a>
-          <a href="/#engagements">Engagements</a>
-          <a href="/#about">About</a>
-          <a href="/#background">Background</a>
-          <a href="/#contact">Contact</a>
-        </nav>
         <div class="nav-actions">
           <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme">
             <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M14.5 3.1a8.8 8.8 0 1 0 6.4 13.6A8.2 8.2 0 0 1 14.5 3.1z"/></svg>
             <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M12 4.2V2.5M12 21.5v-1.7M4.2 12H2.5M21.5 12h-1.7M6.1 6.1 4.9 4.9M19.1 19.1l-1.2-1.2M17.9 6.1l1.2-1.2M4.9 19.1l1.2-1.2"/><circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
-          </button>
-          <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
-            <span class="menu-icon" aria-hidden="true"></span>
           </button>
         </div>
       </div>
@@ -133,7 +117,7 @@
           </nav>
           <p class="kicker">Checklist</p>
           <h1>Self-hosting LLMs on Kubernetes vs paying per token: a decision checklist</h1>
-          <p class="byline"><a href="/#about">Dejan Rajkovic</a> · North Peak Labs · October 26, 2026</p>
+          <p class="byline"><a href="https://www.linkedin.com/in/dejan-rajkovic">Dejan Rajkovic</a> · North Peak Labs · October 26, 2026</p>
           <p class="lede">A per-token API and a model on your own cluster are different operating models. This checklist is for CTOs and engineering leads deciding whether to keep paying per token or to run open-weight models on Kubernetes. Every dollar figure below is illustrative arithmetic for your own rates. None of it is a client result, a benchmark, or a vendor price.</p>
           <h2>Five questions first</h2>
           <ol>
@@ -322,8 +306,8 @@
 
           <section class="cta-band" aria-labelledby="cta-title">
             <h2 id="cta-title">Run the checklist on your numbers</h2>
-            <p>Bring your token counts, latency target, and data boundary. In a one-hour advisory call, Dejan runs this worksheet on your numbers and tells you whether to stay on the API.</p>
-            <p><a class="button button-primary" href="/#contact">Book a one-hour advisory call</a></p>
+            <p>Bring your token counts, latency target, and data boundary. The worksheet is yours to run. Questions about a boundary in the checklist can go to North Peak Labs by email.</p>
+            <p><a class="button button-primary" href="mailto:rajkovic@mail.grokbot.com?subject=Self-hosting%20LLMs%20checklist">Email North Peak Labs</a></p>
           </section>
         </div>
       </article>
@@ -333,12 +317,8 @@
       <div class="wrap footer-inner">
         <p class="footer-copy">© 2026 North Peak Labs, LLC · Mesa, Arizona</p>
         <nav class="footer-nav" aria-label="Footer">
-          <a href="/#services">Services</a>
-          <a href="/#engagements">Engagements</a>
-          <a href="/#about">About</a>
-          <a href="/#background">Background</a>
-          <a href="/#questions">Questions</a>
-          <a href="/#contact">Contact</a>
+          <a href="/">Home</a>
+          <a href="/self-hosting-llms-kubernetes/" aria-current="page">Writing</a>
           <a href="#main">Back to top</a>
         </nav>
         <div class="footer-meta">
