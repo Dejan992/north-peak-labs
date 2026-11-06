@@ -58,7 +58,7 @@
           "name": "North Peak Labs",
           "legalName": "North Peak Labs, LLC",
           "url": "https://northpeaklabs.studio/",
-          "email": "rajkovic@mail.grokbot.com",
+          "email": "hello@northpeaklabs.studio",
           "description": "Something big is coming from North Peak Labs: software factories as a service, and the future of automated software development.",
           "logo": "https://northpeaklabs.studio/mark.png",
           "image": "https://northpeaklabs.studio/og-image.png",
@@ -128,14 +128,101 @@
           <p class="subline">Software factories as a service — <br>the future of automated software development.</p>
           <p class="roots">From builders who’ve been at Replit.</p>
           <div class="teaser-contact">
-            <a class="button button-primary" href="mailto:rajkovic@mail.grokbot.com?subject=Get%20notified">Get notified <svg class="arrow" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-            <a class="teaser-email" href="mailto:rajkovic@mail.grokbot.com">rajkovic@mail.grokbot.com</a>
+            <a class="button button-primary" href="mailto:hello@northpeaklabs.studio?subject=Get%20notified">Get notified <svg class="arrow" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="teaser-email" href="mailto:hello@northpeaklabs.studio">hello@northpeaklabs.studio</a>
           </div>
         </div>
-        <svg class="ridge teaser-ridge" viewBox="0 0 360 120" fill="none" aria-hidden="true">
-          <path class="ridge-soft" d="M4 100 H40 L78 86 L120 94 L168 68 L210 78 L258 56 L300 70 L356 60" stroke="currentColor" stroke-width="1.25" opacity="0.45" />
-          <path class="ridge-path" d="M4 86 H36 L70 66 L104 76 L146 38 L180 56 L214 26 L250 48 L292 16 L328 44 L356 34" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" />
-        </svg>
+        <figure class="flow">
+          <p class="kicker">Concept illustration</p>
+          <p class="flow-lead">Learns from your team’s ongoing work</p>
+          <div class="flow-canvas">
+            <span class="flow-end">Early</span>
+            <span class="flow-end">Later</span>
+            <svg class="flow-svg" viewBox="0 0 400 236" width="400" height="236" role="img" aria-label="Concept illustration of work flowing through a memory and reinforcement-learning layer. Early work branches into an open question and loops back. An eval gate checks it before the signal enters the network and lights connections. Later work reuses the brighter paths and ships with fewer corrections. Not a diagram of literal neural weights." focusable="false">
+              <defs>
+                <filter id="flow-glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="1.7" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <path class="flow-loop" d="M58 78 C44 38 96 30 88 62 C84 80 70 88 58 78" />
+              <path class="p-a" d="M12 122 C30 122 34 66 58 78" />
+              <path class="p-b" d="M58 78 C78 112 92 124 128 112" />
+              <g class="flow-gate">
+                <path d="M98 86 L98 104" />
+                <path d="M98 128 L98 150" />
+                <path class="flow-gate-bar" d="M98 104 L98 128" />
+              </g>
+              <g class="flow-edges">
+                <line x1="128" y1="58" x2="206" y2="42" />
+                <line x1="128" y1="58" x2="220" y2="88" />
+                <line x1="128" y1="112" x2="206" y2="42" />
+                <line x1="128" y1="166" x2="204" y2="132" />
+                <line x1="128" y1="166" x2="220" y2="176" />
+                <line x1="206" y1="42" x2="314" y2="64" />
+                <line x1="204" y1="132" x2="314" y2="170" />
+                <line x1="220" y1="176" x2="328" y2="116" />
+                <line x1="220" y1="176" x2="314" y2="170" />
+                <line class="is-key" data-step="1" x1="128" y1="112" x2="220" y2="88" />
+                <line class="is-key" data-step="1" x1="220" y1="88" x2="328" y2="116" />
+                <line class="is-key" data-step="2" x1="128" y1="112" x2="204" y2="132" />
+                <line class="is-key" data-step="2" x1="204" y1="132" x2="328" y2="116" />
+                <line class="is-key" data-step="2" x1="220" y1="88" x2="314" y2="64" />
+              </g>
+              <g class="flow-nodes">
+                <circle class="flow-node is-open" cx="70" cy="46" r="4.5" />
+                <circle class="flow-node" cx="128" cy="58" r="5.5" />
+                <circle class="flow-node" data-learn="1" cx="128" cy="112" r="5.5" />
+                <circle class="flow-node" cx="128" cy="166" r="5.5" />
+                <circle class="flow-node" cx="206" cy="42" r="5.5" />
+                <circle class="flow-node" data-learn="1" cx="220" cy="88" r="5.5" />
+                <circle class="flow-node" data-learn="2" cx="204" cy="132" r="5.5" />
+                <circle class="flow-node" cx="220" cy="176" r="5.5" />
+                <circle class="flow-node" data-learn="2" cx="314" cy="64" r="5.5" />
+                <circle class="flow-node" data-learn="1" cx="328" cy="116" r="5.5" />
+                <circle class="flow-node" cx="314" cy="170" r="5.5" />
+              </g>
+              <path class="p-fast" d="M128 112 C168 112 188 90 220 88 C262 86 296 116 328 116 C354 116 372 110 388 104" />
+              <rect class="flow-ship" x="378" y="98" width="10" height="10" />
+              <circle class="flow-ghost" r="3.2" cx="0" cy="0" />
+              <circle class="flow-ghost" r="2.2" cx="0" cy="0" />
+              <circle class="flow-bead" r="4.2" cx="0" cy="0" />
+            </svg>
+          </div>
+          <p class="flow-name">Memory · RL</p>
+          <p class="flow-role">Memory retains what worked. The semantic layer connects it to the business, code, and dependencies. Evals check a change before it ships. Reinforcement learning prefers approaches that passed.</p>
+          <p class="flow-reuse">Reuses validated answers and company context.</p>
+          <ul class="trends">
+            <li class="trend">
+              <span class="trend-name">Cost per accepted change</span>
+              <svg class="trend-svg" viewBox="0 0 128 36" aria-hidden="true" focusable="false">
+                <path class="trend-line" d="M4 7 C36 8 72 16 118 30" />
+                <polygon class="trend-head" points="122,32 110,24 112,34" />
+              </svg>
+            </li>
+            <li class="trend">
+              <span class="trend-name">Quality <small>accepted, tested</small></span>
+              <svg class="trend-svg" viewBox="0 0 128 36" aria-hidden="true" focusable="false">
+                <path class="trend-line" d="M4 30 C40 28 74 16 118 7" />
+                <polygon class="trend-head" points="122,5 110,2 112,14" />
+              </svg>
+            </li>
+            <li class="trend">
+              <span class="trend-name">Delivery speed</span>
+              <svg class="trend-svg" viewBox="0 0 128 36" aria-hidden="true" focusable="false">
+                <path class="trend-line" d="M4 28 C46 26 78 14 118 8" />
+                <polygon class="trend-head" points="122,6 110,3 112,15" />
+              </svg>
+            </li>
+          </ul>
+          <figcaption class="flow-caption">
+            <p>Designed for lower cost per accepted change, higher quality, and faster delivery.</p>
+            <p class="flow-fine">A concept. Gains depend on the workload and on learning that passes evals. Higher quality means accepted, tested work, not more activity.</p>
+          </figcaption>
+        </figure>
       </div>
     </main>
 
@@ -191,6 +278,204 @@
         window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
           if (!root.getAttribute("data-theme")) syncThemeControls();
         });
+      })();
+    </script>
+    <script>
+      (function () {
+        var root = document.querySelector(".flow");
+        if (!root) return;
+        var svg = root.querySelector(".flow-svg");
+        var bead = svg.querySelector(".flow-bead");
+        var ghosts = svg.querySelectorAll(".flow-ghost");
+        var paths = {
+          a: svg.querySelector(".p-a"),
+          loop: svg.querySelector(".flow-loop"),
+          b: svg.querySelector(".p-b"),
+          fast: svg.querySelector(".p-fast")
+        };
+        var edges = svg.querySelectorAll(".flow-edges line.is-key");
+        var nodes = svg.querySelectorAll(".flow-node[data-learn]");
+        var trends = root.querySelectorAll(".trend-line");
+        var ship = svg.querySelector(".flow-ship");
+        var reduceQ = window.matchMedia("(prefers-reduced-motion: reduce)");
+        var phases = [];
+        var total = 0;
+        function add(name, dur) {
+          phases.push({ name: name, at: total, dur: dur });
+          total += dur;
+        }
+        add("a", 800);
+        add("loop", 1200);
+        add("b", 900);
+        add("gate", 420);
+        add("fast1", 900);
+        add("grow", 520);
+        add("fast2", 720);
+        add("ship", 240);
+        add("trends", 860);
+        add("hold", 1800);
+
+        function local(name, t) {
+          for (var i = 0; i < phases.length; i++) {
+            var phase = phases[i];
+            if (phase.name !== name) continue;
+            if (t >= phase.at + phase.dur) return 1;
+            if (t < phase.at) return 0;
+            return (t - phase.at) / phase.dur;
+          }
+          return 0;
+        }
+        function live(name, t) {
+          for (var i = 0; i < phases.length; i++) {
+            var phase = phases[i];
+            if (phase.name === name && t >= phase.at && t < phase.at + phase.dur) return (t - phase.at) / phase.dur;
+          }
+          return -1;
+        }
+        function ease(u) {
+          return u < 0.5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2;
+        }
+        function len(el) {
+          if (!el._len) el._len = el.getTotalLength();
+          return el._len;
+        }
+        function point(el, t) {
+          var n = len(el);
+          var pt = el.getPointAtLength(Math.max(0, Math.min(n, n * t)));
+          return [pt.x, pt.y];
+        }
+        function dash(el, t) {
+          var n = len(el);
+          el.style.strokeDasharray = n;
+          el.style.strokeDashoffset = String(n * (1 - t));
+        }
+        var trail = [];
+        function place(x, y, question) {
+          bead.setAttribute("cx", x.toFixed(2));
+          bead.setAttribute("cy", y.toFixed(2));
+          bead.classList.toggle("is-question", !!question);
+          bead.style.opacity = "1";
+          trail.push([x, y]);
+          if (trail.length > 10) trail.shift();
+          var g1 = trail[Math.max(0, trail.length - 4)];
+          var g2 = trail[Math.max(0, trail.length - 8)];
+          ghosts[0].setAttribute("cx", g1[0].toFixed(2));
+          ghosts[0].setAttribute("cy", g1[1].toFixed(2));
+          ghosts[1].setAttribute("cx", g2[0].toFixed(2));
+          ghosts[1].setAttribute("cy", g2[1].toFixed(2));
+          ghosts[0].style.opacity = trail.length > 4 ? "0.4" : "0";
+          ghosts[1].style.opacity = trail.length > 8 ? "0.2" : "0";
+        }
+        function hideBead() {
+          bead.style.opacity = "0";
+          ghosts[0].style.opacity = "0";
+          ghosts[1].style.opacity = "0";
+          trail = [];
+        }
+        function render(now) {
+          var t = now % total;
+          var level = 0;
+          if (local("fast2", t) > 0.2) level = 2;
+          else if (local("fast1", t) > 0.35) level = 1;
+          edges.forEach(function (edge) {
+            var step = Number(edge.getAttribute("data-step"));
+            edge.classList.toggle("is-lit", level >= step);
+            edge.classList.toggle("is-strong", level >= 2 && step === 1);
+          });
+          nodes.forEach(function (node) {
+            node.classList.toggle("is-lit", level >= Number(node.getAttribute("data-learn")));
+          });
+          var trendT = local("trends", t);
+          trends.forEach(function (line) {
+            dash(line, trendT);
+            var head = line.parentNode.querySelector(".trend-head");
+            if (head) head.classList.toggle("is-on", trendT > 0.82);
+          });
+          ship.classList.toggle("is-on", local("ship", t) > 0);
+          root.classList.toggle("is-checking", live("gate", t) >= 0);
+          var moving = null;
+          var question = false;
+          var u = live("a", t);
+          if (u >= 0) moving = point(paths.a, ease(u));
+          u = live("loop", t);
+          if (u >= 0) { moving = point(paths.loop, ease(u)); question = true; }
+          u = live("b", t);
+          if (u >= 0) moving = point(paths.b, ease(u));
+          u = live("gate", t);
+          if (u >= 0) moving = point(paths.b, 1);
+          u = live("fast1", t);
+          if (u >= 0) moving = point(paths.fast, ease(u) * 0.48);
+          u = live("grow", t);
+          if (u >= 0) moving = point(paths.fast, 0.48);
+          u = live("fast2", t);
+          if (u >= 0) moving = point(paths.fast, 0.48 + ease(u) * 0.52);
+          if (moving) place(moving[0], moving[1], question);
+          else hideBead();
+        }
+
+        var running = false;
+        var raf = 0;
+        var elapsed = 0;
+        var origin = 0;
+        var onScreen = false;
+        function frame(ts) {
+          if (!running) return;
+          if (!origin) origin = ts - elapsed;
+          elapsed = ts - origin;
+          render(elapsed);
+          raf = requestAnimationFrame(frame);
+        }
+        function stop() {
+          running = false;
+          if (raf) cancelAnimationFrame(raf);
+          raf = 0;
+          origin = 0;
+        }
+        function play() {
+          if (running || reduceQ.matches || document.hidden || !onScreen) return;
+          running = true;
+          root.classList.add("is-playing");
+          root.classList.remove("is-static");
+          render(elapsed);
+          raf = requestAnimationFrame(frame);
+        }
+        function settle() {
+          stop();
+          root.classList.remove("is-playing");
+          root.classList.remove("is-checking");
+          root.classList.add("is-static");
+          edges.forEach(function (edge) {
+            edge.classList.add("is-lit");
+            edge.classList.toggle("is-strong", edge.getAttribute("data-step") === "1");
+          });
+          nodes.forEach(function (node) { node.classList.add("is-lit"); });
+          ship.classList.add("is-on");
+          trends.forEach(function (line) {
+            line.style.strokeDasharray = "";
+            line.style.strokeDashoffset = "";
+          });
+          hideBead();
+        }
+        document.addEventListener("visibilitychange", function () {
+          if (document.hidden) stop();
+          else play();
+        });
+        reduceQ.addEventListener("change", function () {
+          if (reduceQ.matches) settle();
+          else play();
+        });
+        if ("IntersectionObserver" in window) {
+          var watch = new IntersectionObserver(function (entries) {
+            onScreen = entries[0].isIntersecting;
+            if (onScreen) play();
+            else stop();
+          }, { threshold: 0.18 });
+          watch.observe(root);
+        } else {
+          onScreen = true;
+        }
+        if (reduceQ.matches) settle();
+        else play();
       })();
     </script>
   </body>

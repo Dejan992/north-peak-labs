@@ -31,7 +31,7 @@ The Google Search Console verification meta tag on the home page stays as it is.
 
 ## Contact
 
-The public address is `rajkovic@mail.grokbot.com`. “Get notified” and the address on the home page are mailto links. There is no form and no calendar embed.
+The public address is `hello@northpeaklabs.studio`. “Get notified” and the address on the home page are mailto links. There is no form and no calendar embed.
 
 ## What is on the site
 
